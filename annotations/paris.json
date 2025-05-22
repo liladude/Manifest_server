@@ -1,0 +1,99 @@
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "https://liladude.github.io/Manifest_server/annotations/paris.json",
+  "type": "AnnotationPage",
+  "items": [
+    {
+      "id": "https://liladude.github.io/Manifest_server/annotation/2fa11cd9-44bf-496a-a3db-04ca7b57a5a6",
+      "type": "Annotation",
+      "motivation": "commenting",
+      "body": {
+        "type": "TextualBody",
+        "language": "fr",
+        "format": "text/html",
+        "value": "Map from Paris Manuscript"
+      },
+      "target": {
+        "type": "SpecificResource",
+        "source": {
+          "id": "https://liladude.github.io/Manifest_server/canvas/prv63d3b1ac-cb76-47d3-a4e0-ba0cec2e08f4",
+          "type": "Canvas"
+        },
+        "selector": {
+          "type": "FragmentSelector",
+          "conformsTo": "http://www.w3.org/TR/media-frags/",
+          "value": "xywh=pixel:617.9478468231815,2470.691942487755,3557.6981079598804,3462.4021447188625"
+        }
+      }
+    },
+    {
+      "id": "https://liladude.github.io/Manifest_server/annotation/c9cb400a-ef4a-4f3b-81d0-a0924fe8dee0",
+      "type": "Annotation",
+      "motivation": "commenting",
+      "body": {
+        "type": "TextualBody",
+        "language": "fr",
+        "format": "text/html",
+        "value": "Draft"
+      },
+      "target": {
+        "type": "SpecificResource",
+        "source": {
+          "id": "https://liladude.github.io/Manifest_server/canvas/prva03acdd0-9c92-429f-a22d-f10aefb10260",
+          "type": "Canvas"
+        },
+        "selector": {
+          "type": "FragmentSelector",
+          "conformsTo": "http://www.w3.org/TR/media-frags/",
+          "value": "xywh=pixel:1045.3374612119035,3138.609259965823,823.0923827233862,1093.7417267228166"
+        }
+      }
+    },
+    {
+      "id": "https://liladude.github.io/Manifest_server/annotation/05fb76c8-1ac3-492a-91d8-64b20e603edf",
+      "type": "Annotation",
+      "motivation": "commenting",
+      "body": {
+        "type": "TextualBody",
+        "language": "fr",
+        "format": "text/html",
+        "value": "Table"
+      },
+      "target": {
+        "type": "SpecificResource",
+        "source": {
+          "id": "https://liladude.github.io/Manifest_server/canvas/prva03acdd0-9c92-429f-a22d-f10aefb10260",
+          "type": "Canvas"
+        },
+        "selector": {
+          "type": "FragmentSelector",
+          "conformsTo": "http://www.w3.org/TR/media-frags/",
+          "value": "xywh=pixel:2175.043318912447,3038.500798083626,1843.217443786873,1251.737233972572"
+        }
+      }
+    },
+    {
+      "id": "https://liladude.github.io/Manifest_server/annotation/41858275-c046-4eb2-b063-579819936ebb",
+      "type": "Annotation",
+      "motivation": "commenting",
+      "body": {
+        "type": "TextualBody",
+        "language": "fr",
+        "format": "text/html",
+        "value": "Fascio Littorio"
+      },
+      "target": {
+        "type": "SpecificResource",
+        "source": {
+          "id": "https://liladude.github.io/Manifest_server/canvas/prva03acdd0-9c92-429f-a22d-f10aefb10260",
+          "type": "Canvas"
+        },
+        "selector": {
+          "type": "FragmentSelector",
+          "conformsTo": "http://www.w3.org/TR/media-frags/",
+          "value": "xywh=pixel:3843.634550689338,2690.0233607922455,451.61584702699156,2781.0023921310667"
+        }
+      }
+    }
+  ]
+}
