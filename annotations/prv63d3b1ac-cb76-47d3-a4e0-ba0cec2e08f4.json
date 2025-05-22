@@ -1,0 +1,27 @@
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "https://liladude.github.io/Manifest_server/annotations/prv63d3b1ac-cb76-47d3-a4e0-ba0cec2e08f4.json",
+  "type": "AnnotationPage",
+  "items": [
+    {
+      "id": "https://liladude.github.io/Manifest_server/annotation/2fa11cd9-44bf-496a-a3db-04ca7b57a5a6",
+      "type": "Annotation",
+      "motivation": "commenting",
+      "body": {
+        "type": "TextualBody",
+        "language": "fr",
+        "format": "text/html",
+        "value": "Map from Paris Manuscript"
+      },
+      "target": {
+        "type": "SpecificResource",
+        "source": "https://liladude.github.io/Manifest_server/canvas/prv63d3b1ac-cb76-47d3-a4e0-ba0cec2e08f4",
+        "selector": {
+          "type": "FragmentSelector",
+          "conformsTo": "http://www.w3.org/TR/media-frags/",
+          "value": "xywh=pixel:617.9478468231815,2470.691942487755,3557.6981079598804,3462.4021447188625"
+        }
+      }
+    }
+  ]
+}
