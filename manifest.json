@@ -1,0 +1,335 @@
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "https://liladude.github.io/Manifest_server/manifest.json",
+  "type": "Manifest",
+  "label": {
+    "fr": [
+      "Pirro Ligorio - Simple Example"
+    ]
+  },
+  "version": "3.0",
+  "summary": {
+    "fr": [
+      "Simple example with three annotated images from Pirro Ligorio's work"
+    ]
+  },
+  "metadata": [
+    {
+      "label": {
+        "none": [
+          "Date de création"
+        ]
+      },
+      "value": {
+        "none": [
+          "2025-05-22"
+        ]
+      }
+    },
+    {
+      "label": {
+        "none": [
+          "Auteur"
+        ]
+      },
+      "value": {
+        "none": [
+          "Elisa Bastianello"
+        ]
+      }
+    }
+  ],
+  "items": [
+    {
+      "height": 6914,
+      "id": "https://liladude.github.io/Manifest_server/canvas/prv63d3b1ac-cb76-47d3-a4e0-ba0cec2e08f4",
+      "items": [
+        {
+          "id": "https://liladude.github.io/Manifest_server/canvas/prv63d3b1ac-cb76-47d3-a4e0-ba0cec2e08f4/annotation-page",
+          "items": [
+            {
+              "body": {
+                "format": "image/jpeg",
+                "height": 6914,
+                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f74/full/full/0/native.jpg",
+                "service": [
+                  {
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f74",
+                    "profile": "http://iiif.io/api/image/2/level2",
+                    "type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "width": 4414
+              },
+              "id": "https://liladude.github.io/Manifest_server/canvas/prv63d3b1ac-cb76-47d3-a4e0-ba0cec2e08f4/annotation-image",
+              "motivation": "painting",
+              "target": "https://liladude.github.io/Manifest_server/canvas/prv63d3b1ac-cb76-47d3-a4e0-ba0cec2e08f4",
+              "type": "Annotation"
+            }
+          ],
+          "type": "AnnotationPage"
+        }
+      ],
+      "label": {
+        "none": [
+          "Paris Manuscript Folio 60"
+        ]
+      },
+      "metadata": [
+        {
+          "label": {
+            "fr": [
+              "Titre"
+            ]
+          },
+          "value": {
+            "fr": [
+              "60"
+            ]
+          }
+        }
+      ],
+      "requiredStatement": {
+        "label": {
+          "fr": [
+            "Crédits du fichier numérique"
+          ]
+        },
+        "value": {
+          "fr": [
+            "Source: Bibliothèque nationale de France"
+          ]
+        }
+      },
+      "summary": {
+        "fr": [
+          "Folio 60 of Pirro Ligorio's manuscript"
+        ]
+      },
+      "thumbnail": [
+        {
+          "format": "image/jpeg",
+          "height": 300,
+          "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f74/full/320,412/0/native.jpg",
+          "type": "Image",
+          "width": 200
+        }
+      ],
+      "type": "Canvas",
+      "width": 4414
+    },
+    {
+      "height": 6914,
+      "id": "https://liladude.github.io/Manifest_server/canvas/prva03acdd0-9c92-429f-a22d-f10aefb10260",
+      "items": [
+        {
+          "id": "https://liladude.github.io/Manifest_server/canvas/prva03acdd0-9c92-429f-a22d-f10aefb10260/annotation-page",
+          "items": [
+            {
+              "body": {
+                "format": "image/jpeg",
+                "height": 6914,
+                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f79/full/full/0/native.jpg",
+                "service": [
+                  {
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f79",
+                    "profile": "http://iiif.io/api/image/2/level2",
+                    "type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "width": 4468
+              },
+              "id": "https://liladude.github.io/Manifest_server/canvas/prva03acdd0-9c92-429f-a22d-f10aefb10260/annotation-image",
+              "motivation": "painting",
+              "target": "https://liladude.github.io/Manifest_server/canvas/prva03acdd0-9c92-429f-a22d-f10aefb10260",
+              "type": "Annotation"
+            }
+          ],
+          "type": "AnnotationPage"
+        }
+      ],
+      "label": {
+        "none": [
+          "Paris Manuscript Folio 65"
+        ]
+      },
+      "metadata": [
+        {
+          "label": {
+            "fr": [
+              "Titre"
+            ]
+          },
+          "value": {
+            "fr": [
+              "65"
+            ]
+          }
+        }
+      ],
+      "requiredStatement": {
+        "label": {
+          "fr": [
+            "Crédits du fichier numérique"
+          ]
+        },
+        "value": {
+          "fr": [
+            "Source: Bibliothèque nationale de France"
+          ]
+        }
+      },
+      "summary": {
+        "fr": [
+          "Folio 65 of Pirro Ligorio's manuscript"
+        ]
+      },
+      "thumbnail": [
+        {
+          "format": "image/jpeg",
+          "height": 300,
+          "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f79/full/320,412/0/native.jpg",
+          "type": "Image",
+          "width": 200
+        }
+      ],
+      "type": "Canvas",
+      "width": 4468
+    },
+    {
+      "height": 26700,
+      "id": "https://liladude.github.io/Manifest_server/canvas/prv22aa0d6e-9e2f-4412-9185-d41e4508cdb2",
+      "items": [
+        {
+          "id": "https://liladude.github.io/Manifest_server/canvas/prv22aa0d6e-9e2f-4412-9185-d41e4508cdb2/annotation-page",
+          "items": [
+            {
+              "body": {
+                "format": "image/jpeg",
+                "height": 26700,
+                "id": "https://dlib2.biblhertz.it/iiif/3/dg1403481c@0001.jp2/full/max/0/default.jpg",
+                "service": [
+                  {
+                    "id": "https://dlib2.biblhertz.it/iiif/3/dg1403481c@0001.jp2",
+                    "profile": "http://iiif.io/api/image/3/level2",
+                    "type": "ImageService3"
+                  }
+                ],
+                "type": "Image",
+                "width": 32325
+              },
+              "id": "https://liladude.github.io/Manifest_server/canvas/prv22aa0d6e-9e2f-4412-9185-d41e4508cdb2/annotation-image",
+              "motivation": "painting",
+              "target": "https://liladude.github.io/Manifest_server/canvas/prv22aa0d6e-9e2f-4412-9185-d41e4508cdb2",
+              "type": "Annotation"
+            }
+          ],
+          "type": "AnnotationPage"
+        }
+      ],
+      "label": {
+        "none": [
+          "Map of Rome"
+        ]
+      },
+      "metadata": [
+        {
+          "label": {
+            "fr": [
+              "Titre"
+            ]
+          },
+          "value": {
+            "fr": [
+              "Nuova Pianta Di Roma"
+            ]
+          }
+        }
+      ],
+      "requiredStatement": {
+        "label": {
+          "fr": [
+            "Crédits du fichier numérique"
+          ]
+        },
+        "value": {
+          "fr": [
+            "Source: Bibliotheca Hertziana"
+          ]
+        }
+      },
+      "summary": {
+        "fr": [
+          "Map of Rome by Pirro Ligorio"
+        ]
+      },
+      "thumbnail": [
+        {
+          "format": "image/jpeg",
+          "height": 300,
+          "id": "https://dlib2.biblhertz.it/iiif/3/dg1403481c@0001.jp2/full/max/0/default.jpg",
+          "type": "Image",
+          "width": 200
+        }
+      ],
+      "type": "Canvas",
+      "width": 32325
+    }
+  ],
+  "structures": [
+    {
+      "id": "https://liladude.github.io/Manifest_server/range/r0",
+      "items": [
+        {
+          "annotations": [
+            {
+              "id": "https://liladude.github.io/Manifest_server/annotations/paris.json",
+              "type": "AnnotationPage"
+            }
+          ],
+          "id": "https://liladude.github.io/Manifest_server/range/paris",
+          "items": [
+            {
+              "id": "https://liladude.github.io/Manifest_server/canvas/prv63d3b1ac-cb76-47d3-a4e0-ba0cec2e08f4",
+              "type": "Canvas"
+            },
+            {
+              "id": "https://liladude.github.io/Manifest_server/canvas/prva03acdd0-9c92-429f-a22d-f10aefb10260",
+              "type": "Canvas"
+            }
+          ],
+          "label": {
+            "none": [
+              "Paris"
+            ]
+          },
+          "type": "Range"
+        },
+        {
+          "annotations": [
+            {
+              "id": "https://liladude.github.io/Manifest_server/annotations/map.json",
+              "type": "AnnotationPage"
+            }
+          ],
+          "id": "https://liladude.github.io/Manifest_server/range/map",
+          "items": [
+            {
+              "id": "https://liladude.github.io/Manifest_server/canvas/prv22aa0d6e-9e2f-4412-9185-d41e4508cdb2",
+              "type": "Canvas"
+            }
+          ],
+          "label": {
+            "none": [
+              "Map"
+            ]
+          },
+          "type": "Range"
+        }
+      ],
+      "type": "Range"
+    }
+  ]
+}
