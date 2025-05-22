@@ -1,0 +1,47 @@
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "https://liladude.github.io/Manifest_server/annotations/prv22aa0d6e-9e2f-4412-9185-d41e4508cdb2.json",
+  "type": "AnnotationPage",
+  "items": [
+    {
+      "id": "https://liladude.github.io/Manifest_server/annotation/12941976-2e8a-4dd9-9487-ba27df44bc38",
+      "type": "Annotation",
+      "motivation": "commenting",
+      "body": {
+        "type": "TextualBody",
+        "language": "fr",
+        "format": "text/html",
+        "value": "Palazzo Colonna"
+      },
+      "target": {
+        "type": "SpecificResource",
+        "source": "https://liladude.github.io/Manifest_server/canvas/prv22aa0d6e-9e2f-4412-9185-d41e4508cdb2",
+        "selector": {
+          "type": "FragmentSelector",
+          "conformsTo": "http://www.w3.org/TR/media-frags/",
+          "value": "xywh=pixel:16637.284733203996,9686.980256329518,443.31944768749963,476.9042556245913"
+        }
+      }
+    },
+    {
+      "id": "https://liladude.github.io/Manifest_server/annotation/3595b08c-26a3-4aba-83bc-6c4c1db87642",
+      "type": "Annotation",
+      "motivation": "commenting",
+      "body": {
+        "type": "TextualBody",
+        "language": "fr",
+        "format": "text/html",
+        "value": "Santi Apostoli"
+      },
+      "target": {
+        "type": "SpecificResource",
+        "source": "https://liladude.github.io/Manifest_server/canvas/prv22aa0d6e-9e2f-4412-9185-d41e4508cdb2",
+        "selector": {
+          "type": "FragmentSelector",
+          "conformsTo": "http://www.w3.org/TR/media-frags/",
+          "value": "xywh=pixel:16474.117501636232,9372.55023767323,578.8357742280423,338.2570542169633"
+        }
+      }
+    }
+  ]
+}
