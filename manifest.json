@@ -4,13 +4,13 @@
   "type": "Manifest",
   "label": {
     "fr": [
-      "Pirro Ligorio - Simple Example"
+      "Pirro Ligorio - Example with Linked Annotations"
     ]
   },
   "version": "3.0",
   "summary": {
     "fr": [
-      "Simple example with three annotated images from Pirro Ligorio's work"
+      "Example with three annotated images from Pirro Ligorio's work"
     ]
   },
   "metadata": [
@@ -68,6 +68,12 @@
               "type": "Annotation"
             }
           ],
+          "type": "AnnotationPage"
+        }
+      ],
+      "annotations": [
+        {
+          "id": "https://liladude.github.io/Manifest_server/annotations/prv63d3b1ac-cb76-47d3-a4e0-ba0cec2e08f4.json",
           "type": "AnnotationPage"
         }
       ],
@@ -150,6 +156,12 @@
           "type": "AnnotationPage"
         }
       ],
+      "annotations": [
+        {
+          "id": "https://liladude.github.io/Manifest_server/annotations/prva03acdd0-9c92-429f-a22d-f10aefb10260.json",
+          "type": "AnnotationPage"
+        }
+      ],
       "label": {
         "none": [
           "Paris Manuscript Folio 65"
@@ -229,6 +241,12 @@
           "type": "AnnotationPage"
         }
       ],
+      "annotations": [
+        {
+          "id": "https://liladude.github.io/Manifest_server/annotations/prv22aa0d6e-9e2f-4412-9185-d41e4508cdb2.json",
+          "type": "AnnotationPage"
+        }
+      ],
       "label": {
         "none": [
           "Map of Rome"
@@ -276,60 +294,6 @@
       ],
       "type": "Canvas",
       "width": 32325
-    }
-  ],
-  "structures": [
-    {
-      "id": "https://liladude.github.io/Manifest_server/range/r0",
-      "items": [
-        {
-          "annotations": [
-            {
-              "id": "https://liladude.github.io/Manifest_server/annotations/paris.json",
-              "type": "AnnotationPage"
-            }
-          ],
-          "id": "https://liladude.github.io/Manifest_server/range/paris",
-          "items": [
-            {
-              "id": "https://liladude.github.io/Manifest_server/canvas/prv63d3b1ac-cb76-47d3-a4e0-ba0cec2e08f4",
-              "type": "Canvas"
-            },
-            {
-              "id": "https://liladude.github.io/Manifest_server/canvas/prva03acdd0-9c92-429f-a22d-f10aefb10260",
-              "type": "Canvas"
-            }
-          ],
-          "label": {
-            "none": [
-              "Paris"
-            ]
-          },
-          "type": "Range"
-        },
-        {
-          "annotations": [
-            {
-              "id": "https://liladude.github.io/Manifest_server/annotations/map.json",
-              "type": "AnnotationPage"
-            }
-          ],
-          "id": "https://liladude.github.io/Manifest_server/range/map",
-          "items": [
-            {
-              "id": "https://liladude.github.io/Manifest_server/canvas/prv22aa0d6e-9e2f-4412-9185-d41e4508cdb2",
-              "type": "Canvas"
-            }
-          ],
-          "label": {
-            "none": [
-              "Map"
-            ]
-          },
-          "type": "Range"
-        }
-      ],
-      "type": "Range"
     }
   ]
 }
