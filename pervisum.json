@@ -1,386 +1,1289 @@
 {
-  "@context": "http://iiif.io/api/presentation/3/context.json",
-  "id": "https://pervisum.inha.fr/api/prv27e7074d-f7c7-43f7-8819-b174e708c31d/manifest-edition",
-  "type": "Manifest",
-  "label": {
-    "fr": [
-      "Pirro Ligorio"
-    ]
-  },
-  "version": "3.0",
-  "summary": {
-    "fr": [
-      "Collection of folios from Pirro Ligorio's 'Libro delle antiquità'"
-    ]
-  },
-  "metadata": [
-    {
-      "label": {
-        "none": [
-          "Date de création"
-        ]
-      },
-      "value": {
-        "none": [
-          "2025-05-22T07:40:15.867Z"
-        ]
-      }
-    },
-    {
-      "label": {
-        "none": [
-          "Auteur"
-        ]
-      },
-      "value": {
-        "none": [
-          "Elisa Bastianello"
-        ]
-      }
-    }
-  ],
-  "items": [
-    {
-      "height": 6914,
-      "id": "https://pervisum.inha.fr/api/prv27e7074d-f7c7-43f7-8819-b174e708c31d/manifest-edition/canvas/prv21187938-56dc-4e7f-afe1-8a21407528b6",
-      "items": [
+    "@context": "http://iiif.io/api/presentation/3/context.json",
+    "id": "https://pervisum.inha.fr/api/prv27e7074d-f7c7-43f7-8819-b174e708c31d/manifest-edition",
+    "items": [
         {
-          "id": "https://pervisum.inha.fr/api/prv27e7074d-f7c7-43f7-8819-b174e708c31d/manifest-edition/canvas/prv21187938-56dc-4e7f-afe1-8a21407528b6/annotation-page",
-          "items": [
-            {
-              "body": {
-                "format": "image/jpeg",
-                "height": 6914,
-                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f15/full/full/0/native.jpg",
-                "service": [
-                  {
-                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f15",
-                    "profile": "http://iiif.io/api/image/2/level2",
-                    "type": "ImageService2"
-                  }
-                ],
-                "type": "Image",
-                "width": 4468
-              },
-              "id": "https://pervisum.inha.fr/api/prv27e7074d-f7c7-43f7-8819-b174e708c31d/manifest-edition/annotation/prv21187938-56dc-4e7f-afe1-8a21407528b6-image",
-              "motivation": "painting",
-              "target": "https://pervisum.inha.fr/api/prv27e7074d-f7c7-43f7-8819-b174e708c31d/manifest-edition/canvas/prv21187938-56dc-4e7f-afe1-8a21407528b6",
-              "type": "Annotation"
-            }
-          ],
-          "type": "AnnotationPage"
-        }
-      ],
-      "label": {
-        "none": [
-          "1"
-        ]
-      },
-      "metadata": [
-        {
-          "label": {
-            "fr": [
-              "Titre"
-            ]
-          },
-          "value": {
-            "fr": [
-              "1"
-            ]
-          }
-        },
-        {
-          "label": {
-            "fr": [
-              "Créateur"
-            ]
-          },
-          "value": {
-            "fr": [
-              "Pirro Ligorio"
-            ]
-          }
-        }
-      ],
-      "partOf": [
-        {
-          "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/manifest.json",
-          "label": {
-            "none": [
-              "Libro delle antiquità di Pyrrho Ligorio napoletano, nel quale paradossamente confuta la comune openione sopra varii et diversi luoghi della citta di Roma et fuor d'essa."
-            ]
-          },
-          "type": "Manifest"
-        }
-      ],
-      "requiredStatement": {
-        "label": {
-          "fr": [
-            "Crédits du fichier numérique"
-          ]
-        },
-        "value": {
-          "fr": [
-            "Source: Bibliothèque nationale de France"
-          ]
-        }
-      },
-      "summary": {
-        "fr": [
-          "Folio 1 of Pirro Ligorio's manuscript"
-        ]
-      },
-      "thumbnail": [
-        {
-          "format": "image/jpeg",
-          "height": 300,
-          "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f15/full/320,412/0/native.jpg",
-          "type": "Image",
-          "width": 200
-        }
-      ],
-      "type": "Canvas",
-      "width": 4468
-    },
-    {
-      "height": 6914,
-      "id": "https://pervisum.inha.fr/api/prv27e7074d-f7c7-43f7-8819-b174e708c31d/manifest-edition/canvas/prv63d3b1ac-cb76-47d3-a4e0-ba0cec2e08f4",
-      "items": [
-        {
-          "id": "https://pervisum.inha.fr/api/prv27e7074d-f7c7-43f7-8819-b174e708c31d/manifest-edition/canvas/prv63d3b1ac-cb76-47d3-a4e0-ba0cec2e08f4/annotation-page",
-          "items": [
-            {
-              "body": {
-                "format": "image/jpeg",
-                "height": 6914,
-                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f74/full/full/0/native.jpg",
-                "service": [
-                  {
-                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f74",
-                    "profile": "http://iiif.io/api/image/2/level2",
-                    "type": "ImageService2"
-                  }
-                ],
-                "type": "Image",
-                "width": 4414
-              },
-              "id": "https://pervisum.inha.fr/api/prv27e7074d-f7c7-43f7-8819-b174e708c31d/manifest-edition/annotation/prv63d3b1ac-cb76-47d3-a4e0-ba0cec2e08f4-image",
-              "motivation": "painting",
-              "target": "https://pervisum.inha.fr/api/prv27e7074d-f7c7-43f7-8819-b174e708c31d/manifest-edition/canvas/prv63d3b1ac-cb76-47d3-a4e0-ba0cec2e08f4",
-              "type": "Annotation"
-            }
-          ],
-          "type": "AnnotationPage"
-        }
-      ],
-      "label": {
-        "none": [
-          "60"
-        ]
-      },
-      "metadata": [
-        {
-          "label": {
-            "fr": [
-              "Titre"
-            ]
-          },
-          "value": {
-            "fr": [
-              "60"
-            ]
-          }
-        }
-      ],
-      "partOf": [
-        {
-          "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/manifest.json",
-          "label": {
-            "none": [
-              "Libro delle antiquità di Pyrrho Ligorio napoletano, nel quale paradossamente confuta la comune openione sopra varii et diversi luoghi della citta di Roma et fuor d'essa."
-            ]
-          },
-          "type": "Manifest"
-        }
-      ],
-      "requiredStatement": {
-        "label": {
-          "fr": [
-            "Crédits du fichier numérique"
-          ]
-        },
-        "value": {
-          "fr": [
-            "Source: Bibliothèque nationale de France"
-          ]
-        }
-      },
-      "summary": {
-        "fr": [
-          "Folio 60 of Pirro Ligorio's manuscript"
-        ]
-      },
-      "thumbnail": [
-        {
-          "format": "image/jpeg",
-          "height": 300,
-          "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f74/full/320,412/0/native.jpg",
-          "type": "Image",
-          "width": 200
-        }
-      ],
-      "type": "Canvas",
-      "width": 4414
-    },
-    {
-      "height": 26700,
-      "id": "https://pervisum.inha.fr/api/prv27e7074d-f7c7-43f7-8819-b174e708c31d/manifest-edition/canvas/prv22aa0d6e-9e2f-4412-9185-d41e4508cdb2",
-      "items": [
-        {
-          "id": "https://pervisum.inha.fr/api/prv27e7074d-f7c7-43f7-8819-b174e708c31d/manifest-edition/canvas/prv22aa0d6e-9e2f-4412-9185-d41e4508cdb2/annotation-page",
-          "items": [
-            {
-              "body": {
-                "format": "image/jpeg",
-                "height": 26700,
-                "id": "https://dlib2.biblhertz.it/iiif/3/dg1403481c@0001.jp2/full/max/0/default.jpg",
-                "service": [
-                  {
-                    "id": "https://dlib2.biblhertz.it/iiif/3/dg1403481c@0001.jp2",
-                    "profile": "http://iiif.io/api/image/3/level2",
-                    "type": "ImageService3"
-                  }
-                ],
-                "type": "Image",
-                "width": 32325
-              },
-              "id": "https://pervisum.inha.fr/api/prv27e7074d-f7c7-43f7-8819-b174e708c31d/manifest-edition/annotation/prv22aa0d6e-9e2f-4412-9185-d41e4508cdb2-image",
-              "motivation": "painting",
-              "target": "https://pervisum.inha.fr/api/prv27e7074d-f7c7-43f7-8819-b174e708c31d/manifest-edition/canvas/prv22aa0d6e-9e2f-4412-9185-d41e4508cdb2",
-              "type": "Annotation"
-            }
-          ],
-          "type": "AnnotationPage"
-        }
-      ],
-      "label": {
-        "none": [
-          "Map"
-        ]
-      },
-      "metadata": [
-        {
-          "label": {
-            "fr": [
-              "Titre"
-            ]
-          },
-          "value": {
-            "fr": [
-              "Nuova Pianta Di Roma"
-            ]
-          }
-        }
-      ],
-      "partOf": [
-        {
-          "id": "https://dlib.biblhertz.it/iiif/dg1403481c/manifest.json",
-          "label": {
-            "none": [
-              "Nuova Pianta Di Roma"
-            ]
-          },
-          "type": "Manifest"
-        }
-      ],
-      "requiredStatement": {
-        "label": {
-          "fr": [
-            "Crédits du fichier numérique"
-          ]
-        },
-        "value": {
-          "fr": [
-            "Source: Bibliotheca Hertziana"
-          ]
-        }
-      },
-      "summary": {
-        "fr": [
-          "Map of Rome by Pirro Ligorio"
-        ]
-      },
-      "thumbnail": [
-        {
-          "format": "image/jpeg",
-          "height": 300,
-          "id": "https://dlib2.biblhertz.it/iiif/3/dg1403481c@0001.jp2/full/max/0/default.jpg",
-          "type": "Image",
-          "width": 200
-        }
-      ],
-      "type": "Canvas",
-      "width": 32325
-    }
-  ],
-  "structures": [
-    {
-      "id": "https://pervisum.inha.fr/api/prv27e7074d-f7c7-43f7-8819-b174e708c31d/manifest-edition/range/r0",
-      "items": [
-        {
-          "annotations": [
-            {
-              "id": "https://pervisum.inha.fr/api/prv27e7074d-f7c7-43f7-8819-b174e708c31d/manifest-edition/rprv8da31386-5ea0-430e-bbc0-137f723e149f_annotations",
-              "type": "AnnotationPage"
-            }
-          ],
-          "id": "https://pervisum.inha.fr/api/prv27e7074d-f7c7-43f7-8819-b174e708c31d/manifest-edition/rprv8da31386-5ea0-430e-bbc0-137f723e149f",
-          "items": [
-            {
-              "id": "https://pervisum.inha.fr/api/prv27e7074d-f7c7-43f7-8819-b174e708c31d/manifest-edition/canvas/prv63d3b1ac-cb76-47d3-a4e0-ba0cec2e08f4",
-              "label": {
-                "fr": [
-                  "Folio 60"
+            "height": 6914,
+            "id": "https://liladude.github.io/Manifest_server/canvas/prv21187938-56dc-4e7f-afe1-8a21407528b6",
+            "items": [
+                {
+                    "id": "https://liladude.github.io/Manifest_server/canvas/prv21187938-56dc-4e7f-afe1-8a21407528b6/annotation-page",
+                    "items": [
+                        {
+                            "body": {
+                                "format": "image/jpeg",
+                                "height": 6914,
+                                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f15/full/full/0/native.jpg",
+                                "service": [
+                                    {
+                                        "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f15",
+                                        "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+                                        "type": "ImageService2"
+                                    }
+                                ],
+                                "type": "Image",
+                                "width": 4468
+                            },
+                            "id": "https://liladude.github.io/Manifest_server/annotation/prv21187938-56dc-4e7f-afe1-8a21407528b6-image",
+                            "motivation": "painting",
+                            "target": "https://liladude.github.io/Manifest_server/canvas/prv21187938-56dc-4e7f-afe1-8a21407528b6",
+                            "type": "Annotation"
+                        }
+                    ],
+                    "type": "AnnotationPage"
+                }
+            ],
+            "label": {
+                "none": [
+                    "1"
                 ]
-              },
-              "type": "Canvas"
-            }
-          ],
-          "label": {
-            "none": [
-              "Paris"
-            ]
-          },
-          "type": "Range"
+            },
+            "metadata": [
+                {
+                    "label": {
+                        "fr": [
+                            "Titre"
+                        ]
+                    },
+                    "value": {
+                        "fr": [
+                            "1"
+                        ]
+                    }
+                },
+                {
+                    "label": {
+                        "fr": [
+                            "Cr\u00e9ateur"
+                        ]
+                    },
+                    "value": {
+                        "fr": [
+                            "Pirro Ligorio"
+                        ]
+                    }
+                }
+            ],
+            "partOf": [
+                {
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/manifest.json",
+                    "label": {
+                        "none": [
+                            "Libro delle antiquit\u00e0 di Pyrrho Ligorio napoletano, nel quale paradossamente confuta la comune openione sopra varii et diversi luoghi della citta di Roma et fuor d'essa."
+                        ]
+                    },
+                    "type": "Manifest"
+                }
+            ],
+            "requiredStatement": {
+                "label": {
+                    "fr": [
+                        "Cr\u00e9dits du fichier num\u00e9rique"
+                    ]
+                },
+                "value": {
+                    "fr": [
+                        ""
+                    ]
+                }
+            },
+            "summary": {
+                "fr": [
+                    ""
+                ]
+            },
+            "thumbnail": [
+                {
+                    "format": "image/jpeg",
+                    "height": 300,
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f15/full/320,412/0/native.jpg",
+                    "type": "Image",
+                    "width": 200
+                }
+            ],
+            "type": "Canvas",
+            "width": 4468
         },
         {
-          "annotations": [
-            {
-              "id": "https://pervisum.inha.fr/api/prv27e7074d-f7c7-43f7-8819-b174e708c31d/manifest-edition/rprv5b2ad1a2-fb76-4fa6-a417-7f0e29490b88_annotations",
-              "type": "AnnotationPage"
-            }
-          ],
-          "id": "https://pervisum.inha.fr/api/prv27e7074d-f7c7-43f7-8819-b174e708c31d/manifest-edition/rprv5b2ad1a2-fb76-4fa6-a417-7f0e29490b88",
-          "items": [
-            {
-              "id": "https://pervisum.inha.fr/api/prv27e7074d-f7c7-43f7-8819-b174e708c31d/manifest-edition/canvas/prv22aa0d6e-9e2f-4412-9185-d41e4508cdb2",
-              "label": {
-                "fr": [
-                  "Map of Rome"
+            "height": 6914,
+            "id": "https://liladude.github.io/Manifest_server/canvas/prv63d3b1ac-cb76-47d3-a4e0-ba0cec2e08f4",
+            "items": [
+                {
+                    "id": "https://liladude.github.io/Manifest_server/canvas/prv63d3b1ac-cb76-47d3-a4e0-ba0cec2e08f4/annotation-page",
+                    "items": [
+                        {
+                            "body": {
+                                "format": "image/jpeg",
+                                "height": 6914,
+                                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f74/full/full/0/native.jpg",
+                                "service": [
+                                    {
+                                        "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f74",
+                                        "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+                                        "type": "ImageService2"
+                                    }
+                                ],
+                                "type": "Image",
+                                "width": 4414
+                            },
+                            "id": "https://liladude.github.io/Manifest_server/annotation/prv63d3b1ac-cb76-47d3-a4e0-ba0cec2e08f4-image",
+                            "motivation": "painting",
+                            "target": "https://liladude.github.io/Manifest_server/canvas/prv63d3b1ac-cb76-47d3-a4e0-ba0cec2e08f4",
+                            "type": "Annotation"
+                        }
+                    ],
+                    "type": "AnnotationPage"
+                }
+            ],
+            "label": {
+                "none": [
+                    "60"
                 ]
-              },
-              "type": "Canvas"
-            }
-          ],
-          "label": {
-            "none": [
-              "Map"
-            ]
-          },
-          "type": "Range"
+            },
+            "metadata": [
+                {
+                    "label": {
+                        "fr": [
+                            "Titre"
+                        ]
+                    },
+                    "value": {
+                        "fr": [
+                            "60"
+                        ]
+                    }
+                }
+            ],
+            "partOf": [
+                {
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/manifest.json",
+                    "label": {
+                        "none": [
+                            "Libro delle antiquit\u00e0 di Pyrrho Ligorio napoletano, nel quale paradossamente confuta la comune openione sopra varii et diversi luoghi della citta di Roma et fuor d'essa."
+                        ]
+                    },
+                    "type": "Manifest"
+                }
+            ],
+            "requiredStatement": {
+                "label": {
+                    "fr": [
+                        "Cr\u00e9dits du fichier num\u00e9rique"
+                    ]
+                },
+                "value": {
+                    "fr": [
+                        ""
+                    ]
+                }
+            },
+            "summary": {
+                "fr": [
+                    ""
+                ]
+            },
+            "thumbnail": [
+                {
+                    "format": "image/jpeg",
+                    "height": 300,
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f74/full/320,412/0/native.jpg",
+                    "type": "Image",
+                    "width": 200
+                }
+            ],
+            "type": "Canvas",
+            "width": 4414
+        },
+        {
+            "height": 6914,
+            "id": "https://liladude.github.io/Manifest_server/canvas/prva03acdd0-9c92-429f-a22d-f10aefb10260",
+            "items": [
+                {
+                    "id": "https://liladude.github.io/Manifest_server/canvas/prva03acdd0-9c92-429f-a22d-f10aefb10260/annotation-page",
+                    "items": [
+                        {
+                            "body": {
+                                "format": "image/jpeg",
+                                "height": 6914,
+                                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f79/full/full/0/native.jpg",
+                                "service": [
+                                    {
+                                        "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f79",
+                                        "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+                                        "type": "ImageService2"
+                                    }
+                                ],
+                                "type": "Image",
+                                "width": 4468
+                            },
+                            "id": "https://liladude.github.io/Manifest_server/annotation/prva03acdd0-9c92-429f-a22d-f10aefb10260-image",
+                            "motivation": "painting",
+                            "target": "https://liladude.github.io/Manifest_server/canvas/prva03acdd0-9c92-429f-a22d-f10aefb10260",
+                            "type": "Annotation"
+                        }
+                    ],
+                    "type": "AnnotationPage"
+                }
+            ],
+            "label": {
+                "none": [
+                    "65"
+                ]
+            },
+            "metadata": [
+                {
+                    "label": {
+                        "fr": [
+                            "Titre"
+                        ]
+                    },
+                    "value": {
+                        "fr": [
+                            "65"
+                        ]
+                    }
+                }
+            ],
+            "partOf": [
+                {
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/manifest.json",
+                    "label": {
+                        "none": [
+                            "Libro delle antiquit\u00e0 di Pyrrho Ligorio napoletano, nel quale paradossamente confuta la comune openione sopra varii et diversi luoghi della citta di Roma et fuor d'essa."
+                        ]
+                    },
+                    "type": "Manifest"
+                }
+            ],
+            "requiredStatement": {
+                "label": {
+                    "fr": [
+                        "Cr\u00e9dits du fichier num\u00e9rique"
+                    ]
+                },
+                "value": {
+                    "fr": [
+                        ""
+                    ]
+                }
+            },
+            "summary": {
+                "fr": [
+                    ""
+                ]
+            },
+            "thumbnail": [
+                {
+                    "format": "image/jpeg",
+                    "height": 300,
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f79/full/320,412/0/native.jpg",
+                    "type": "Image",
+                    "width": 200
+                }
+            ],
+            "type": "Canvas",
+            "width": 4468
+        },
+        {
+            "height": 6914,
+            "id": "https://liladude.github.io/Manifest_server/canvas/prv04f1e679-265e-460f-94c2-f41f53bd32f3",
+            "items": [
+                {
+                    "id": "https://liladude.github.io/Manifest_server/canvas/prv04f1e679-265e-460f-94c2-f41f53bd32f3/annotation-page",
+                    "items": [
+                        {
+                            "body": {
+                                "format": "image/jpeg",
+                                "height": 6914,
+                                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f89/full/full/0/native.jpg",
+                                "service": [
+                                    {
+                                        "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f89",
+                                        "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+                                        "type": "ImageService2"
+                                    }
+                                ],
+                                "type": "Image",
+                                "width": 4468
+                            },
+                            "id": "https://liladude.github.io/Manifest_server/annotation/prv04f1e679-265e-460f-94c2-f41f53bd32f3-image",
+                            "motivation": "painting",
+                            "target": "https://liladude.github.io/Manifest_server/canvas/prv04f1e679-265e-460f-94c2-f41f53bd32f3",
+                            "type": "Annotation"
+                        }
+                    ],
+                    "type": "AnnotationPage"
+                }
+            ],
+            "label": {
+                "none": [
+                    "75"
+                ]
+            },
+            "metadata": [
+                {
+                    "label": {
+                        "fr": [
+                            "Titre"
+                        ]
+                    },
+                    "value": {
+                        "fr": [
+                            "75"
+                        ]
+                    }
+                }
+            ],
+            "partOf": [
+                {
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/manifest.json",
+                    "label": {
+                        "none": [
+                            "Libro delle antiquit\u00e0 di Pyrrho Ligorio napoletano, nel quale paradossamente confuta la comune openione sopra varii et diversi luoghi della citta di Roma et fuor d'essa."
+                        ]
+                    },
+                    "type": "Manifest"
+                }
+            ],
+            "requiredStatement": {
+                "label": {
+                    "fr": [
+                        "Cr\u00e9dits du fichier num\u00e9rique"
+                    ]
+                },
+                "value": {
+                    "fr": [
+                        ""
+                    ]
+                }
+            },
+            "summary": {
+                "fr": [
+                    ""
+                ]
+            },
+            "thumbnail": [
+                {
+                    "format": "image/jpeg",
+                    "height": 300,
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f89/full/320,412/0/native.jpg",
+                    "type": "Image",
+                    "width": 200
+                }
+            ],
+            "type": "Canvas",
+            "width": 4468
+        },
+        {
+            "height": 6914,
+            "id": "https://liladude.github.io/Manifest_server/canvas/prvef341a77-f664-4a6b-84c0-e437f5280c5e",
+            "items": [
+                {
+                    "id": "https://liladude.github.io/Manifest_server/canvas/prvef341a77-f664-4a6b-84c0-e437f5280c5e/annotation-page",
+                    "items": [
+                        {
+                            "body": {
+                                "format": "image/jpeg",
+                                "height": 6914,
+                                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f117/full/full/0/native.jpg",
+                                "service": [
+                                    {
+                                        "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f117",
+                                        "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+                                        "type": "ImageService2"
+                                    }
+                                ],
+                                "type": "Image",
+                                "width": 4468
+                            },
+                            "id": "https://liladude.github.io/Manifest_server/annotation/prvef341a77-f664-4a6b-84c0-e437f5280c5e-image",
+                            "motivation": "painting",
+                            "target": "https://liladude.github.io/Manifest_server/canvas/prvef341a77-f664-4a6b-84c0-e437f5280c5e",
+                            "type": "Annotation"
+                        }
+                    ],
+                    "type": "AnnotationPage"
+                }
+            ],
+            "label": {
+                "none": [
+                    "103"
+                ]
+            },
+            "metadata": [
+                {
+                    "label": {
+                        "fr": [
+                            "Titre"
+                        ]
+                    },
+                    "value": {
+                        "fr": [
+                            "103"
+                        ]
+                    }
+                }
+            ],
+            "partOf": [
+                {
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/manifest.json",
+                    "label": {
+                        "none": [
+                            "Libro delle antiquit\u00e0 di Pyrrho Ligorio napoletano, nel quale paradossamente confuta la comune openione sopra varii et diversi luoghi della citta di Roma et fuor d'essa."
+                        ]
+                    },
+                    "type": "Manifest"
+                }
+            ],
+            "requiredStatement": {
+                "label": {
+                    "fr": [
+                        "Cr\u00e9dits du fichier num\u00e9rique"
+                    ]
+                },
+                "value": {
+                    "fr": [
+                        ""
+                    ]
+                }
+            },
+            "summary": {
+                "fr": [
+                    ""
+                ]
+            },
+            "thumbnail": [
+                {
+                    "format": "image/jpeg",
+                    "height": 300,
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f117/full/320,412/0/native.jpg",
+                    "type": "Image",
+                    "width": 200
+                }
+            ],
+            "type": "Canvas",
+            "width": 4468
+        },
+        {
+            "height": 6914,
+            "id": "https://liladude.github.io/Manifest_server/canvas/prvc3e99419-6247-41e4-9c6c-98c685f947ce",
+            "items": [
+                {
+                    "id": "https://liladude.github.io/Manifest_server/canvas/prvc3e99419-6247-41e4-9c6c-98c685f947ce/annotation-page",
+                    "items": [
+                        {
+                            "body": {
+                                "format": "image/jpeg",
+                                "height": 6914,
+                                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f137/full/full/0/native.jpg",
+                                "service": [
+                                    {
+                                        "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f137",
+                                        "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+                                        "type": "ImageService2"
+                                    }
+                                ],
+                                "type": "Image",
+                                "width": 4468
+                            },
+                            "id": "https://liladude.github.io/Manifest_server/annotation/prvc3e99419-6247-41e4-9c6c-98c685f947ce-image",
+                            "motivation": "painting",
+                            "target": "https://liladude.github.io/Manifest_server/canvas/prvc3e99419-6247-41e4-9c6c-98c685f947ce",
+                            "type": "Annotation"
+                        }
+                    ],
+                    "type": "AnnotationPage"
+                }
+            ],
+            "label": {
+                "none": [
+                    "123"
+                ]
+            },
+            "metadata": [
+                {
+                    "label": {
+                        "fr": [
+                            "Titre"
+                        ]
+                    },
+                    "value": {
+                        "fr": [
+                            "123"
+                        ]
+                    }
+                }
+            ],
+            "partOf": [
+                {
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/manifest.json",
+                    "label": {
+                        "none": [
+                            "Libro delle antiquit\u00e0 di Pyrrho Ligorio napoletano, nel quale paradossamente confuta la comune openione sopra varii et diversi luoghi della citta di Roma et fuor d'essa."
+                        ]
+                    },
+                    "type": "Manifest"
+                }
+            ],
+            "requiredStatement": {
+                "label": {
+                    "fr": [
+                        "Cr\u00e9dits du fichier num\u00e9rique"
+                    ]
+                },
+                "value": {
+                    "fr": [
+                        ""
+                    ]
+                }
+            },
+            "summary": {
+                "fr": [
+                    ""
+                ]
+            },
+            "thumbnail": [
+                {
+                    "format": "image/jpeg",
+                    "height": 300,
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f137/full/320,412/0/native.jpg",
+                    "type": "Image",
+                    "width": 200
+                }
+            ],
+            "type": "Canvas",
+            "width": 4468
+        },
+        {
+            "height": 6914,
+            "id": "https://liladude.github.io/Manifest_server/canvas/prva0f67041-f68f-4ea2-9b43-0495c6817d8c",
+            "items": [
+                {
+                    "id": "https://liladude.github.io/Manifest_server/canvas/prva0f67041-f68f-4ea2-9b43-0495c6817d8c/annotation-page",
+                    "items": [
+                        {
+                            "body": {
+                                "format": "image/jpeg",
+                                "height": 6914,
+                                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f140/full/full/0/native.jpg",
+                                "service": [
+                                    {
+                                        "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f140",
+                                        "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+                                        "type": "ImageService2"
+                                    }
+                                ],
+                                "type": "Image",
+                                "width": 4414
+                            },
+                            "id": "https://liladude.github.io/Manifest_server/annotation/prva0f67041-f68f-4ea2-9b43-0495c6817d8c-image",
+                            "motivation": "painting",
+                            "target": "https://liladude.github.io/Manifest_server/canvas/prva0f67041-f68f-4ea2-9b43-0495c6817d8c",
+                            "type": "Annotation"
+                        }
+                    ],
+                    "type": "AnnotationPage"
+                }
+            ],
+            "label": {
+                "none": [
+                    "126"
+                ]
+            },
+            "metadata": [
+                {
+                    "label": {
+                        "fr": [
+                            "Titre"
+                        ]
+                    },
+                    "value": {
+                        "fr": [
+                            "126"
+                        ]
+                    }
+                }
+            ],
+            "partOf": [
+                {
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/manifest.json",
+                    "label": {
+                        "none": [
+                            "Libro delle antiquit\u00e0 di Pyrrho Ligorio napoletano, nel quale paradossamente confuta la comune openione sopra varii et diversi luoghi della citta di Roma et fuor d'essa."
+                        ]
+                    },
+                    "type": "Manifest"
+                }
+            ],
+            "requiredStatement": {
+                "label": {
+                    "fr": [
+                        "Cr\u00e9dits du fichier num\u00e9rique"
+                    ]
+                },
+                "value": {
+                    "fr": [
+                        ""
+                    ]
+                }
+            },
+            "summary": {
+                "fr": [
+                    ""
+                ]
+            },
+            "thumbnail": [
+                {
+                    "format": "image/jpeg",
+                    "height": 300,
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f140/full/320,412/0/native.jpg",
+                    "type": "Image",
+                    "width": 200
+                }
+            ],
+            "type": "Canvas",
+            "width": 4414
+        },
+        {
+            "height": 6914,
+            "id": "https://liladude.github.io/Manifest_server/canvas/prvf6cb730a-5f2d-43d9-998c-a4571b6a85da",
+            "items": [
+                {
+                    "id": "https://liladude.github.io/Manifest_server/canvas/prvf6cb730a-5f2d-43d9-998c-a4571b6a85da/annotation-page",
+                    "items": [
+                        {
+                            "body": {
+                                "format": "image/jpeg",
+                                "height": 6914,
+                                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f172/full/full/0/native.jpg",
+                                "service": [
+                                    {
+                                        "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f172",
+                                        "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+                                        "type": "ImageService2"
+                                    }
+                                ],
+                                "type": "Image",
+                                "width": 4414
+                            },
+                            "id": "https://liladude.github.io/Manifest_server/annotation/prvf6cb730a-5f2d-43d9-998c-a4571b6a85da-image",
+                            "motivation": "painting",
+                            "target": "https://liladude.github.io/Manifest_server/canvas/prvf6cb730a-5f2d-43d9-998c-a4571b6a85da",
+                            "type": "Annotation"
+                        }
+                    ],
+                    "type": "AnnotationPage"
+                }
+            ],
+            "label": {
+                "none": [
+                    "158"
+                ]
+            },
+            "metadata": [
+                {
+                    "label": {
+                        "fr": [
+                            "Titre"
+                        ]
+                    },
+                    "value": {
+                        "fr": [
+                            "158"
+                        ]
+                    }
+                }
+            ],
+            "partOf": [
+                {
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/manifest.json",
+                    "label": {
+                        "none": [
+                            "Libro delle antiquit\u00e0 di Pyrrho Ligorio napoletano, nel quale paradossamente confuta la comune openione sopra varii et diversi luoghi della citta di Roma et fuor d'essa."
+                        ]
+                    },
+                    "type": "Manifest"
+                }
+            ],
+            "requiredStatement": {
+                "label": {
+                    "fr": [
+                        "Cr\u00e9dits du fichier num\u00e9rique"
+                    ]
+                },
+                "value": {
+                    "fr": [
+                        ""
+                    ]
+                }
+            },
+            "summary": {
+                "fr": [
+                    ""
+                ]
+            },
+            "thumbnail": [
+                {
+                    "format": "image/jpeg",
+                    "height": 300,
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f172/full/320,412/0/native.jpg",
+                    "type": "Image",
+                    "width": 200
+                }
+            ],
+            "type": "Canvas",
+            "width": 4414
+        },
+        {
+            "height": 6914,
+            "id": "https://liladude.github.io/Manifest_server/canvas/prv26452055-cd73-4ec2-8b5d-751b19a55b6a",
+            "items": [
+                {
+                    "id": "https://liladude.github.io/Manifest_server/canvas/prv26452055-cd73-4ec2-8b5d-751b19a55b6a/annotation-page",
+                    "items": [
+                        {
+                            "body": {
+                                "format": "image/jpeg",
+                                "height": 6914,
+                                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f182/full/full/0/native.jpg",
+                                "service": [
+                                    {
+                                        "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f182",
+                                        "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+                                        "type": "ImageService2"
+                                    }
+                                ],
+                                "type": "Image",
+                                "width": 4414
+                            },
+                            "id": "https://liladude.github.io/Manifest_server/annotation/prv26452055-cd73-4ec2-8b5d-751b19a55b6a-image",
+                            "motivation": "painting",
+                            "target": "https://liladude.github.io/Manifest_server/canvas/prv26452055-cd73-4ec2-8b5d-751b19a55b6a",
+                            "type": "Annotation"
+                        }
+                    ],
+                    "type": "AnnotationPage"
+                }
+            ],
+            "label": {
+                "none": [
+                    "168"
+                ]
+            },
+            "metadata": [
+                {
+                    "label": {
+                        "fr": [
+                            "Titre"
+                        ]
+                    },
+                    "value": {
+                        "fr": [
+                            "168"
+                        ]
+                    }
+                }
+            ],
+            "partOf": [
+                {
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/manifest.json",
+                    "label": {
+                        "none": [
+                            "Libro delle antiquit\u00e0 di Pyrrho Ligorio napoletano, nel quale paradossamente confuta la comune openione sopra varii et diversi luoghi della citta di Roma et fuor d'essa."
+                        ]
+                    },
+                    "type": "Manifest"
+                }
+            ],
+            "requiredStatement": {
+                "label": {
+                    "fr": [
+                        "Cr\u00e9dits du fichier num\u00e9rique"
+                    ]
+                },
+                "value": {
+                    "fr": [
+                        ""
+                    ]
+                }
+            },
+            "summary": {
+                "fr": [
+                    ""
+                ]
+            },
+            "thumbnail": [
+                {
+                    "format": "image/jpeg",
+                    "height": 300,
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f182/full/320,412/0/native.jpg",
+                    "type": "Image",
+                    "width": 200
+                }
+            ],
+            "type": "Canvas",
+            "width": 4414
+        },
+        {
+            "height": 6914,
+            "id": "https://liladude.github.io/Manifest_server/canvas/prv87b9f9fe-ed95-41b6-9b42-d439a41353e7",
+            "items": [
+                {
+                    "id": "https://liladude.github.io/Manifest_server/canvas/prv87b9f9fe-ed95-41b6-9b42-d439a41353e7/annotation-page",
+                    "items": [
+                        {
+                            "body": {
+                                "format": "image/jpeg",
+                                "height": 6914,
+                                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f183/full/full/0/native.jpg",
+                                "service": [
+                                    {
+                                        "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f183",
+                                        "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+                                        "type": "ImageService2"
+                                    }
+                                ],
+                                "type": "Image",
+                                "width": 4468
+                            },
+                            "id": "https://liladude.github.io/Manifest_server/annotation/prv87b9f9fe-ed95-41b6-9b42-d439a41353e7-image",
+                            "motivation": "painting",
+                            "target": "https://liladude.github.io/Manifest_server/canvas/prv87b9f9fe-ed95-41b6-9b42-d439a41353e7",
+                            "type": "Annotation"
+                        }
+                    ],
+                    "type": "AnnotationPage"
+                }
+            ],
+            "label": {
+                "none": [
+                    "169"
+                ]
+            },
+            "metadata": [
+                {
+                    "label": {
+                        "fr": [
+                            "Titre"
+                        ]
+                    },
+                    "value": {
+                        "fr": [
+                            "169"
+                        ]
+                    }
+                }
+            ],
+            "partOf": [
+                {
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/manifest.json",
+                    "label": {
+                        "none": [
+                            "Libro delle antiquit\u00e0 di Pyrrho Ligorio napoletano, nel quale paradossamente confuta la comune openione sopra varii et diversi luoghi della citta di Roma et fuor d'essa."
+                        ]
+                    },
+                    "type": "Manifest"
+                }
+            ],
+            "requiredStatement": {
+                "label": {
+                    "fr": [
+                        "Cr\u00e9dits du fichier num\u00e9rique"
+                    ]
+                },
+                "value": {
+                    "fr": [
+                        ""
+                    ]
+                }
+            },
+            "summary": {
+                "fr": [
+                    ""
+                ]
+            },
+            "thumbnail": [
+                {
+                    "format": "image/jpeg",
+                    "height": 300,
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f183/full/320,412/0/native.jpg",
+                    "type": "Image",
+                    "width": 200
+                }
+            ],
+            "type": "Canvas",
+            "width": 4468
+        },
+        {
+            "height": 4435,
+            "id": "https://liladude.github.io/Manifest_server/canvas/prv572c36f0-1b60-4b91-a668-b290dd24d033",
+            "items": [
+                {
+                    "id": "https://liladude.github.io/Manifest_server/canvas/prv572c36f0-1b60-4b91-a668-b290dd24d033/annotation-page",
+                    "items": [
+                        {
+                            "body": {
+                                "format": "image/jpeg",
+                                "height": 4435,
+                                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f193/full/full/0/native.jpg",
+                                "service": [
+                                    {
+                                        "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f193",
+                                        "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+                                        "type": "ImageService2"
+                                    }
+                                ],
+                                "type": "Image",
+                                "width": 3610
+                            },
+                            "id": "https://liladude.github.io/Manifest_server/annotation/prv572c36f0-1b60-4b91-a668-b290dd24d033-image",
+                            "motivation": "painting",
+                            "target": "https://liladude.github.io/Manifest_server/canvas/prv572c36f0-1b60-4b91-a668-b290dd24d033",
+                            "type": "Annotation"
+                        }
+                    ],
+                    "type": "AnnotationPage"
+                }
+            ],
+            "label": {
+                "none": [
+                    "179"
+                ]
+            },
+            "metadata": [
+                {
+                    "label": {
+                        "fr": [
+                            "Titre"
+                        ]
+                    },
+                    "value": {
+                        "fr": [
+                            "179"
+                        ]
+                    }
+                }
+            ],
+            "partOf": [
+                {
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/manifest.json",
+                    "label": {
+                        "none": [
+                            "Libro delle antiquit\u00e0 di Pyrrho Ligorio napoletano, nel quale paradossamente confuta la comune openione sopra varii et diversi luoghi della citta di Roma et fuor d'essa."
+                        ]
+                    },
+                    "type": "Manifest"
+                }
+            ],
+            "requiredStatement": {
+                "label": {
+                    "fr": [
+                        "Cr\u00e9dits du fichier num\u00e9rique"
+                    ]
+                },
+                "value": {
+                    "fr": [
+                        ""
+                    ]
+                }
+            },
+            "summary": {
+                "fr": [
+                    ""
+                ]
+            },
+            "thumbnail": [
+                {
+                    "format": "image/jpeg",
+                    "height": 300,
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f193/full/320,412/0/native.jpg",
+                    "type": "Image",
+                    "width": 200
+                }
+            ],
+            "type": "Canvas",
+            "width": 3610
+        },
+        {
+            "height": 6914,
+            "id": "https://liladude.github.io/Manifest_server/canvas/prv22830974-000d-4144-af42-34439a692094",
+            "items": [
+                {
+                    "id": "https://liladude.github.io/Manifest_server/canvas/prv22830974-000d-4144-af42-34439a692094/annotation-page",
+                    "items": [
+                        {
+                            "body": {
+                                "format": "image/jpeg",
+                                "height": 6914,
+                                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f195/full/full/0/native.jpg",
+                                "service": [
+                                    {
+                                        "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f195",
+                                        "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+                                        "type": "ImageService2"
+                                    }
+                                ],
+                                "type": "Image",
+                                "width": 4173
+                            },
+                            "id": "https://liladude.github.io/Manifest_server/annotation/prv22830974-000d-4144-af42-34439a692094-image",
+                            "motivation": "painting",
+                            "target": "https://liladude.github.io/Manifest_server/canvas/prv22830974-000d-4144-af42-34439a692094",
+                            "type": "Annotation"
+                        }
+                    ],
+                    "type": "AnnotationPage"
+                }
+            ],
+            "label": {
+                "none": [
+                    "181"
+                ]
+            },
+            "metadata": [
+                {
+                    "label": {
+                        "fr": [
+                            "Titre"
+                        ]
+                    },
+                    "value": {
+                        "fr": [
+                            "181"
+                        ]
+                    }
+                }
+            ],
+            "partOf": [
+                {
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/manifest.json",
+                    "label": {
+                        "none": [
+                            "Libro delle antiquit\u00e0 di Pyrrho Ligorio napoletano, nel quale paradossamente confuta la comune openione sopra varii et diversi luoghi della citta di Roma et fuor d'essa."
+                        ]
+                    },
+                    "type": "Manifest"
+                }
+            ],
+            "requiredStatement": {
+                "label": {
+                    "fr": [
+                        "Cr\u00e9dits du fichier num\u00e9rique"
+                    ]
+                },
+                "value": {
+                    "fr": [
+                        ""
+                    ]
+                }
+            },
+            "summary": {
+                "fr": [
+                    ""
+                ]
+            },
+            "thumbnail": [
+                {
+                    "format": "image/jpeg",
+                    "height": 300,
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f195/full/320,412/0/native.jpg",
+                    "type": "Image",
+                    "width": 200
+                }
+            ],
+            "type": "Canvas",
+            "width": 4173
+        },
+        {
+            "height": 26700,
+            "id": "https://liladude.github.io/Manifest_server/canvas/prv22aa0d6e-9e2f-4412-9185-d41e4508cdb2",
+            "items": [
+                {
+                    "id": "https://liladude.github.io/Manifest_server/canvas/prv22aa0d6e-9e2f-4412-9185-d41e4508cdb2/annotation-page",
+                    "items": [
+                        {
+                            "body": {
+                                "format": "image/jpeg",
+                                "height": 26700,
+                                "id": "https://dlib2.biblhertz.it/iiif/3/dg1403481c@0001.jp2/full/max/0/default.jpg",
+                                "service": [
+                                    {
+                                        "id": "https://dlib2.biblhertz.it/iiif/3/dg1403481c@0001.jp2",
+                                        "profile": "level2",
+                                        "type": "ImageService3"
+                                    }
+                                ],
+                                "type": "Image",
+                                "width": 32325
+                            },
+                            "id": "https://liladude.github.io/Manifest_server/annotation/prv22aa0d6e-9e2f-4412-9185-d41e4508cdb2-image",
+                            "motivation": "painting",
+                            "target": "https://liladude.github.io/Manifest_server/canvas/prv22aa0d6e-9e2f-4412-9185-d41e4508cdb2",
+                            "type": "Annotation"
+                        }
+                    ],
+                    "type": "AnnotationPage"
+                }
+            ],
+            "label": {
+                "none": [
+                    "1"
+                ]
+            },
+            "metadata": [
+                {
+                    "label": {
+                        "fr": [
+                            "Titre"
+                        ]
+                    },
+                    "value": {
+                        "fr": [
+                            "1"
+                        ]
+                    }
+                }
+            ],
+            "partOf": [
+                {
+                    "id": "https://dlib.biblhertz.it/iiif/dg1403481c/manifest.json",
+                    "label": {
+                        "none": [
+                            "Nuova Pianta Di Roma"
+                        ]
+                    },
+                    "type": "Manifest"
+                }
+            ],
+            "requiredStatement": {
+                "label": {
+                    "fr": [
+                        "Cr\u00e9dits du fichier num\u00e9rique"
+                    ]
+                },
+                "value": {
+                    "fr": [
+                        ""
+                    ]
+                }
+            },
+            "summary": {
+                "fr": [
+                    ""
+                ]
+            },
+            "thumbnail": [
+                {
+                    "format": "image/jpeg",
+                    "height": 300,
+                    "id": "https://dlib2.biblhertz.it/iiif/3/dg1403481c@0001.jp2/full/max/0/default.jpg",
+                    "type": "Image",
+                    "width": 200
+                }
+            ],
+            "type": "Canvas",
+            "width": 32325
         }
-      ],
-      "type": "Range"
-    }
-  ]
+    ],
+    "label": {
+        "fr": [
+            "Pirro Ligorio"
+        ]
+    },
+    "metadata": [
+        {
+            "label": {
+                "none": [
+                    "Date de cr\u00e9ation"
+                ]
+            },
+            "value": {
+                "none": [
+                    "2025-05-22T07:40:15.867Z"
+                ]
+            }
+        },
+        {
+            "label": {
+                "none": [
+                    "Auteur"
+                ]
+            },
+            "value": {
+                "none": [
+                    "Elisa Bastianello"
+                ]
+            }
+        }
+    ],
+    "structures": [
+        {
+            "id": "https://liladude.github.io/Manifest_server/range/r0",
+            "items": [
+                {
+                    "annotations": [
+                        {
+                            "id": "https://liladude.github.io/Manifest_server/rprv8da31386-5ea0-430e-bbc0-137f723e149f_annotations",
+                            "type": "AnnotationPage"
+                        }
+                    ],
+                    "id": "https://liladude.github.io/Manifest_server/rprv8da31386-5ea0-430e-bbc0-137f723e149f",
+                    "items": [
+                        {
+                            "id": "https://liladude.github.io/Manifest_server/canvas/prv63d3b1ac-cb76-47d3-a4e0-ba0cec2e08f4",
+                            "label": {
+                                "fr": [
+                                    ""
+                                ]
+                            },
+                            "type": "Canvas"
+                        },
+                        {
+                            "id": "https://liladude.github.io/Manifest_server/canvas/prva03acdd0-9c92-429f-a22d-f10aefb10260",
+                            "label": {
+                                "fr": [
+                                    ""
+                                ]
+                            },
+                            "type": "Canvas"
+                        }
+                    ],
+                    "label": {
+                        "none": [
+                            "Paris"
+                        ]
+                    },
+                    "type": "Range"
+                },
+                {
+                    "annotations": [
+                        {
+                            "id": "https://liladude.github.io/Manifest_server/rprv5b2ad1a2-fb76-4fa6-a417-7f0e29490b88_annotations.json",
+                            "type": "AnnotationPage"
+                        }
+                    ],
+                    "id": "https://liladude.github.io/Manifest_server/rprv5b2ad1a2-fb76-4fa6-a417-7f0e29490b88",
+                    "items": [
+                        {
+                            "id": "https://liladude.github.io/Manifest_server/canvas/prv22aa0d6e-9e2f-4412-9185-d41e4508cdb2",
+                            "label": {
+                                "fr": [
+                                    ""
+                                ]
+                            },
+                            "type": "Canvas"
+                        }
+                    ],
+                    "label": {
+                        "none": [
+                            "Map"
+                        ]
+                    },
+                    "type": "Range"
+                }
+            ],
+            "type": "Range"
+        }
+    ],
+    "type": "Manifest"
 }
