@@ -1,0 +1,425 @@
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "https://liladude.github.io/Manifest_server/manifest.json",
+  "type": "Manifest",
+  "label": {
+    "fr": [
+      "Pirro Ligorio - Example with Embedded Annotations"
+    ]
+  },
+  "version": "3.0",
+  "summary": {
+    "fr": [
+      "Example with three annotated images from Pirro Ligorio's work with embedded annotations"
+    ]
+  },
+  "metadata": [
+    {
+      "label": {
+        "none": [
+          "Date de création"
+        ]
+      },
+      "value": {
+        "none": [
+          "2025-05-22"
+        ]
+      }
+    },
+    {
+      "label": {
+        "none": [
+          "Auteur"
+        ]
+      },
+      "value": {
+        "none": [
+          "Elisa Bastianello"
+        ]
+      }
+    }
+  ],
+  "items": [
+    {
+      "height": 6914,
+      "id": "https://liladude.github.io/Manifest_server/canvas/prv63d3b1ac-cb76-47d3-a4e0-ba0cec2e08f4",
+      "items": [
+        {
+          "id": "https://liladude.github.io/Manifest_server/canvas/prv63d3b1ac-cb76-47d3-a4e0-ba0cec2e08f4/annotation-page",
+          "items": [
+            {
+              "body": {
+                "format": "image/jpeg",
+                "height": 6914,
+                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f74/full/full/0/native.jpg",
+                "service": [
+                  {
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f74",
+                    "profile": "http://iiif.io/api/image/2/level2",
+                    "type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "width": 4414
+              },
+              "id": "https://liladude.github.io/Manifest_server/canvas/prv63d3b1ac-cb76-47d3-a4e0-ba0cec2e08f4/annotation-image",
+              "motivation": "painting",
+              "target": "https://liladude.github.io/Manifest_server/canvas/prv63d3b1ac-cb76-47d3-a4e0-ba0cec2e08f4",
+              "type": "Annotation"
+            }
+          ],
+          "type": "AnnotationPage"
+        }
+      ],
+      "annotations": [
+        {
+          "id": "https://liladude.github.io/Manifest_server/canvas/prv63d3b1ac-cb76-47d3-a4e0-ba0cec2e08f4/comments",
+          "items": [
+            {
+              "id": "https://liladude.github.io/Manifest_server/annotation/2fa11cd9-44bf-496a-a3db-04ca7b57a5a6",
+              "type": "Annotation",
+              "motivation": "commenting",
+              "body": {
+                "type": "TextualBody",
+                "language": "fr",
+                "format": "text/html",
+                "value": "Map from Paris Manuscript"
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": "https://liladude.github.io/Manifest_server/canvas/prv63d3b1ac-cb76-47d3-a4e0-ba0cec2e08f4",
+                "selector": {
+                  "type": "FragmentSelector",
+                  "conformsTo": "http://www.w3.org/TR/media-frags/",
+                  "value": "xywh=pixel:617.9478468231815,2470.691942487755,3557.6981079598804,3462.4021447188625"
+                }
+              }
+            }
+          ],
+          "type": "AnnotationPage"
+        }
+      ],
+      "label": {
+        "none": [
+          "Paris Manuscript Folio 60"
+        ]
+      },
+      "metadata": [
+        {
+          "label": {
+            "fr": [
+              "Titre"
+            ]
+          },
+          "value": {
+            "fr": [
+              "60"
+            ]
+          }
+        }
+      ],
+      "requiredStatement": {
+        "label": {
+          "fr": [
+            "Crédits du fichier numérique"
+          ]
+        },
+        "value": {
+          "fr": [
+            "Source: Bibliothèque nationale de France"
+          ]
+        }
+      },
+      "summary": {
+        "fr": [
+          "Folio 60 of Pirro Ligorio's manuscript"
+        ]
+      },
+      "thumbnail": [
+        {
+          "format": "image/jpeg",
+          "height": 300,
+          "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f74/full/320,412/0/native.jpg",
+          "type": "Image",
+          "width": 200
+        }
+      ],
+      "type": "Canvas",
+      "width": 4414
+    },
+    {
+      "height": 6914,
+      "id": "https://liladude.github.io/Manifest_server/canvas/prva03acdd0-9c92-429f-a22d-f10aefb10260",
+      "items": [
+        {
+          "id": "https://liladude.github.io/Manifest_server/canvas/prva03acdd0-9c92-429f-a22d-f10aefb10260/annotation-page",
+          "items": [
+            {
+              "body": {
+                "format": "image/jpeg",
+                "height": 6914,
+                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f79/full/full/0/native.jpg",
+                "service": [
+                  {
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f79",
+                    "profile": "http://iiif.io/api/image/2/level2",
+                    "type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "width": 4468
+              },
+              "id": "https://liladude.github.io/Manifest_server/canvas/prva03acdd0-9c92-429f-a22d-f10aefb10260/annotation-image",
+              "motivation": "painting",
+              "target": "https://liladude.github.io/Manifest_server/canvas/prva03acdd0-9c92-429f-a22d-f10aefb10260",
+              "type": "Annotation"
+            }
+          ],
+          "type": "AnnotationPage"
+        }
+      ],
+      "annotations": [
+        {
+          "id": "https://liladude.github.io/Manifest_server/canvas/prva03acdd0-9c92-429f-a22d-f10aefb10260/comments",
+          "items": [
+            {
+              "id": "https://liladude.github.io/Manifest_server/annotation/c9cb400a-ef4a-4f3b-81d0-a0924fe8dee0",
+              "type": "Annotation",
+              "motivation": "commenting",
+              "body": {
+                "type": "TextualBody",
+                "language": "fr",
+                "format": "text/html",
+                "value": "Draft"
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": "https://liladude.github.io/Manifest_server/canvas/prva03acdd0-9c92-429f-a22d-f10aefb10260",
+                "selector": {
+                  "type": "FragmentSelector",
+                  "conformsTo": "http://www.w3.org/TR/media-frags/",
+                  "value": "xywh=pixel:1045.3374612119035,3138.609259965823,823.0923827233862,1093.7417267228166"
+                }
+              }
+            },
+            {
+              "id": "https://liladude.github.io/Manifest_server/annotation/05fb76c8-1ac3-492a-91d8-64b20e603edf",
+              "type": "Annotation",
+              "motivation": "commenting",
+              "body": {
+                "type": "TextualBody",
+                "language": "fr",
+                "format": "text/html",
+                "value": "Table"
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": "https://liladude.github.io/Manifest_server/canvas/prva03acdd0-9c92-429f-a22d-f10aefb10260",
+                "selector": {
+                  "type": "FragmentSelector",
+                  "conformsTo": "http://www.w3.org/TR/media-frags/",
+                  "value": "xywh=pixel:2175.043318912447,3038.500798083626,1843.217443786873,1251.737233972572"
+                }
+              }
+            },
+            {
+              "id": "https://liladude.github.io/Manifest_server/annotation/41858275-c046-4eb2-b063-579819936ebb",
+              "type": "Annotation",
+              "motivation": "commenting",
+              "body": {
+                "type": "TextualBody",
+                "language": "fr",
+                "format": "text/html",
+                "value": "Fascio Littorio"
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": "https://liladude.github.io/Manifest_server/canvas/prva03acdd0-9c92-429f-a22d-f10aefb10260",
+                "selector": {
+                  "type": "FragmentSelector",
+                  "conformsTo": "http://www.w3.org/TR/media-frags/",
+                  "value": "xywh=pixel:3843.634550689338,2690.0233607922455,451.61584702699156,2781.0023921310667"
+                }
+              }
+            }
+          ],
+          "type": "AnnotationPage"
+        }
+      ],
+      "label": {
+        "none": [
+          "Paris Manuscript Folio 65"
+        ]
+      },
+      "metadata": [
+        {
+          "label": {
+            "fr": [
+              "Titre"
+            ]
+          },
+          "value": {
+            "fr": [
+              "65"
+            ]
+          }
+        }
+      ],
+      "requiredStatement": {
+        "label": {
+          "fr": [
+            "Crédits du fichier numérique"
+          ]
+        },
+        "value": {
+          "fr": [
+            "Source: Bibliothèque nationale de France"
+          ]
+        }
+      },
+      "summary": {
+        "fr": [
+          "Folio 65 of Pirro Ligorio's manuscript"
+        ]
+      },
+      "thumbnail": [
+        {
+          "format": "image/jpeg",
+          "height": 300,
+          "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52512289f/f79/full/320,412/0/native.jpg",
+          "type": "Image",
+          "width": 200
+        }
+      ],
+      "type": "Canvas",
+      "width": 4468
+    },
+    {
+      "height": 26700,
+      "id": "https://liladude.github.io/Manifest_server/canvas/prv22aa0d6e-9e2f-4412-9185-d41e4508cdb2",
+      "items": [
+        {
+          "id": "https://liladude.github.io/Manifest_server/canvas/prv22aa0d6e-9e2f-4412-9185-d41e4508cdb2/annotation-page",
+          "items": [
+            {
+              "body": {
+                "format": "image/jpeg",
+                "height": 26700,
+                "id": "https://dlib2.biblhertz.it/iiif/3/dg1403481c@0001.jp2/full/max/0/default.jpg",
+                "service": [
+                  {
+                    "id": "https://dlib2.biblhertz.it/iiif/3/dg1403481c@0001.jp2",
+                    "profile": "http://iiif.io/api/image/3/level2",
+                    "type": "ImageService3"
+                  }
+                ],
+                "type": "Image",
+                "width": 32325
+              },
+              "id": "https://liladude.github.io/Manifest_server/canvas/prv22aa0d6e-9e2f-4412-9185-d41e4508cdb2/annotation-image",
+              "motivation": "painting",
+              "target": "https://liladude.github.io/Manifest_server/canvas/prv22aa0d6e-9e2f-4412-9185-d41e4508cdb2",
+              "type": "Annotation"
+            }
+          ],
+          "type": "AnnotationPage"
+        }
+      ],
+      "annotations": [
+        {
+          "id": "https://liladude.github.io/Manifest_server/canvas/prv22aa0d6e-9e2f-4412-9185-d41e4508cdb2/comments",
+          "items": [
+            {
+              "id": "https://liladude.github.io/Manifest_server/annotation/12941976-2e8a-4dd9-9487-ba27df44bc38",
+              "type": "Annotation",
+              "motivation": "commenting",
+              "body": {
+                "type": "TextualBody",
+                "language": "fr",
+                "format": "text/html",
+                "value": "Palazzo Colonna"
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": "https://liladude.github.io/Manifest_server/canvas/prv22aa0d6e-9e2f-4412-9185-d41e4508cdb2",
+                "selector": {
+                  "type": "FragmentSelector",
+                  "conformsTo": "http://www.w3.org/TR/media-frags/",
+                  "value": "xywh=pixel:16637.284733203996,9686.980256329518,443.31944768749963,476.9042556245913"
+                }
+              }
+            },
+            {
+              "id": "https://liladude.github.io/Manifest_server/annotation/3595b08c-26a3-4aba-83bc-6c4c1db87642",
+              "type": "Annotation",
+              "motivation": "commenting",
+              "body": {
+                "type": "TextualBody",
+                "language": "fr",
+                "format": "text/html",
+                "value": "Santi Apostoli"
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": "https://liladude.github.io/Manifest_server/canvas/prv22aa0d6e-9e2f-4412-9185-d41e4508cdb2",
+                "selector": {
+                  "type": "FragmentSelector",
+                  "conformsTo": "http://www.w3.org/TR/media-frags/",
+                  "value": "xywh=pixel:16474.117501636232,9372.55023767323,578.8357742280423,338.2570542169633"
+                }
+              }
+            }
+          ],
+          "type": "AnnotationPage"
+        }
+      ],
+      "label": {
+        "none": [
+          "Map of Rome"
+        ]
+      },
+      "metadata": [
+        {
+          "label": {
+            "fr": [
+              "Titre"
+            ]
+          },
+          "value": {
+            "fr": [
+              "Nuova Pianta Di Roma"
+            ]
+          }
+        }
+      ],
+      "requiredStatement": {
+        "label": {
+          "fr": [
+            "Crédits du fichier numérique"
+          ]
+        },
+        "value": {
+          "fr": [
+            "Source: Bibliotheca Hertziana"
+          ]
+        }
+      },
+      "summary": {
+        "fr": [
+          "Map of Rome by Pirro Ligorio"
+        ]
+      },
+      "thumbnail": [
+        {
+          "format": "image/jpeg",
+          "height": 300,
+          "id": "https://dlib2.biblhertz.it/iiif/3/dg1403481c@0001.jp2/full/max/0/default.jpg",
+          "type": "Image",
+          "width": 200
+        }
+      ],
+      "type": "Canvas",
+      "width": 32325
+    }
+  ]
+}
