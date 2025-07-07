@@ -1,0 +1,219 @@
+{
+  "@context": [
+    "http://iiif.io/api/presentation/3/context.json"
+  ],
+  "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison.json",
+  "type": "Manifest",
+  "label": {
+    "it": ["Confronto: Garofalo e Ligorio - Dal Trionfo di Bacco ai disegni derivati"],
+    "en": ["Comparison: Garofalo and Ligorio - From Triumph of Bacchus to Derived Drawings"]
+  },
+  "metadata": [
+    {
+      "label": {"it": ["Autore"], "en": ["Author"]},
+      "value": {"it": ["Cecilia Vicentini"], "en": ["Cecilia Vicentini"]}
+    },
+    {
+      "label": {"it": ["Soggetto"], "en": ["Subject"]},
+      "value": {"it": ["Pirro Ligorio, Garofalo, Trionfo di Bacco, disegni derivati"], "en": ["Pirro Ligorio, Garofalo, Triumph of Bacchus, derived drawings"]}
+    },
+    {
+      "label": {"it": ["Tipo di composizione"], "en": ["Composition Type"]},
+      "value": {"it": ["Storyboard comparativo"], "en": ["Comparative Storyboard"]}
+    }
+  ],
+  "summary": {
+    "it": ["Analisi visiva della trasformazione del modello raffaellesco attraverso Garofalo fino alle rielaborazioni grafiche di Pirro Ligorio a Ferrara"],
+    "en": ["Visual analysis of the transformation of Raphael's model through Garofalo to Pirro Ligorio's graphic reworkings in Ferrara"]
+  },
+  "viewingHint": "individuals",
+  "behavior": ["multi-part"],
+  "items": [
+    {
+      "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard",
+      "type": "Canvas",
+      "label": {
+        "it": ["Storyboard: Evoluzione iconografica"],
+        "en": ["Storyboard: Iconographic Evolution"]
+      },
+      "width": 2400,
+      "height": 1600,
+      "items": [
+        {
+          "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard/page1",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/annotation/fig9",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": {
+                "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard#xywh=0,0,2400,1000",
+                "type": "SpecificResource",
+                "source": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard"
+              },
+              "body": {
+                "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_09.jp2/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "width": 2400,
+                "height": 1000,
+                "label": {
+                  "it": ["Fig. 9: Garofalo, Trionfo di Bacco, 1540 (Fonte principale)"],
+                  "en": ["Fig. 9: Garofalo, Triumph of Bacchus, 1540 (Main Source)"]
+                },
+                "service": [
+                  {
+                    "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_09.jp2",
+                    "type": "ImageService3",
+                    "profile": "level2"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/annotation/fig10",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": {
+                "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard#xywh=0,1000,800,600",
+                "type": "SpecificResource",
+                "source": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard"
+              },
+              "body": {
+                "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_10.jp2/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "width": 800,
+                "height": 600,
+                "label": {
+                  "it": ["Fig. 10: Ligorio, Vol. 30, c. 47r (Sileno e aiutante)"],
+                  "en": ["Fig. 10: Ligorio, Vol. 30, f. 47r (Silenus and helper)"]
+                },
+                "service": [
+                  {
+                    "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_10.jp2",
+                    "type": "ImageService3",
+                    "profile": "level2"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/annotation/fig11",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": {
+                "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard#xywh=800,1000,800,600",
+                "type": "SpecificResource",
+                "source": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard"
+              },
+              "body": {
+                "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_11.jp2/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "width": 800,
+                "height": 600,
+                "label": {
+                  "it": ["Fig. 11: Ligorio, Vol. 30, c. 54r (Elefante e condottieri)"],
+                  "en": ["Fig. 11: Ligorio, Vol. 30, f. 54r (Elephant and commanders)"]
+                },
+                "service": [
+                  {
+                    "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_11.jp2",
+                    "type": "ImageService3",
+                    "profile": "level2"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/annotation/fig12",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": {
+                "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard#xywh=1600,1000,800,600",
+                "type": "SpecificResource",
+                "source": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard"
+              },
+              "body": {
+                "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_12.jp2/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "width": 800,
+                "height": 600,
+                "label": {
+                  "it": ["Fig. 12: Ligorio, Vol. 30, c. 53r (Satiro barbuto)"],
+                  "en": ["Fig. 12: Ligorio, Vol. 30, f. 53r (Bearded Satyr)"]
+                },
+                "service": [
+                  {
+                    "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_12.jp2",
+                    "type": "ImageService3",
+                    "profile": "level2"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "annotations": [
+        {
+          "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard/annotations",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/annotation/scholarly-note-1",
+              "type": "Annotation",
+              "motivation": "commenting",
+              "target": {
+                "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard#xywh=800,400,800,200",
+                "type": "SpecificResource",
+                "source": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard"
+              },
+              "body": {
+                "type": "TextualBody",
+                "value": "Fonte principale: il dipinto di Garofalo deriva dal disegno raffaellesco e diventa matrice per le rielaborazioni di Ligorio",
+                "format": "text/plain",
+                "language": "it"
+              }
+            },
+            {
+              "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/annotation/scholarly-note-2",
+              "type": "Annotation",
+              "motivation": "commenting",
+              "target": {
+                "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard#xywh=400,1200,1600,200",
+                "type": "SpecificResource",
+                "source": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard"
+              },
+              "body": {
+                "type": "TextualBody",
+                "value": "Tre derivazioni ligoriane: isolamento e reinterpretazione michelangiolesca delle figure centrali",
+                "format": "text/plain",
+                "language": "it"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "structures": [
+    {
+      "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/range/comparative-analysis",
+      "type": "Range",
+      "label": {
+        "it": ["Analisi comparativa"],
+        "en": ["Comparative Analysis"]
+      },
+      "items": [
+        {
+          "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard",
+          "type": "Canvas"
+        }
+      ]
+    }
+  ]
+}
