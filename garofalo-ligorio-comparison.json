@@ -35,8 +35,8 @@
         "it": ["Storyboard: Evoluzione iconografica"],
         "en": ["Storyboard: Iconographic Evolution"]
       },
-      "width": 2400,
-      "height": 1600,
+      "width": 3467,
+      "height": 2437,
       "items": [
         {
           "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard/page1",
@@ -47,7 +47,7 @@
               "type": "Annotation",
               "motivation": "painting",
               "target": {
-                "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard#xywh=0,0,2400,1000",
+                "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard#xywh=0,0,3467,719",
                 "type": "SpecificResource",
                 "source": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard"
               },
@@ -55,8 +55,8 @@
                 "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_09.jp2/full/max/0/default.jpg",
                 "type": "Image",
                 "format": "image/jpeg",
-                "width": 2400,
-                "height": 1000,
+                "width": 1000,
+                "height": 693,
                 "label": {
                   "it": ["Fig. 9: Garofalo, Trionfo di Bacco, 1540 (Fonte principale)"],
                   "en": ["Fig. 9: Garofalo, Triumph of Bacchus, 1540 (Main Source)"]
@@ -75,7 +75,7 @@
               "type": "Annotation",
               "motivation": "painting",
               "target": {
-                "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard#xywh=0,1000,800,600",
+                "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard#xywh=0,719,1155,1718",
                 "type": "SpecificResource",
                 "source": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard"
               },
@@ -83,8 +83,8 @@
                 "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_10.jp2/full/max/0/default.jpg",
                 "type": "Image",
                 "format": "image/jpeg",
-                "width": 800,
-                "height": 600,
+                "width": 3410,
+                "height": 5073,
                 "label": {
                   "it": ["Fig. 10: Ligorio, Vol. 30, c. 47r (Sileno e aiutante)"],
                   "en": ["Fig. 10: Ligorio, Vol. 30, f. 47r (Silenus and helper)"]
@@ -103,7 +103,7 @@
               "type": "Annotation",
               "motivation": "painting",
               "target": {
-                "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard#xywh=800,1000,800,600",
+                "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard#xywh=1155,719,1155,1718",
                 "type": "SpecificResource",
                 "source": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard"
               },
@@ -111,8 +111,8 @@
                 "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_11.jp2/full/max/0/default.jpg",
                 "type": "Image",
                 "format": "image/jpeg",
-                "width": 800,
-                "height": 600,
+                "width": 3467,
+                "height": 5042,
                 "label": {
                   "it": ["Fig. 11: Ligorio, Vol. 30, c. 54r (Elefante e condottieri)"],
                   "en": ["Fig. 11: Ligorio, Vol. 30, f. 54r (Elephant and commanders)"]
@@ -131,7 +131,7 @@
               "type": "Annotation",
               "motivation": "painting",
               "target": {
-                "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard#xywh=1600,1000,800,600",
+                "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard#xywh=2310,719,1155,1718",
                 "type": "SpecificResource",
                 "source": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard"
               },
@@ -139,8 +139,8 @@
                 "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_12.jp2/full/max/0/default.jpg",
                 "type": "Image",
                 "format": "image/jpeg",
-                "width": 800,
-                "height": 600,
+                "width": 3432,
+                "height": 5018,
                 "label": {
                   "it": ["Fig. 12: Ligorio, Vol. 30, c. 53r (Satiro barbuto)"],
                   "en": ["Fig. 12: Ligorio, Vol. 30, f. 53r (Bearded Satyr)"]
@@ -167,7 +167,7 @@
               "type": "Annotation",
               "motivation": "commenting",
               "target": {
-                "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard#xywh=800,400,800,200",
+                "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard#xywh=867,200,1733,300",
                 "type": "SpecificResource",
                 "source": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard"
               },
@@ -183,7 +183,7 @@
               "type": "Annotation",
               "motivation": "commenting",
               "target": {
-                "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard#xywh=400,1200,1600,200",
+                "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard#xywh=0,1500,3467,200",
                 "type": "SpecificResource",
                 "source": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard"
               },
