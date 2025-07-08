@@ -36,7 +36,7 @@
         "en": ["Storyboard: Iconographic Evolution"]
       },
       "width": 3467,
-      "height": 2437,
+      "height": 2600,
       "items": [
         {
           "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard/page1",
@@ -47,7 +47,7 @@
               "type": "Annotation",
               "motivation": "painting",
               "target": {
-                "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard#xywh=0,0,3467,719",
+                "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard#xywh=600,50,2267,1572",
                 "type": "SpecificResource",
                 "source": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard"
               },
@@ -75,7 +75,7 @@
               "type": "Annotation",
               "motivation": "painting",
               "target": {
-                "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard#xywh=0,719,1155,1718",
+                "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard#xywh=0,1650,1155,950",
                 "type": "SpecificResource",
                 "source": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard"
               },
@@ -103,7 +103,7 @@
               "type": "Annotation",
               "motivation": "painting",
               "target": {
-                "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard#xywh=1155,719,1155,1718",
+                "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard#xywh=1155,1650,1155,950",
                 "type": "SpecificResource",
                 "source": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard"
               },
@@ -131,7 +131,7 @@
               "type": "Annotation",
               "motivation": "painting",
               "target": {
-                "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard#xywh=2310,719,1155,1718",
+                "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard#xywh=2310,1650,1157,950",
                 "type": "SpecificResource",
                 "source": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard"
               },
@@ -167,7 +167,7 @@
               "type": "Annotation",
               "motivation": "commenting",
               "target": {
-                "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard#xywh=867,200,1733,300",
+                "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard#xywh=600,800,2267,200",
                 "type": "SpecificResource",
                 "source": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard"
               },
@@ -183,7 +183,7 @@
               "type": "Annotation",
               "motivation": "commenting",
               "target": {
-                "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard#xywh=0,1500,3467,200",
+                "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard#xywh=200,2000,3067,200",
                 "type": "SpecificResource",
                 "source": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard"
               },
