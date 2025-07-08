@@ -1,0 +1,169 @@
+{
+  "@context": [
+    "http://iiif.io/api/presentation/3/context.json"
+  ],
+  "id": "https://liladude.github.io/Manifest_server/basic-garofalo-ligorio.json",
+  "type": "Manifest",
+  "label": {
+    "it": ["Test Sequenziale: Garofalo e Ligorio"],
+    "en": ["Sequential Test: Garofalo and Ligorio"]
+  },
+  "summary": {
+    "it": ["Manifest di test per verificare l'accesso alle immagini"],
+    "en": ["Test manifest to verify image access"]
+  },
+  "items": [
+    {
+      "id": "https://liladude.github.io/Manifest_server/basic-garofalo-ligorio/canvas/fig9",
+      "type": "Canvas",
+      "label": {
+        "it": ["Fig. 9: Garofalo, Trionfo di Bacco, 1540"],
+        "en": ["Fig. 9: Garofalo, Triumph of Bacchus, 1540"]
+      },
+      "width": 1000,
+      "height": 693,
+      "items": [
+        {
+          "id": "https://liladude.github.io/Manifest_server/basic-garofalo-ligorio/canvas/fig9/page1",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://liladude.github.io/Manifest_server/basic-garofalo-ligorio/annotation/fig9-image",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": "https://liladude.github.io/Manifest_server/basic-garofalo-ligorio/canvas/fig9",
+              "body": {
+                "id": "https://hertz-foto-os1.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_09.jp2/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "width": 1000,
+                "height": 693,
+                "service": [
+                  {
+                    "id": "https://hertz-foto-os1.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_09.jp2",
+                    "type": "ImageService3",
+                    "profile": "level2"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://liladude.github.io/Manifest_server/basic-garofalo-ligorio/canvas/fig10",
+      "type": "Canvas",
+      "label": {
+        "it": ["Fig. 10: Ligorio, Vol. 30, c. 47r"],
+        "en": ["Fig. 10: Ligorio, Vol. 30, f. 47r"]
+      },
+      "width": 3410,
+      "height": 5073,
+      "items": [
+        {
+          "id": "https://liladude.github.io/Manifest_server/basic-garofalo-ligorio/canvas/fig10/page1",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://liladude.github.io/Manifest_server/basic-garofalo-ligorio/annotation/fig10-image",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": "https://liladude.github.io/Manifest_server/basic-garofalo-ligorio/canvas/fig10",
+              "body": {
+                "id": "https://hertz-foto-os1.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_10.jp2/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "width": 3410,
+                "height": 5073,
+                "service": [
+                  {
+                    "id": "https://hertz-foto-os1.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_10.jp2",
+                    "type": "ImageService3",
+                    "profile": "level2"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://liladude.github.io/Manifest_server/basic-garofalo-ligorio/canvas/fig11",
+      "type": "Canvas",
+      "label": {
+        "it": ["Fig. 11: Ligorio, Vol. 30, c. 54r"],
+        "en": ["Fig. 11: Ligorio, Vol. 30, f. 54r"]
+      },
+      "width": 3467,
+      "height": 5042,
+      "items": [
+        {
+          "id": "https://liladude.github.io/Manifest_server/basic-garofalo-ligorio/canvas/fig11/page1",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://liladude.github.io/Manifest_server/basic-garofalo-ligorio/annotation/fig11-image",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": "https://liladude.github.io/Manifest_server/basic-garofalo-ligorio/canvas/fig11",
+              "body": {
+                "id": "https://hertz-foto-os1.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_11.jp2/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "width": 3467,
+                "height": 5042,
+                "service": [
+                  {
+                    "id": "https://hertz-foto-os1.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_11.jp2",
+                    "type": "ImageService3",
+                    "profile": "level2"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://liladude.github.io/Manifest_server/basic-garofalo-ligorio/canvas/fig12",
+      "type": "Canvas",
+      "label": {
+        "it": ["Fig. 12: Ligorio, Vol. 30, c. 53r"],
+        "en": ["Fig. 12: Ligorio, Vol. 30, f. 53r"]
+      },
+      "width": 3432,
+      "height": 5018,
+      "items": [
+        {
+          "id": "https://liladude.github.io/Manifest_server/basic-garofalo-ligorio/canvas/fig12/page1",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://liladude.github.io/Manifest_server/basic-garofalo-ligorio/annotation/fig12-image",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": "https://liladude.github.io/Manifest_server/basic-garofalo-ligorio/canvas/fig12",
+              "body": {
+                "id": "https://hertz-foto-os1.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_12.jp2/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "width": 3432,
+                "height": 5018,
+                "service": [
+                  {
+                    "id": "https://hertz-foto-os1.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_12.jp2",
+                    "type": "ImageService3",
+                    "profile": "level2"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

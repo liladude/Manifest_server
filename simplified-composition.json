@@ -1,0 +1,123 @@
+{
+  "@context": [
+    "http://iiif.io/api/presentation/3/context.json"
+  ],
+  "id": "https://liladude.github.io/Manifest_server/simplified-composition.json",
+  "type": "Manifest",
+  "label": {
+    "it": ["Composizione Semplificata: Garofalo e Ligorio"],
+    "en": ["Simplified Composition: Garofalo and Ligorio"]
+  },
+  "summary": {
+    "it": ["Layout semplificato per test di compatibilità"],
+    "en": ["Simplified layout for compatibility testing"]
+  },
+  "items": [
+    {
+      "id": "https://liladude.github.io/Manifest_server/simplified-composition/canvas/layout",
+      "type": "Canvas",
+      "label": {
+        "it": ["Layout Comparativo"],
+        "en": ["Comparative Layout"]
+      },
+      "width": 4000,
+      "height": 3000,
+      "items": [
+        {
+          "id": "https://liladude.github.io/Manifest_server/simplified-composition/canvas/layout/page1",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://liladude.github.io/Manifest_server/simplified-composition/annotation/fig9",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": {
+                "id": "https://liladude.github.io/Manifest_server/simplified-composition/canvas/layout#xywh=0,0,4000,800",
+                "type": "SpecificResource",
+                "source": "https://liladude.github.io/Manifest_server/simplified-composition/canvas/layout"
+              },
+              "body": {
+                "id": "https://hertz-foto-os1.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_09.jp2/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "service": [
+                  {
+                    "id": "https://hertz-foto-os1.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_09.jp2",
+                    "type": "ImageService3",
+                    "profile": "level2"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "https://liladude.github.io/Manifest_server/simplified-composition/annotation/fig10",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": {
+                "id": "https://liladude.github.io/Manifest_server/simplified-composition/canvas/layout#xywh=0,800,1333,2200",
+                "type": "SpecificResource",
+                "source": "https://liladude.github.io/Manifest_server/simplified-composition/canvas/layout"
+              },
+              "body": {
+                "id": "https://hertz-foto-os1.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_10.jp2/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "service": [
+                  {
+                    "id": "https://hertz-foto-os1.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_10.jp2",
+                    "type": "ImageService3",
+                    "profile": "level2"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "https://liladude.github.io/Manifest_server/simplified-composition/annotation/fig11",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": {
+                "id": "https://liladude.github.io/Manifest_server/simplified-composition/canvas/layout#xywh=1333,800,1333,2200",
+                "type": "SpecificResource",
+                "source": "https://liladude.github.io/Manifest_server/simplified-composition/canvas/layout"
+              },
+              "body": {
+                "id": "https://hertz-foto-os1.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_11.jp2/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "service": [
+                  {
+                    "id": "https://hertz-foto-os1.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_11.jp2",
+                    "type": "ImageService3",
+                    "profile": "level2"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "https://liladude.github.io/Manifest_server/simplified-composition/annotation/fig12",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": {
+                "id": "https://liladude.github.io/Manifest_server/simplified-composition/canvas/layout#xywh=2666,800,1334,2200",
+                "type": "SpecificResource",
+                "source": "https://liladude.github.io/Manifest_server/simplified-composition/canvas/layout"
+              },
+              "body": {
+                "id": "https://hertz-foto-os1.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_12.jp2/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "service": [
+                  {
+                    "id": "https://hertz-foto-os1.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_12.jp2",
+                    "type": "ImageService3",
+                    "profile": "level2"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
