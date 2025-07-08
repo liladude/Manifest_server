@@ -5,215 +5,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academic IIIF Manifest Generator</title>
     <style>
-        * {
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; }
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background: #f5f7fa;
-            color: #2c3e50;
+            margin: 0; padding: 20px; background: #f5f7fa; color: #2c3e50;
         }
         
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+        .container { max-width: 1400px; margin: 0 auto; }
         
         .header {
-            text-align: center;
-            margin-bottom: 30px;
-            padding: 30px;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center; margin-bottom: 30px; padding: 30px;
+            background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
         
-        .header h1 {
-            color: #2c3e50;
-            margin: 0 0 10px 0;
-            font-size: 2.5em;
-        }
+        .header h1 { color: #2c3e50; margin: 0 0 10px 0; font-size: 2.5em; }
         
         .tabs {
-            display: flex;
-            margin-bottom: 20px;
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex; margin-bottom: 20px; background: white;
+            border-radius: 12px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         
         .tab {
-            flex: 1;
-            padding: 15px 20px;
-            background: #ecf0f1;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-            transition: all 0.3s;
-            font-weight: 600;
+            flex: 1; padding: 15px 20px; background: #ecf0f1; border: none;
+            cursor: pointer; font-size: 16px; transition: all 0.3s; font-weight: 600;
         }
         
-        .tab.active {
-            background: #3498db;
-            color: white;
-        }
-        
-        .tab:hover {
-            background: #2980b9;
-            color: white;
-        }
+        .tab.active { background: #3498db; color: white; }
+        .tab:hover { background: #2980b9; color: white; }
         
         .tab-content {
-            display: none;
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            display: none; background: white; padding: 30px;
+            border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
         
-        .tab-content.active {
-            display: block;
-        }
+        .tab-content.active { display: block; }
         
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
+        .form-group { margin-bottom: 20px; }
         .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #34495e;
+            display: block; margin-bottom: 8px; font-weight: 600; color: #34495e;
         }
         
         .form-group input, .form-group select, .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #e0e6ed;
-            border-radius: 8px;
-            font-size: 14px;
-            transition: border-color 0.3s;
+            width: 100%; padding: 12px; border: 2px solid #e0e6ed;
+            border-radius: 8px; font-size: 14px; transition: border-color 0.3s;
         }
         
         .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-            outline: none;
-            border-color: #3498db;
+            outline: none; border-color: #3498db;
         }
         
-        .form-group textarea {
-            resize: vertical;
-            height: 80px;
-        }
-        
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
+        .form-group textarea { resize: vertical; height: 80px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .form-row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; }
         
         .button {
-            background: #3498db;
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: 600;
-            transition: background-color 0.3s;
-            margin-right: 10px;
-            margin-bottom: 10px;
+            background: #3498db; color: white; border: none; padding: 12px 24px;
+            border-radius: 8px; cursor: pointer; font-size: 16px; font-weight: 600;
+            transition: background-color 0.3s; margin-right: 10px; margin-bottom: 10px;
         }
         
-        .button:hover {
-            background: #2980b9;
-        }
-        
-        .button.secondary {
-            background: #95a5a6;
-        }
-        
-        .button.auto-fetch {
-            background: #9b59b6;
-            margin-top: 8px;
-            padding: 8px 16px;
-            font-size: 14px;
-        }
+        .button:hover { background: #2980b9; }
+        .button.secondary { background: #95a5a6; }
+        .button.success { background: #27ae60; }
+        .button.auto-fetch { background: #9b59b6; margin-top: 8px; padding: 8px 16px; font-size: 14px; }
         
         .output-section {
-            margin-top: 30px;
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 8px;
-            border: 2px dashed #bdc3c7;
+            margin-top: 30px; padding: 20px; background: #f8f9fa;
+            border-radius: 8px; border: 2px dashed #bdc3c7;
         }
         
         .code-output {
-            background: #2c3e50;
-            color: #ecf0f1;
-            padding: 20px;
-            border-radius: 8px;
-            font-family: 'Courier New', monospace;
-            font-size: 12px;
-            overflow-x: auto;
-            max-height: 400px;
-            overflow-y: auto;
-            white-space: pre-wrap;
-            margin: 10px 0;
+            background: #2c3e50; color: #ecf0f1; padding: 20px; border-radius: 8px;
+            font-family: 'Courier New', monospace; font-size: 12px; overflow-x: auto;
+            max-height: 400px; overflow-y: auto; white-space: pre-wrap; margin: 10px 0;
         }
         
-        .success-message, .error-message {
-            padding: 15px;
-            border-radius: 8px;
-            margin: 10px 0;
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-            max-width: 400px;
+        .message {
+            padding: 15px; border-radius: 8px; margin: 10px 0;
+            position: fixed; top: 20px; right: 20px; z-index: 1000; max-width: 400px;
         }
         
-        .success-message {
-            background: #d5edda;
-            border: 1px solid #c3e6cb;
-            color: #155724;
-        }
-        
-        .error-message {
-            background: #f8d7da;
-            border: 1px solid #f5c6cb;
-            color: #721c24;
-        }
+        .message.success { background: #d5edda; border: 1px solid #c3e6cb; color: #155724; }
+        .message.error { background: #f8d7da; border: 1px solid #f5c6cb; color: #721c24; }
         
         .info-panel {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
-            color: #856404;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 0 8px 8px 0;
+            background: #e8f4fd; border-left: 4px solid #3498db; padding: 15px;
+            margin: 20px 0; border-radius: 0 8px 8px 0;
         }
         
-        .library-list {
-            border: 2px solid #e0e6ed;
-            border-radius: 8px;
-            padding: 15px;
-            margin-bottom: 20px;
-            max-height: 300px;
-            overflow-y: auto;
+        .library-list, .image-list {
+            border: 2px solid #e0e6ed; border-radius: 8px; padding: 15px;
+            margin-bottom: 20px; max-height: 300px; overflow-y: auto;
         }
         
-        .library-item {
-            padding: 10px;
-            margin-bottom: 10px;
-            background: #f8f9fa;
-            border-radius: 6px;
-            border: 1px solid #e0e6ed;
+        .library-item, .image-item {
+            display: flex; align-items: center; padding: 10px; margin-bottom: 10px;
+            background: #f8f9fa; border-radius: 6px; border: 1px solid #e0e6ed;
         }
+        
+        .library-item.selected { background: #d5edda; border-color: #27ae60; }
+        .library-item input[type="checkbox"] { width: auto; margin-right: 15px; }
+        
+        .image-info { flex: 1; }
+        .image-info strong { color: #2c3e50; }
+        
+        .layout-preview {
+            border: 2px solid #3498db; border-radius: 8px; padding: 20px;
+            margin: 20px 0; background: white; text-align: center;
+        }
+        
+        .layout-boxes {
+            display: flex; justify-content: center; align-items: center;
+            gap: 10px; margin: 15px 0; flex-wrap: wrap;
+        }
+        
+        .layout-box {
+            width: 80px; height: 60px; background: #3498db; border-radius: 4px;
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-weight: bold; font-size: 12px;
+        }
+        
+        .layout-box.main { width: 160px; height: 80px; background: #e74c3c; }
     </style>
 </head>
 <body>
@@ -234,7 +147,7 @@
             <h2>Individual Image Manifest Generator</h2>
             
             <div class="info-panel">
-                <strong>💡 Auto-Fetch Tip:</strong> Enter your IIIF Service ID and click "🔍 Auto-fetch Info" to automatically retrieve image dimensions!
+                <strong>💡 Auto-Fetch:</strong> Enter IIIF Service ID and click "🔍 Auto-fetch Info" to retrieve dimensions automatically!
             </div>
             
             <div class="form-row">
@@ -251,11 +164,11 @@
             
             <div class="form-row">
                 <div class="form-group">
-                    <label for="imageWidth">Image Width (px) <span id="widthStatus"></span></label>
+                    <label for="imageWidth">Width (px) <span id="widthStatus"></span></label>
                     <input type="number" id="imageWidth" placeholder="1000">
                 </div>
                 <div class="form-group">
-                    <label for="imageHeight">Image Height (px) <span id="heightStatus"></span></label>
+                    <label for="imageHeight">Height (px) <span id="heightStatus"></span></label>
                     <input type="number" id="imageHeight" placeholder="693">
                 </div>
             </div>
@@ -282,7 +195,7 @@
                 </div>
             </div>
             
-            <div class="form-row">
+            <div class="form-row-3">
                 <div class="form-group">
                     <label for="artist">Artist</label>
                     <input type="text" id="artist" placeholder="Garofalo (Benvenuto Tisi)">
@@ -291,51 +204,101 @@
                     <label for="date">Date</label>
                     <input type="text" id="date" placeholder="1540">
                 </div>
-            </div>
-            
-            <div class="form-row">
                 <div class="form-group">
                     <label for="institution">Institution</label>
                     <input type="text" id="institution" placeholder="Gemäldegalerie Alte Meister, Dresden">
                 </div>
+            </div>
+            
+            <div class="form-row">
                 <div class="form-group">
                     <label for="manifestId">Manifest ID *</label>
                     <input type="text" id="manifestId" placeholder="garofalo-trionfo-bacco" required>
                 </div>
+                <div class="form-group">
+                    <label for="baseUrl">Base URL</label>
+                    <input type="url" id="baseUrl" value="https://liladude.github.io/Manifest_server/" readonly>
+                </div>
             </div>
             
-            <button class="button" onclick="generateIndividualManifest()">🚀 Generate Individual Manifest</button>
-            <button class="button secondary" onclick="clearForm()">🧹 Clear Form</button>
-            <button class="button" style="background: #27ae60;" onclick="saveToLibrary()">💾 Save to Library</button>
+            <button class="button" onclick="generateIndividualManifest()">🚀 Generate Manifest</button>
+            <button class="button secondary" onclick="clearIndividualForm()">🧹 Clear Form</button>
+            <button class="button success" onclick="saveToLibrary()">💾 Save to Library</button>
             
             <div id="individualOutput" class="output-section" style="display: none;">
                 <h3>Generated Manifest</h3>
                 <div class="code-output" id="individualCode"></div>
-                <button class="button" onclick="downloadManifest()">📥 Download JSON</button>
-                <button class="button secondary" onclick="copyToClipboard()">📋 Copy to Clipboard</button>
+                <button class="button" onclick="downloadManifest('individual')">📥 Download JSON</button>
+                <button class="button secondary" onclick="copyToClipboard('individualCode')">📋 Copy</button>
             </div>
         </div>
         
         <!-- Comparison Layout Tab -->
         <div id="comparison" class="tab-content">
             <h2>Comparison Layout Generator</h2>
-            <p>Create comparison manifests with multiple images using different layout options.</p>
             
-            <div class="form-group">
-                <label for="comparisonTitle">Comparison Title (Italian) *</label>
-                <input type="text" id="comparisonTitle" placeholder="Confronto: Garofalo e Ligorio">
+            <div class="info-panel">
+                <strong>🔄 Workflow:</strong> Import images from your library, choose layout, and generate comparison manifests!
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="comparisonTitle">Title (Italian) *</label>
+                    <input type="text" id="comparisonTitle" placeholder="Confronto: Garofalo e Ligorio">
+                </div>
+                <div class="form-group">
+                    <label for="comparisonTitleEn">Title (English)</label>
+                    <input type="text" id="comparisonTitleEn" placeholder="Comparison: Garofalo and Ligorio">
+                </div>
             </div>
             
             <div class="form-group">
-                <label for="layoutType">Layout Type *</label>
-                <select id="layoutType">
-                    <option value="horizontal">Horizontal Row</option>
-                    <option value="main-derivatives">Main + Derivatives (1+N)</option>
-                    <option value="grid-2x2">2x2 Grid</option>
-                </select>
+                <label for="comparisonSummary">Description (Italian)</label>
+                <textarea id="comparisonSummary" placeholder="Analisi comparativa..."></textarea>
             </div>
             
-            <p><em>Comparison functionality coming soon...</em></p>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="layoutType">Layout Type *</label>
+                    <select id="layoutType" onchange="updateLayoutPreview()">
+                        <option value="horizontal">Horizontal Row</option>
+                        <option value="main-derivatives">Main + Derivatives (1+N)</option>
+                        <option value="grid-2x2">2x2 Grid</option>
+                        <option value="vertical">Vertical Stack</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="padding">Padding (px)</label>
+                    <input type="number" id="padding" value="100" onchange="updateLayoutPreview()">
+                </div>
+            </div>
+            
+            <div class="layout-preview" id="layoutPreview">
+                <h4>Layout Preview</h4>
+                <div class="layout-boxes" id="layoutBoxes"></div>
+            </div>
+            
+            <h3>📚 Import from Library</h3>
+            <div class="library-list" id="libraryForComparison">
+                <p><em>No manifests in library. Create individual manifests first!</em></p>
+            </div>
+            <button class="button secondary" onclick="importSelectedImages()">📥 Import Selected</button>
+            
+            <h3>🖼️ Images for Comparison</h3>
+            <div class="image-list" id="comparisonImages">
+                <p><em>No images added yet. Import from library above.</em></p>
+            </div>
+            
+            <button class="button" onclick="addManualImage()">➕ Add Manual</button>
+            <button class="button" onclick="generateComparisonManifest()">🚀 Generate Comparison</button>
+            <button class="button secondary" onclick="clearComparison()">🧹 Clear All</button>
+            
+            <div id="comparisonOutput" class="output-section" style="display: none;">
+                <h3>Generated Comparison Manifest</h3>
+                <div class="code-output" id="comparisonCode"></div>
+                <button class="button" onclick="downloadManifest('comparison')">📥 Download JSON</button>
+                <button class="button secondary" onclick="copyToClipboard('comparisonCode')">📋 Copy</button>
+            </div>
         </div>
         
         <!-- Library Tab -->
@@ -343,96 +306,91 @@
             <h2>Manifest Library</h2>
             <p>Manage your collection of individual image manifests.</p>
             
-            <div class="library-list" id="libraryList">
+            <div class="library-list" id="libraryDisplay">
                 <p><em>No manifests stored yet.</em></p>
             </div>
             
-            <button class="button secondary" onclick="clearLibrary()">🗑️ Clear Library</button>
+            <button class="button secondary" onclick="exportLibrary()">📤 Export Library</button>
+            <button class="button secondary" onclick="importLibrary()">📥 Import Library</button>
+            <button class="button" style="background: #e74c3c;" onclick="clearLibrary()">🗑️ Clear All</button>
+            
+            <input type="file" id="libraryFileInput" accept=".json" style="display: none;">
         </div>
     </div>
 
     <script>
         let manifestLibrary = [];
-        let currentManifest = null;
+        let comparisonImages = [];
+        let selectedLibraryItems = new Set();
+        let currentIndividualManifest = null;
+        let currentComparisonManifest = null;
         
         // Initialize
         document.addEventListener('DOMContentLoaded', function() {
             setupTabs();
             loadLibrary();
+            updateLayoutPreview();
         });
         
-        // Setup tab functionality
+        // Tab functionality
         function setupTabs() {
-            const tabs = document.querySelectorAll('.tab');
-            const tabContents = document.querySelectorAll('.tab-content');
-            
-            tabs.forEach(tab => {
+            document.querySelectorAll('.tab').forEach(tab => {
                 tab.addEventListener('click', function() {
                     const targetTab = this.getAttribute('data-tab');
                     
-                    // Remove active class from all tabs and contents
-                    tabs.forEach(t => t.classList.remove('active'));
-                    tabContents.forEach(tc => tc.classList.remove('active'));
+                    // Update active states
+                    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                    document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
                     
-                    // Add active class to clicked tab and corresponding content
                     this.classList.add('active');
                     document.getElementById(targetTab).classList.add('active');
+                    
+                    // Update displays when switching tabs
+                    if (targetTab === 'comparison') {
+                        updateLibraryForComparison();
+                        updateLayoutPreview();
+                    } else if (targetTab === 'library') {
+                        updateLibraryDisplay();
+                    }
                 });
             });
         }
         
-        // Fetch image info from IIIF API
+        // Auto-fetch IIIF info
         async function fetchImageInfo() {
             const serviceId = document.getElementById('imageService').value.trim();
             if (!serviceId) {
-                showMessage('Please enter a IIIF Service ID first', 'error');
+                showMessage('Please enter IIIF Service ID first', 'error');
                 return;
             }
             
-            // Show loading state
-            document.getElementById('widthStatus').innerHTML = '<em style="color: #3498db;">⏳ Fetching...</em>';
-            document.getElementById('heightStatus').innerHTML = '<em style="color: #3498db;">⏳ Fetching...</em>';
+            document.getElementById('widthStatus').innerHTML = '<em style="color: #3498db;">⏳</em>';
+            document.getElementById('heightStatus').innerHTML = '<em style="color: #3498db;">⏳</em>';
             
             try {
-                const infoUrl = `${serviceId}/info.json`;
-                console.log('Fetching IIIF info from:', infoUrl);
-                
-                const response = await fetch(infoUrl);
-                if (!response.ok) {
-                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-                }
+                const response = await fetch(`${serviceId}/info.json`);
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
                 
                 const info = await response.json();
-                console.log('IIIF info received:', info);
                 
                 if (info.width && info.height) {
                     document.getElementById('imageWidth').value = info.width;
                     document.getElementById('imageHeight').value = info.height;
+                    document.getElementById('widthStatus').innerHTML = '<em style="color: #27ae60;">✓</em>';
+                    document.getElementById('heightStatus').innerHTML = '<em style="color: #27ae60;">✓</em>';
                     
-                    // Show success status
-                    document.getElementById('widthStatus').innerHTML = '<em style="color: #27ae60;">✓ Auto-fetched</em>';
-                    document.getElementById('heightStatus').innerHTML = '<em style="color: #27ae60;">✓ Auto-fetched</em>';
-                    
-                    showMessage(`Dimensions retrieved: ${info.width} × ${info.height}`, 'success');
-                    
-                    // Auto-populate image URL if empty
-                    const imageUrlField = document.getElementById('imageUrl');
-                    if (!imageUrlField.value) {
-                        imageUrlField.value = `${serviceId}/full/max/0/default.jpg`;
+                    if (!document.getElementById('imageUrl').value) {
+                        document.getElementById('imageUrl').value = `${serviceId}/full/max/0/default.jpg`;
                     }
                     
+                    showMessage(`Dimensions: ${info.width} × ${info.height}`, 'success');
                 } else {
-                    throw new Error('No width/height found in IIIF info response');
+                    throw new Error('No dimensions found');
                 }
-                
             } catch (error) {
-                console.error('Error fetching IIIF info:', error);
-                
-                // Show error status
-                document.getElementById('widthStatus').innerHTML = '<em style="color: #e74c3c;">✗ Failed</em>';
-                document.getElementById('heightStatus').innerHTML = '<em style="color: #e74c3c;">✗ Failed</em>';
-                
-                showMessage(`Failed to fetch image info: ${error.message}`, 'error');
+                document.getElementById('widthStatus').innerHTML = '<em style="color: #e74c3c;">✗</em>';
+                document.getElementById('heightStatus').innerHTML = '<em style="color: #e74c3c;">✗</em>';
+                showMessage(`Failed: ${error.message}`, 'error');
             }
         }
         
@@ -444,13 +402,26 @@
             const manifestId = document.getElementById('manifestId').value;
             
             if (!imageUrl || !imageService || !titleIt || !manifestId) {
-                showMessage('Please fill in all required fields (*)', 'error');
+                showMessage('Please fill required fields (*)', 'error');
                 return;
+            }
+            
+            const width = parseInt(document.getElementById('imageWidth').value) || 1000;
+            const height = parseInt(document.getElementById('imageHeight').value) || 693;
+            
+            // Canvas dimensions for viewer-friendly display
+            let canvasWidth, canvasHeight;
+            if (width > height) {
+                canvasWidth = Math.min(width, 800);
+                canvasHeight = Math.round(height * (canvasWidth / width));
+            } else {
+                canvasHeight = Math.min(height, 800);
+                canvasWidth = Math.round(width * (canvasHeight / height));
             }
             
             const manifest = {
                 "@context": ["http://iiif.io/api/presentation/3/context.json"],
-                "id": `https://liladude.github.io/Manifest_server/${manifestId}.json`,
+                "id": `${document.getElementById('baseUrl').value}${manifestId}.json`,
                 "type": "Manifest",
                 "label": {
                     "it": [titleIt],
@@ -461,44 +432,24 @@
                     "en": [document.getElementById('summaryEn').value || ""]
                 },
                 "behavior": ["individuals"],
-                "viewingDirection": "left-to-right",
                 "metadata": []
             };
             
             // Add metadata
-            if (document.getElementById('artist').value) {
-                manifest.metadata.push({
-                    "label": {"it": ["Artista"], "en": ["Artist"]},
-                    "value": {"it": [document.getElementById('artist').value], "en": [document.getElementById('artist').value]}
-                });
-            }
-            
-            if (document.getElementById('date').value) {
-                manifest.metadata.push({
-                    "label": {"it": ["Data"], "en": ["Date"]},
-                    "value": {"it": [document.getElementById('date').value], "en": [document.getElementById('date').value]}
-                });
-            }
-            
-            if (document.getElementById('institution').value) {
-                manifest.metadata.push({
-                    "label": {"it": ["Istituzione"], "en": ["Institution"]},
-                    "value": {"it": [document.getElementById('institution').value], "en": [document.getElementById('institution').value]}
-                });
-            }
-            
-            const width = parseInt(document.getElementById('imageWidth').value) || 1000;
-            const height = parseInt(document.getElementById('imageHeight').value) || 693;
-            
-            // Use viewer-friendly canvas dimensions
-            let canvasWidth, canvasHeight;
-            if (width > height) {
-                canvasWidth = Math.min(width, 800);
-                canvasHeight = Math.round(height * (canvasWidth / width));
-            } else {
-                canvasHeight = Math.min(height, 800);
-                canvasWidth = Math.round(width * (canvasHeight / height));
-            }
+            ['artist', 'date', 'institution'].forEach(field => {
+                const value = document.getElementById(field).value;
+                if (value) {
+                    const labels = {
+                        artist: {it: "Artista", en: "Artist"},
+                        date: {it: "Data", en: "Date"},
+                        institution: {it: "Istituzione", en: "Institution"}
+                    };
+                    manifest.metadata.push({
+                        "label": {"it": [labels[field].it], "en": [labels[field].en]},
+                        "value": {"it": [value], "en": [value]}
+                    });
+                }
+            });
             
             manifest.items = [{
                 "id": `${manifest.id}/canvas/1`,
@@ -507,7 +458,7 @@
                 "width": canvasWidth,
                 "height": canvasHeight,
                 "items": [{
-                    "id": `${manifest.id}/canvas/1/page1`,
+                    "id": `${manifest.id}/page/1`,
                     "type": "AnnotationPage",
                     "items": [{
                         "id": `${manifest.id}/annotation/1`,
@@ -531,24 +482,20 @@
                 "thumbnail": [{
                     "id": `${imageService}/full/300,/0/default.jpg`,
                     "type": "Image",
-                    "format": "image/jpeg",
-                    "width": 300,
-                    "height": Math.round(300 * (height / width))
+                    "format": "image/jpeg"
                 }]
             }];
             
-            const jsonOutput = JSON.stringify(manifest, null, 2);
-            document.getElementById('individualCode').textContent = jsonOutput;
+            document.getElementById('individualCode').textContent = JSON.stringify(manifest, null, 2);
             document.getElementById('individualOutput').style.display = 'block';
             
-            // Store current manifest
-            currentManifest = {
+            currentIndividualManifest = {
                 manifest: manifest,
                 metadata: {
                     id: manifestId,
                     title: titleIt,
-                    artist: document.getElementById('artist').value,
-                    date: document.getElementById('date').value,
+                    artist: document.getElementById('artist').value || 'Unknown',
+                    date: document.getElementById('date').value || 'No date',
                     imageUrl: imageUrl,
                     serviceId: imageService,
                     width: width,
@@ -556,45 +503,49 @@
                 }
             };
             
-            showMessage('Individual manifest generated successfully!', 'success');
+            showMessage('Manifest generated!', 'success');
         }
         
         // Save to library
         function saveToLibrary() {
-            if (!currentManifest) {
-                showMessage('Please generate a manifest first', 'error');
+            if (!currentIndividualManifest) {
+                showMessage('Generate manifest first', 'error');
                 return;
             }
             
-            const existing = manifestLibrary.findIndex(m => m.metadata.id === currentManifest.metadata.id);
+            const existingIndex = manifestLibrary.findIndex(m => 
+                m.metadata.id === currentIndividualManifest.metadata.id
+            );
             
-            if (existing >= 0) {
-                manifestLibrary[existing] = currentManifest;
+            if (existingIndex >= 0) {
+                manifestLibrary[existingIndex] = currentIndividualManifest;
                 showMessage('Manifest updated in library', 'success');
             } else {
-                manifestLibrary.push(currentManifest);
+                manifestLibrary.push(currentIndividualManifest);
                 showMessage('Manifest saved to library', 'success');
             }
             
-            saveLibraryToStorage();
+            localStorage.setItem('iiifManifestLibrary', JSON.stringify(manifestLibrary));
             updateLibraryDisplay();
+            updateLibraryForComparison();
         }
         
         // Library management
         function loadLibrary() {
             const stored = localStorage.getItem('iiifManifestLibrary');
             if (stored) {
-                manifestLibrary = JSON.parse(stored);
+                try {
+                    manifestLibrary = JSON.parse(stored);
+                } catch (e) {
+                    console.error('Error loading library:', e);
+                    manifestLibrary = [];
+                }
             }
             updateLibraryDisplay();
         }
         
-        function saveLibraryToStorage() {
-            localStorage.setItem('iiifManifestLibrary', JSON.stringify(manifestLibrary));
-        }
-        
         function updateLibraryDisplay() {
-            const container = document.getElementById('libraryList');
+            const container = document.getElementById('libraryDisplay');
             if (manifestLibrary.length === 0) {
                 container.innerHTML = '<p><em>No manifests stored yet.</em></p>';
                 return;
@@ -602,57 +553,399 @@
             
             container.innerHTML = manifestLibrary.map((item, index) => `
                 <div class="library-item">
-                    <strong>${item.metadata.title}</strong><br>
-                    <small>ID: ${item.metadata.id} | ${item.metadata.artist || 'Unknown'} | ${item.metadata.date || 'No date'}</small><br>
-                    <small>Dimensions: ${item.metadata.width}×${item.metadata.height}</small>
+                    <div class="image-info">
+                        <strong>${item.metadata.title}</strong><br>
+                        <small>ID: ${item.metadata.id} | ${item.metadata.artist} | ${item.metadata.date}</small><br>
+                        <small>Dimensions: ${item.metadata.width}×${item.metadata.height}</small>
+                    </div>
+                    <button class="button" style="padding: 5px 10px; background: #e74c3c;" onclick="deleteFromLibrary(${index})">Delete</button>
                 </div>
             `).join('');
         }
         
-        function clearLibrary() {
-            if (confirm('Are you sure you want to clear the entire library?')) {
-                manifestLibrary = [];
-                saveLibraryToStorage();
+        function updateLibraryForComparison() {
+            const container = document.getElementById('libraryForComparison');
+            if (manifestLibrary.length === 0) {
+                container.innerHTML = '<p><em>No manifests in library.</em></p>';
+                return;
+            }
+            
+            container.innerHTML = manifestLibrary.map((item, index) => `
+                <div class="library-item ${selectedLibraryItems.has(index) ? 'selected' : ''}" onclick="toggleLibrarySelection(${index})">
+                    <input type="checkbox" ${selectedLibraryItems.has(index) ? 'checked' : ''} onchange="toggleLibrarySelection(${index})" onclick="event.stopPropagation();">
+                    <div class="image-info">
+                        <strong>${item.metadata.title}</strong><br>
+                        <small>${item.metadata.artist} | ${item.metadata.date} | ${item.metadata.width}×${item.metadata.height}</small>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        function toggleLibrarySelection(index) {
+            if (selectedLibraryItems.has(index)) {
+                selectedLibraryItems.delete(index);
+            } else {
+                selectedLibraryItems.add(index);
+            }
+            updateLibraryForComparison();
+        }
+        
+        function importSelectedImages() {
+            if (selectedLibraryItems.size === 0) {
+                showMessage('Select images first', 'error');
+                return;
+            }
+            
+            selectedLibraryItems.forEach(index => {
+                const item = manifestLibrary[index];
+                comparisonImages.push({
+                    id: item.metadata.id,
+                    title: item.metadata.title,
+                    imageUrl: item.metadata.imageUrl,
+                    serviceId: item.metadata.serviceId,
+                    width: item.metadata.width,
+                    height: item.metadata.height
+                });
+            });
+            
+            selectedLibraryItems.clear();
+            updateLibraryForComparison();
+            updateComparisonImages();
+            updateLayoutPreview();
+            showMessage(`Imported ${comparisonImages.length} images`, 'success');
+        }
+        
+        function updateComparisonImages() {
+            const container = document.getElementById('comparisonImages');
+            if (comparisonImages.length === 0) {
+                container.innerHTML = '<p><em>No images added yet.</em></p>';
+                return;
+            }
+            
+            container.innerHTML = comparisonImages.map((img, index) => `
+                <div class="image-item">
+                    <div class="image-info">
+                        <strong>${img.title}</strong><br>
+                        <small>ID: ${img.id} | ${img.width}×${img.height}</small>
+                    </div>
+                    <button class="button" style="padding: 5px 10px; background: #e74c3c;" onclick="removeComparisonImage(${index})">Remove</button>
+                </div>
+            `).join('');
+        }
+        
+        function updateLayoutPreview() {
+            const layoutType = document.getElementById('layoutType').value;
+            const imageCount = comparisonImages.length;
+            const container = document.getElementById('layoutBoxes');
+            
+            if (imageCount === 0) {
+                container.innerHTML = '<div class="layout-box">No Images</div>';
+                return;
+            }
+            
+            let html = '';
+            switch (layoutType) {
+                case 'horizontal':
+                    for (let i = 0; i < imageCount; i++) {
+                        html += `<div class="layout-box">Img ${i + 1}</div>`;
+                    }
+                    break;
+                case 'main-derivatives':
+                    html += `<div class="layout-box main">Main</div><br>`;
+                    for (let i = 1; i < imageCount; i++) {
+                        html += `<div class="layout-box">Der ${i}</div>`;
+                    }
+                    break;
+                case 'grid-2x2':
+                    for (let i = 0; i < Math.min(4, imageCount); i++) {
+                        if (i === 2) html += '<br>';
+                        html += `<div class="layout-box">Img ${i + 1}</div>`;
+                    }
+                    break;
+                case 'vertical':
+                    for (let i = 0; i < imageCount; i++) {
+                        html += `<div class="layout-box">Img ${i + 1}</div><br>`;
+                    }
+                    break;
+            }
+            container.innerHTML = html;
+        }
+        
+        function generateComparisonManifest() {
+            if (comparisonImages.length < 2) {
+                showMessage('Need at least 2 images', 'error');
+                return;
+            }
+            
+            const title = document.getElementById('comparisonTitle').value;
+            if (!title) {
+                showMessage('Enter comparison title', 'error');
+                return;
+            }
+            
+            const layoutType = document.getElementById('layoutType').value;
+            const padding = parseInt(document.getElementById('padding').value) || 100;
+            
+            const manifest = generateComparisonLayout(comparisonImages, layoutType, padding, {
+                titleIt: title,
+                titleEn: document.getElementById('comparisonTitleEn').value || title,
+                summaryIt: document.getElementById('comparisonSummary').value || ''
+            });
+            
+            document.getElementById('comparisonCode').textContent = JSON.stringify(manifest, null, 2);
+            document.getElementById('comparisonOutput').style.display = 'block';
+            
+            currentComparisonManifest = manifest;
+            showMessage('Comparison manifest generated!', 'success');
+        }
+        
+        function generateComparisonLayout(images, layoutType, padding, metadata) {
+            const manifestId = `comparison-${Date.now()}`;
+            let canvasWidth, canvasHeight, positions;
+            
+            switch (layoutType) {
+                case 'horizontal':
+                    const maxHeight = Math.max(...images.map(img => img.height));
+                    const totalWidth = images.reduce((sum, img) => sum + img.width, 0);
+                    canvasWidth = totalWidth + (padding * (images.length + 1));
+                    canvasHeight = maxHeight + (padding * 2);
+                    
+                    positions = [];
+                    let x = padding;
+                    images.forEach(img => {
+                        positions.push({ x, y: padding, width: img.width, height: img.height });
+                        x += img.width + padding;
+                    });
+                    break;
+                    
+                case 'main-derivatives':
+                    const mainImg = images[0];
+                    const derivatives = images.slice(1);
+                    const derivativeWidth = derivatives.length > 0 ? 
+                        Math.floor((mainImg.width - (padding * (derivatives.length - 1))) / derivatives.length) : 0;
+                    
+                    canvasWidth = mainImg.width + (padding * 2);
+                    canvasHeight = mainImg.height + padding + (derivativeWidth * 0.7) + (padding * 2);
+                    
+                    positions = [
+                        { x: padding, y: padding, width: mainImg.width, height: mainImg.height }
+                    ];
+                    
+                    let derivX = padding;
+                    derivatives.forEach(img => {
+                        positions.push({
+                            x: derivX,
+                            y: mainImg.height + (padding * 2),
+                            width: derivativeWidth,
+                            height: derivativeWidth * 0.7
+                        });
+                        derivX += derivativeWidth + padding;
+                    });
+                    break;
+                    
+                default: // grid-2x2
+                    const gridSize = Math.ceil(Math.sqrt(images.length));
+                    const cellWidth = 800;
+                    const cellHeight = 600;
+                    
+                    canvasWidth = (cellWidth * gridSize) + (padding * (gridSize + 1));
+                    canvasHeight = (cellHeight * gridSize) + (padding * (gridSize + 1));
+                    
+                    positions = [];
+                    images.forEach((img, index) => {
+                        const row = Math.floor(index / gridSize);
+                        const col = index % gridSize;
+                        positions.push({
+                            x: padding + (col * (cellWidth + padding)),
+                            y: padding + (row * (cellHeight + padding)),
+                            width: cellWidth,
+                            height: cellHeight
+                        });
+                    });
+                    break;
+            }
+            
+            return {
+                "@context": ["http://iiif.io/api/presentation/3/context.json"],
+                "id": `https://liladude.github.io/Manifest_server/${manifestId}.json`,
+                "type": "Manifest",
+                "label": {
+                    "it": [metadata.titleIt],
+                    "en": [metadata.titleEn]
+                },
+                "summary": {
+                    "it": [metadata.summaryIt],
+                    "en": [metadata.summaryIt]
+                },
+                "behavior": ["multi-part"],
+                "items": [{
+                    "id": `https://liladude.github.io/Manifest_server/${manifestId}/canvas/layout`,
+                    "type": "Canvas",
+                    "label": { "it": ["Layout Comparativo"], "en": ["Comparative Layout"] },
+                    "width": canvasWidth,
+                    "height": canvasHeight,
+                    "items": [{
+                        "id": `https://liladude.github.io/Manifest_server/${manifestId}/page/1`,
+                        "type": "AnnotationPage",
+                        "items": images.map((img, index) => ({
+                            "id": `https://liladude.github.io/Manifest_server/${manifestId}/annotation/img${index + 1}`,
+                            "type": "Annotation",
+                            "motivation": "painting",
+                            "target": {
+                                "id": `https://liladude.github.io/Manifest_server/${manifestId}/canvas/layout#xywh=${positions[index].x},${positions[index].y},${positions[index].width},${positions[index].height}`,
+                                "type": "SpecificResource",
+                                "source": `https://liladude.github.io/Manifest_server/${manifestId}/canvas/layout`
+                            },
+                            "body": {
+                                "id": img.imageUrl,
+                                "type": "Image",
+                                "format": "image/jpeg",
+                                "service": [{
+                                    "id": img.serviceId,
+                                    "type": "ImageService3",
+                                    "profile": "level2"
+                                }]
+                            }
+                        }))
+                    }]
+                }]
+            };
+        }
+        
+        // Utility functions
+        function removeComparisonImage(index) {
+            comparisonImages.splice(index, 1);
+            updateComparisonImages();
+            updateLayoutPreview();
+        }
+        
+        function addManualImage() {
+            const imageUrl = prompt('IIIF Image URL:');
+            if (!imageUrl) return;
+            
+            const serviceId = prompt('IIIF Service ID:');
+            if (!serviceId) return;
+            
+            const title = prompt('Image Title:');
+            if (!title) return;
+            
+            const width = parseInt(prompt('Width (px):') || '1000');
+            const height = parseInt(prompt('Height (px):') || '700');
+            
+            comparisonImages.push({
+                id: `manual-${Date.now()}`,
+                title: title,
+                imageUrl: imageUrl,
+                serviceId: serviceId,
+                width: width,
+                height: height
+            });
+            
+            updateComparisonImages();
+            updateLayoutPreview();
+        }
+        
+        function clearComparison() {
+            comparisonImages = [];
+            selectedLibraryItems.clear();
+            updateComparisonImages();
+            updateLibraryForComparison();
+            updateLayoutPreview();
+            document.getElementById('comparisonOutput').style.display = 'none';
+        }
+        
+        function clearIndividualForm() {
+            document.querySelectorAll('#individual input, #individual textarea').forEach(el => {
+                if (el.id !== 'baseUrl') el.value = '';
+            });
+            document.getElementById('individualOutput').style.display = 'none';
+            document.getElementById('widthStatus').innerHTML = '';
+            document.getElementById('heightStatus').innerHTML = '';
+            currentIndividualManifest = null;
+        }
+        
+        function deleteFromLibrary(index) {
+            if (confirm('Delete this manifest?')) {
+                manifestLibrary.splice(index, 1);
+                localStorage.setItem('iiifManifestLibrary', JSON.stringify(manifestLibrary));
                 updateLibraryDisplay();
+                updateLibraryForComparison();
+                showMessage('Manifest deleted', 'success');
+            }
+        }
+        
+        function clearLibrary() {
+            if (confirm('Clear entire library?')) {
+                manifestLibrary = [];
+                localStorage.setItem('iiifManifestLibrary', JSON.stringify(manifestLibrary));
+                updateLibraryDisplay();
+                updateLibraryForComparison();
                 showMessage('Library cleared', 'success');
             }
         }
         
-        // Utility functions
-        function downloadManifest() {
-            if (!currentManifest) {
-                showMessage('Please generate a manifest first', 'error');
-                return;
-            }
-            
-            const code = document.getElementById('individualCode').textContent;
-            const blob = new Blob([code], { type: 'application/json' });
+        function exportLibrary() {
+            const blob = new Blob([JSON.stringify(manifestLibrary, null, 2)], { type: 'application/json' });
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = `${currentManifest.metadata.id}.json`;
+            a.download = 'iiif-manifest-library.json';
             a.click();
             URL.revokeObjectURL(url);
         }
         
-        function copyToClipboard() {
-            const text = document.getElementById('individualCode').textContent;
+        function importLibrary() {
+            document.getElementById('libraryFileInput').click();
+            document.getElementById('libraryFileInput').onchange = function(e) {
+                const file = e.target.files[0];
+                if (!file) return;
+                
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    try {
+                        const imported = JSON.parse(e.target.result);
+                        manifestLibrary = [...manifestLibrary, ...imported];
+                        localStorage.setItem('iiifManifestLibrary', JSON.stringify(manifestLibrary));
+                        updateLibraryDisplay();
+                        updateLibraryForComparison();
+                        showMessage(`Imported ${imported.length} manifests`, 'success');
+                    } catch (error) {
+                        showMessage('Import failed: ' + error.message, 'error');
+                    }
+                };
+                reader.readAsText(file);
+            };
+        }
+        
+        function downloadManifest(type) {
+            const code = type === 'individual' ? 
+                document.getElementById('individualCode').textContent : 
+                document.getElementById('comparisonCode').textContent;
+                
+            const manifest = type === 'individual' ? currentIndividualManifest : currentComparisonManifest;
+            const filename = type === 'individual' && manifest ? 
+                `${manifest.metadata.id}.json` : 
+                `comparison-manifest.json`;
+            
+            const blob = new Blob([code], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+        
+        function copyToClipboard(elementId) {
+            const text = document.getElementById(elementId).textContent;
             navigator.clipboard.writeText(text).then(() => {
                 showMessage('Copied to clipboard!', 'success');
             });
         }
         
-        function clearForm() {
-            document.querySelectorAll('#individual input, #individual textarea').forEach(el => el.value = '');
-            document.getElementById('individualOutput').style.display = 'none';
-            document.getElementById('widthStatus').innerHTML = '';
-            document.getElementById('heightStatus').innerHTML = '';
-            currentManifest = null;
-        }
-        
         function showMessage(message, type) {
             const messageDiv = document.createElement('div');
-            messageDiv.className = type === 'error' ? 'error-message' : 'success-message';
+            messageDiv.className = `message ${type}`;
             messageDiv.textContent = message;
             
             document.body.appendChild(messageDiv);
