@@ -2,14 +2,14 @@
   "@context": [
     "http://iiif.io/api/presentation/3/context.json"
   ],
-  "id": "https://liladude.github.io/Manifest_server/comparison-1751988063594.json",
+  "id": "https://liladude.github.io/Manifest_server/comparison-1751990088184.json",
   "type": "Manifest",
   "label": {
     "it": [
-      "Confronto tra elementi all'antica"
+      "Confronto Busto e Erma"
     ],
     "en": [
-      "Confronto tra elementi all'antica"
+      "Confronto Busto e Erma"
     ]
   },
   "summary": {
@@ -21,11 +21,12 @@
     ]
   },
   "behavior": [
-    "multi-part"
+    "individuals"
   ],
+  "viewingDirection": "left-to-right",
   "items": [
     {
-      "id": "https://liladude.github.io/Manifest_server/comparison-1751988063594/canvas/layout",
+      "id": "https://liladude.github.io/Manifest_server/comparison-1751990088184/canvas/layout",
       "type": "Canvas",
       "label": {
         "it": [
@@ -35,21 +36,21 @@
           "Comparative Layout"
         ]
       },
-      "width": 1464,
-      "height": 800,
+      "width": 1900,
+      "height": 1500,
       "items": [
         {
-          "id": "https://liladude.github.io/Manifest_server/comparison-1751988063594/page/1",
+          "id": "https://liladude.github.io/Manifest_server/comparison-1751990088184/page/1",
           "type": "AnnotationPage",
           "items": [
             {
-              "id": "https://liladude.github.io/Manifest_server/comparison-1751988063594/annotation/img1",
+              "id": "https://liladude.github.io/Manifest_server/comparison-1751990088184/annotation/img1",
               "type": "Annotation",
               "motivation": "painting",
               "target": {
-                "id": "https://liladude.github.io/Manifest_server/comparison-1751988063594/canvas/layout#xywh=100,100,647,600",
+                "id": "https://liladude.github.io/Manifest_server/comparison-1751990088184/canvas/layout#xywh=100,100,800,600",
                 "type": "SpecificResource",
-                "source": "https://liladude.github.io/Manifest_server/comparison-1751988063594/canvas/layout"
+                "source": "https://liladude.github.io/Manifest_server/comparison-1751990088184/canvas/layout"
               },
               "body": {
                 "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_04a.jp2/full/max/0/default.jpg",
@@ -65,13 +66,13 @@
               }
             },
             {
-              "id": "https://liladude.github.io/Manifest_server/comparison-1751988063594/annotation/img2",
+              "id": "https://liladude.github.io/Manifest_server/comparison-1751990088184/annotation/img2",
               "type": "Annotation",
               "motivation": "painting",
               "target": {
-                "id": "https://liladude.github.io/Manifest_server/comparison-1751988063594/canvas/layout#xywh=847,100,517,600",
+                "id": "https://liladude.github.io/Manifest_server/comparison-1751990088184/canvas/layout#xywh=1000,100,800,600",
                 "type": "SpecificResource",
-                "source": "https://liladude.github.io/Manifest_server/comparison-1751988063594/canvas/layout"
+                "source": "https://liladude.github.io/Manifest_server/comparison-1751990088184/canvas/layout"
               },
               "body": {
                 "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_04b.jp2/full/max/0/default.jpg",
@@ -87,6 +88,15 @@
               }
             }
           ]
+        }
+      ],
+      "thumbnail": [
+        {
+          "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_04a.jp2/full/400,/0/default.jpg",
+          "type": "Image",
+          "format": "image/jpeg",
+          "width": 400,
+          "height": 316
         }
       ]
     }
