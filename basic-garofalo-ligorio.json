@@ -12,6 +12,8 @@
     "it": ["Manifest di test per verificare l'accesso alle immagini"],
     "en": ["Test manifest to verify image access"]
   },
+  "behavior": ["individuals", "auto-advance"],
+  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://liladude.github.io/Manifest_server/basic-garofalo-ligorio/canvas/fig9",
@@ -20,8 +22,8 @@
         "it": ["Fig. 9: Garofalo, Trionfo di Bacco, 1540"],
         "en": ["Fig. 9: Garofalo, Triumph of Bacchus, 1540"]
       },
-      "width": 1000,
-      "height": 693,
+      "width": 800,
+      "height": 555,
       "items": [
         {
           "id": "https://liladude.github.io/Manifest_server/basic-garofalo-ligorio/canvas/fig9/page1",
@@ -49,6 +51,15 @@
             }
           ]
         }
+      ],
+      "thumbnail": [
+        {
+          "id": "https://hertz-foto-os1.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_09.jp2/full/300,/0/default.jpg",
+          "type": "Image",
+          "format": "image/jpeg",
+          "width": 300,
+          "height": 208
+        }
       ]
     },
     {
@@ -58,8 +69,8 @@
         "it": ["Fig. 10: Ligorio, Vol. 30, c. 47r"],
         "en": ["Fig. 10: Ligorio, Vol. 30, f. 47r"]
       },
-      "width": 3410,
-      "height": 5073,
+      "width": 600,
+      "height": 893,
       "items": [
         {
           "id": "https://liladude.github.io/Manifest_server/basic-garofalo-ligorio/canvas/fig10/page1",
@@ -87,6 +98,15 @@
             }
           ]
         }
+      ],
+      "thumbnail": [
+        {
+          "id": "https://hertz-foto-os1.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_10.jp2/full/200,/0/default.jpg",
+          "type": "Image",
+          "format": "image/jpeg",
+          "width": 200,
+          "height": 297
+        }
       ]
     },
     {
@@ -96,8 +116,8 @@
         "it": ["Fig. 11: Ligorio, Vol. 30, c. 54r"],
         "en": ["Fig. 11: Ligorio, Vol. 30, f. 54r"]
       },
-      "width": 3467,
-      "height": 5042,
+      "width": 600,
+      "height": 873,
       "items": [
         {
           "id": "https://liladude.github.io/Manifest_server/basic-garofalo-ligorio/canvas/fig11/page1",
@@ -125,6 +145,15 @@
             }
           ]
         }
+      ],
+      "thumbnail": [
+        {
+          "id": "https://hertz-foto-os1.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_11.jp2/full/200,/0/default.jpg",
+          "type": "Image",
+          "format": "image/jpeg",
+          "width": 200,
+          "height": 291
+        }
       ]
     },
     {
@@ -134,8 +163,8 @@
         "it": ["Fig. 12: Ligorio, Vol. 30, c. 53r"],
         "en": ["Fig. 12: Ligorio, Vol. 30, f. 53r"]
       },
-      "width": 3432,
-      "height": 5018,
+      "width": 600,
+      "height": 877,
       "items": [
         {
           "id": "https://liladude.github.io/Manifest_server/basic-garofalo-ligorio/canvas/fig12/page1",
@@ -162,6 +191,15 @@
               }
             }
           ]
+        }
+      ],
+      "thumbnail": [
+        {
+          "id": "https://hertz-foto-os1.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_12.jp2/full/200,/0/default.jpg",
+          "type": "Image",
+          "format": "image/jpeg",
+          "width": 200,
+          "height": 293
         }
       ]
     }
