@@ -677,7 +677,7 @@
                     
                     positions = [];
                     let scaledX = padding;
-                    scaledImages.forEach(img => {
+                    scaledImages.forEach((img, index) => {
                         positions.push({ 
                             x: scaledX, 
                             y: padding, 
@@ -685,6 +685,10 @@
                             height: img.scaledHeight 
                         });
                         scaledX += img.scaledWidth + padding;
+                        
+                        // Update the original image data with scaled dimensions for manifest generation
+                        images[index].scaledWidth = img.scaledWidth;
+                        images[index].scaledHeight = img.scaledHeight;
                     });
                     break;
                     
