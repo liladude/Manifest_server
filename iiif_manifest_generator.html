@@ -660,7 +660,7 @@
                     }
                     break;
                     
-                                case 'horizontal-balanced':
+                case 'horizontal-balanced':
                     // Scale all images to same height for better comparison
                     const scaledImages = images.map(img => {
                         const scale = targetHeight / img.height;
@@ -677,7 +677,7 @@
                     
                     positions = [];
                     let scaledX = padding;
-                    scaledImages.forEach((img, index) => {
+                    scaledImages.forEach(img => {
                         positions.push({ 
                             x: scaledX, 
                             y: padding, 
@@ -685,10 +685,6 @@
                             height: img.scaledHeight 
                         });
                         scaledX += img.scaledWidth + padding;
-                        
-                        // Update the original image data with scaled dimensions for manifest generation
-                        images[index].scaledWidth = img.scaledWidth;
-                        images[index].scaledHeight = img.scaledHeight;
                     });
                     break;
                     
@@ -862,7 +858,7 @@
                     
                     positions = [];
                     let scaledX = padding;
-                    scaledImages.forEach((img, index) => {
+                    scaledImages.forEach(img => {
                         positions.push({ 
                             x: scaledX, 
                             y: padding, 
@@ -870,10 +866,6 @@
                             height: img.scaledHeight 
                         });
                         scaledX += img.scaledWidth + padding;
-                        
-                        // Update the original image data with scaled dimensions for manifest generation
-                        images[index].scaledWidth = img.scaledWidth;
-                        images[index].scaledHeight = img.scaledHeight;
                     });
                     break;
                     
