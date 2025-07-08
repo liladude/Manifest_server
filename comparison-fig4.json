@@ -1,0 +1,94 @@
+{
+  "@context": [
+    "http://iiif.io/api/presentation/3/context.json"
+  ],
+  "id": "https://liladude.github.io/Manifest_server/comparison-1751983749229.json",
+  "type": "Manifest",
+  "label": {
+    "it": [
+      "Confronto: Palazzo Bevilacqua e Camerino dei Baccanali a Ferrara"
+    ],
+    "en": [
+      "Comparison: Palazzo Bevilacqua and the Camerino dei Baccanali in Ferrara"
+    ]
+  },
+  "summary": {
+    "it": [
+      "Confronto tra dettagli di busto e erma"
+    ],
+    "en": [
+      "Confronto tra dettagli di busto e erma"
+    ]
+  },
+  "behavior": [
+    "multi-part"
+  ],
+  "items": [
+    {
+      "id": "https://liladude.github.io/Manifest_server/comparison-1751983749229/canvas/layout",
+      "type": "Canvas",
+      "label": {
+        "it": [
+          "Layout Comparativo"
+        ],
+        "en": [
+          "Comparative Layout"
+        ]
+      },
+      "width": 2715,
+      "height": 2605,
+      "items": [
+        {
+          "id": "https://liladude.github.io/Manifest_server/comparison-1751983749229/page/1",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://liladude.github.io/Manifest_server/comparison-1751983749229/annotation/img1",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": {
+                "id": "https://liladude.github.io/Manifest_server/comparison-1751983749229/canvas/layout#xywh=100,100,341,316",
+                "type": "SpecificResource",
+                "source": "https://liladude.github.io/Manifest_server/comparison-1751983749229/canvas/layout"
+              },
+              "body": {
+                "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_04a.jp2/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "service": [
+                  {
+                    "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_04a.jp2",
+                    "type": "ImageService3",
+                    "profile": "level2"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "https://liladude.github.io/Manifest_server/comparison-1751983749229/annotation/img2",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": {
+                "id": "https://liladude.github.io/Manifest_server/comparison-1751983749229/canvas/layout#xywh=541,100,2074,2405",
+                "type": "SpecificResource",
+                "source": "https://liladude.github.io/Manifest_server/comparison-1751983749229/canvas/layout"
+              },
+              "body": {
+                "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_04b.jp2/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "service": [
+                  {
+                    "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_04b.jp2",
+                    "type": "ImageService3",
+                    "profile": "level2"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
