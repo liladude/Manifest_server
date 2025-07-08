@@ -9,6 +9,9 @@
             box-sizing: border-box;
         }
         
+        // Generate individual manifest
+        function generateIndividualManifest() {
+        
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
@@ -307,6 +310,28 @@
             background: #d5edda;
             border-color: #27ae60;
         }
+        
+        .auto-fetch-btn {
+            background: #9b59b6;
+            margin-top: 8px;
+            padding: 8px 16px;
+            font-size: 14px;
+        }
+        
+        .auto-fetch-btn:hover {
+            background: #8e44ad;
+        }
+        
+        .dimension-status {
+            font-size: 12px;
+            margin-left: 8px;
+        }
+        
+        .info-panel.tip {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            color: #856404;
+        }
     </style>
 </head>
 <body>
@@ -327,24 +352,29 @@
             <h2>Individual Image Manifest Generator</h2>
             <p>Create detailed manifests for individual images with full academic metadata.</p>
             
+            <div class="info-panel tip">
+                <strong>💡 Auto-Fetch Tip:</strong> Enter your IIIF Service ID and click "🔍 Auto-fetch Info" to automatically retrieve image dimensions and populate the image URL. No more manual measurements!
+            </div>
+            
             <div class="form-row">
                 <div class="form-group">
                     <label for="imageUrl">IIIF Image URL *</label>
-                    <input type="url" id="imageUrl" placeholder="https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_09.jp2/full/max/0/default.jpg">
+                    <input type="url" id="imageUrl" placeholder="https://hertz-foto-os1.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_09.jp2/full/max/0/default.jpg">
                 </div>
                 <div class="form-group">
                     <label for="imageService">IIIF Service ID *</label>
-                    <input type="url" id="imageService" placeholder="https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_09.jp2">
+                    <input type="url" id="imageService" placeholder="https://hertz-foto-os1.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_09.jp2" onblur="autoFetchDimensions()">
+                    <button type="button" class="button auto-fetch-btn" onclick="fetchImageInfo()">🔍 Auto-fetch Info</button>
                 </div>
             </div>
             
             <div class="form-row">
                 <div class="form-group">
-                    <label for="imageWidth">Image Width (px)</label>
+                    <label for="imageWidth">Image Width (px) <span id="widthStatus"></span></label>
                     <input type="number" id="imageWidth" placeholder="1000">
                 </div>
                 <div class="form-group">
-                    <label for="imageHeight">Image Height (px)</label>
+                    <label for="imageHeight">Image Height (px) <span id="heightStatus"></span></label>
                     <input type="number" id="imageHeight" placeholder="693">
                 </div>
             </div>
@@ -352,7 +382,7 @@
             <div class="form-row">
                 <div class="form-group">
                     <label for="titleIt">Title (Italian) *</label>
-                    <input type="text" id="titleIt" placeholder="Garofalo, Trionfo di Bacco, 1540">
+                    <input type="text" id="titleIt" placeholder="Garofalo, Trionfo di Bacco, 1540" oninput="autoGenerateManifestId()">
                 </div>
                 <div class="form-group">
                     <label for="titleEn">Title (English)</label>
@@ -532,8 +562,107 @@
             }
         }
         
-        // Generate individual manifest
-        function generateIndividualManifest() {
+        // Fetch image info from IIIF API
+        async function fetchImageInfo() {
+            const serviceId = document.getElementById('imageService').value.trim();
+            if (!serviceId) {
+                showMessage('Please enter a IIIF Service ID first', 'error');
+                return;
+            }
+            
+            // Show loading state
+            document.getElementById('widthStatus').innerHTML = '<em style="color: #3498db;">⏳ Fetching...</em>';
+            document.getElementById('heightStatus').innerHTML = '<em style="color: #3498db;">⏳ Fetching...</em>';
+            
+            try {
+                const infoUrl = `${serviceId}/info.json`;
+                console.log('Fetching IIIF info from:', infoUrl);
+                
+                const response = await fetch(infoUrl);
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                
+                const info = await response.json();
+                console.log('IIIF info received:', info);
+                
+                if (info.width && info.height) {
+                    document.getElementById('imageWidth').value = info.width;
+                    document.getElementById('imageHeight').value = info.height;
+                    
+                    // Show success status
+                    document.getElementById('widthStatus').innerHTML = '<em style="color: #27ae60;">✓ Auto-fetched</em>';
+                    document.getElementById('heightStatus').innerHTML = '<em style="color: #27ae60;">✓ Auto-fetched</em>';
+                    
+                    showMessage(`Dimensions retrieved: ${info.width} × ${info.height}`, 'success');
+                    
+                    // Also populate image URL if it's empty
+                    const imageUrlField = document.getElementById('imageUrl');
+                    if (!imageUrlField.value) {
+                        imageUrlField.value = `${serviceId}/full/max/0/default.jpg`;
+                    }
+                    
+                    // Auto-generate manifest ID if empty
+                    const manifestIdField = document.getElementById('manifestId');
+                    if (!manifestIdField.value && document.getElementById('titleIt').value) {
+                        const title = document.getElementById('titleIt').value;
+                        const autoId = generateManifestId(title);
+                        manifestIdField.value = autoId;
+                    }
+                    
+                } else {
+                    throw new Error('No width/height found in IIIF info response');
+                }
+                
+            } catch (error) {
+                console.error('Error fetching IIIF info:', error);
+                
+                // Show error status
+                document.getElementById('widthStatus').innerHTML = '<em style="color: #e74c3c;">✗ Failed</em>';
+                document.getElementById('heightStatus').innerHTML = '<em style="color: #e74c3c;">✗ Failed</em>';
+                
+                showMessage(`Failed to fetch image info: ${error.message}`, 'error');
+            }
+        }
+        
+        // Auto-fetch dimensions when service ID field loses focus
+        async function autoFetchDimensions() {
+            const serviceId = document.getElementById('imageService').value.trim();
+            const hasWidth = document.getElementById('imageWidth').value;
+            const hasHeight = document.getElementById('imageHeight').value;
+            
+            // Only auto-fetch if we have a service ID and missing dimensions
+            if (serviceId && (!hasWidth || !hasHeight)) {
+                await fetchImageInfo();
+            }
+        }
+        
+        // Generate manifest ID from title
+        function generateManifestId(title) {
+            return title
+                .toLowerCase()
+                .replace(/[àáâãäå]/g, 'a')
+                .replace(/[èéêë]/g, 'e')
+                .replace(/[ìíîï]/g, 'i')
+                .replace(/[òóôõö]/g, 'o')
+                .replace(/[ùúûü]/g, 'u')
+                .replace(/[ç]/g, 'c')
+                .replace(/[ñ]/g, 'n')
+                .replace(/[^a-z0-9\s]/g, '')
+                .trim()
+                .replace(/\s+/g, '-')
+                .substring(0, 50);
+        }
+        
+        // Auto-generate manifest ID when title changes
+        function autoGenerateManifestId() {
+            const title = document.getElementById('titleIt').value;
+            const manifestIdField = document.getElementById('manifestId');
+            
+            if (title && !manifestIdField.value) {
+                manifestIdField.value = generateManifestId(title);
+            }
+        }
             const imageUrl = document.getElementById('imageUrl').value;
             const imageService = document.getElementById('imageService').value;
             const titleIt = document.getElementById('titleIt').value;
@@ -556,6 +685,8 @@
                     "it": [document.getElementById('summaryIt').value || ""],
                     "en": [document.getElementById('summaryEn').value || ""]
                 },
+                "behavior": ["individuals"],
+                "viewingDirection": "left-to-right",
                 "metadata": []
             };
             
@@ -584,12 +715,24 @@
             const width = parseInt(document.getElementById('imageWidth').value) || 1000;
             const height = parseInt(document.getElementById('imageHeight').value) || 693;
             
+            // Use viewer-friendly canvas dimensions (max 800px wide for landscape, 600px for portrait)
+            let canvasWidth, canvasHeight;
+            if (width > height) {
+                // Landscape
+                canvasWidth = Math.min(width, 800);
+                canvasHeight = Math.round(height * (canvasWidth / width));
+            } else {
+                // Portrait  
+                canvasHeight = Math.min(height, 800);
+                canvasWidth = Math.round(width * (canvasHeight / height));
+            }
+            
             manifest.items = [{
                 "id": `${manifest.id}/canvas/1`,
                 "type": "Canvas",
                 "label": manifest.label,
-                "width": width,
-                "height": height,
+                "width": canvasWidth,
+                "height": canvasHeight,
                 "items": [{
                     "id": `${manifest.id}/canvas/1/page1`,
                     "type": "AnnotationPage",
