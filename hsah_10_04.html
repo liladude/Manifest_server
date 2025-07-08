@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ligorio - Baccanali Comparison - OpenSeadragon Viewer</title>
+    <title>Garofalo-Ligorio Comparison - OpenSeadragon Viewer</title>
     <style>
         body {
             font-family: 'Georgia', serif;
@@ -147,7 +146,7 @@
 <body>
     <div class="header">
         <h1>Pirro Ligorio e la cultura antiquaria</h1>
-        <p>Confronto: Busto di Palazzo Bevilacqua e erma del Camerino dei Baccanali</p>
+        <p>Confronto: Garofalo e Ligorio - Dal Trionfo di Bacco ai disegni derivati</p>
     </div>
     
     <div class="viewer-container">
@@ -159,10 +158,10 @@
             <h3>Controlli Visualizzatore</h3>
             
             <div class="manifest-selector">
-                <label for="manifestSelect">Seleziona Layout da caricare:</label>
+                <label for="manifestSelect">Seleziona Layout:</label>
                 <select id="manifestSelect">
                     <option value="https://liladude.github.io/Manifest_server/comparison-fig4.json">Composizione Completa</option>
-                    <!-- <option value="https://liladude.github.io/Manifest_server/simplified-composition.json">Layout Semplificato</option>-->
+                    <option value="https://liladude.github.io/Manifest_server/simplified-composition.json">Layout Semplificato</option>
                     <option value="https://liladude.github.io/Manifest_server/basic-garofalo-ligorio.json">Sequenza Singola</option>
                 </select>
             </div>
@@ -170,6 +169,7 @@
             <button class="button" onclick="loadManifest()">Carica Manifest</button>
             <button class="button" onclick="resetView()">Reset Vista</button>
             <button class="button" onclick="goHome()">Vista Completa</button>
+            <button class="button" onclick="fitComparison()">Adatta Confronto</button>
             
             <div class="info-panel">
                 <h4>Informazioni</h4>
@@ -469,6 +469,17 @@
         function goHome() {
             if (viewer) {
                 viewer.viewport.goHome();
+            }
+        }
+        
+        function fitComparison() {
+            if (viewer) {
+                // Force fit to entire canvas for comparison viewing
+                viewer.viewport.fitBounds(new OpenSeadragon.Rect(0, 0, 1, 1), true);
+                // Set a comfortable zoom level for comparison
+                setTimeout(() => {
+                    viewer.viewport.zoomBy(0.9);
+                }, 100);
             }
         }
         
