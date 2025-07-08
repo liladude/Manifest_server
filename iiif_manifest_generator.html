@@ -263,6 +263,8 @@
                     <select id="layoutType" onchange="updateLayoutPreview()">
                         <option value="horizontal">Horizontal Row</option>
                         <option value="horizontal-balanced">Horizontal Row (Balanced Heights)</option>
+                        <option value="horizontal-upscale">Horizontal Row (Favor Small Images)</option>
+                        <option value="storyboard">Storyboard Layout (Optimized for Viewing)</option>
                         <option value="main-derivatives">Main + Derivatives (1+N)</option>
                         <option value="grid-2x2">2x2 Grid</option>
                         <option value="vertical">Vertical Stack</option>
@@ -657,7 +659,114 @@
                         html += `<div class="layout-box">Img ${i + 1}</div>`;
                     }
                     break;
+                    
                 case 'horizontal-balanced':
+                    // Scale all images to same height for better comparison
+                    const scaledImages = images.map(img => {
+                        const scale = targetHeight / img.height;
+                        return {
+                            ...img,
+                            scaledWidth: Math.round(img.width * scale),
+                            scaledHeight: targetHeight
+                        };
+                    });
+                    
+                    const totalScaledWidth = scaledImages.reduce((sum, img) => sum + img.scaledWidth, 0);
+                    canvasWidth = totalScaledWidth + (padding * (images.length + 1));
+                    canvasHeight = targetHeight + (padding * 2);
+                    
+                    positions = [];
+                    let scaledX = padding;
+                    scaledImages.forEach(img => {
+                        positions.push({ 
+                            x: scaledX, 
+                            y: padding, 
+                            width: img.scaledWidth, 
+                            height: img.scaledHeight 
+                        });
+                        scaledX += img.scaledWidth + padding;
+                    });
+                    break;
+                    
+                case 'storyboard':
+                    // Optimized storyboard layout like the working Garofalo manifest
+                    // Force reasonable canvas proportions and consistent scaling
+                    const storyboardHeight = targetHeight || 600;
+                    
+                    const storyboardImages = images.map(img => {
+                        const scale = storyboardHeight / img.height;
+                        return {
+                            ...img,
+                            scaledWidth: Math.round(img.width * scale),
+                            scaledHeight: storyboardHeight
+                        };
+                    });
+                    
+                    const totalStoryboardWidth = storyboardImages.reduce((sum, img) => sum + img.scaledWidth, 0);
+                    
+                    // Use proportions similar to working Garofalo manifest
+                    canvasWidth = totalStoryboardWidth + (padding * (images.length + 1));
+                    canvasHeight = storyboardHeight + (padding * 2);
+                    
+                    // Ensure canvas isn't too wide (max 16:9 ratio)
+                    if (canvasWidth / canvasHeight > 3) {
+                        const maxWidth = canvasHeight * 3;
+                        const scale = maxWidth / canvasWidth;
+                        canvasWidth = maxWidth;
+                        storyboardImages.forEach(img => {
+                            img.scaledWidth = Math.round(img.scaledWidth * scale);
+                        });
+                    }
+                    
+                    positions = [];
+                    let storyX = padding;
+                    storyboardImages.forEach(img => {
+                        positions.push({ 
+                            x: storyX, 
+                            y: padding, 
+                            width: img.scaledWidth, 
+                            height: img.scaledHeight 
+                        });
+                        storyX += img.scaledWidth + padding;
+                    });
+                    break;
+                case 'horizontal-upscale':
+                    // Scale everything to make the smallest image have good detail
+                    const minImage = images.reduce((min, img) => 
+                        (img.width * img.height < min.width * min.height) ? img : min
+                    );
+                    
+                    // Use the smaller image's larger dimension as target
+                    const targetDimension = Math.max(minImage.width, minImage.height);
+                    const upscaleTarget = Math.max(targetDimension * 2, 800); // At least 800px
+                    
+                    const upscaledImages = images.map(img => {
+                        // Scale based on larger dimension to maintain aspect ratio
+                        const scale = upscaleTarget / Math.max(img.width, img.height);
+                        return {
+                            ...img,
+                            scaledWidth: Math.round(img.width * scale),
+                            scaledHeight: Math.round(img.height * scale)
+                        };
+                    });
+                    
+                    const totalUpscaledWidth = upscaledImages.reduce((sum, img) => sum + img.scaledWidth, 0);
+                    const maxUpscaledHeight = Math.max(...upscaledImages.map(img => img.scaledHeight));
+                    canvasWidth = totalUpscaledWidth + (padding * (images.length + 1));
+                    canvasHeight = maxUpscaledHeight + (padding * 2);
+                    
+                    positions = [];
+                    let upscaledX = padding;
+                    upscaledImages.forEach(img => {
+                        positions.push({ 
+                            x: upscaledX, 
+                            y: padding + Math.round((maxUpscaledHeight - img.scaledHeight) / 2), // Center vertically
+                            width: img.scaledWidth, 
+                            height: img.scaledHeight 
+                        });
+                        upscaledX += img.scaledWidth + padding;
+                    });
+                    break;
                     for (let i = 0; i < imageCount; i++) {
                         html += `<div class="layout-box" style="background: #27ae60;">Bal ${i + 1}</div>`;
                     }
@@ -819,7 +928,8 @@
                     "it": [metadata.summaryIt],
                     "en": [metadata.summaryIt]
                 },
-                "behavior": ["multi-part"],
+                "behavior": ["individuals"],
+                "viewingDirection": "left-to-right",
                 "items": [{
                     "id": `https://liladude.github.io/Manifest_server/${manifestId}/canvas/layout`,
                     "type": "Canvas",
@@ -849,6 +959,13 @@
                                 }]
                             }
                         }))
+                    }],
+                    "thumbnail": [{
+                        "id": `${images[0].serviceId}/full/400,/0/default.jpg`,
+                        "type": "Image",
+                        "format": "image/jpeg",
+                        "width": 400,
+                        "height": Math.round(400 * (canvasHeight / canvasWidth))
                     }]
                 }]
             };
