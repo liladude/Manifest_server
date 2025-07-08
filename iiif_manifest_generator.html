@@ -262,6 +262,7 @@
                     <label for="layoutType">Layout Type *</label>
                     <select id="layoutType" onchange="updateLayoutPreview()">
                         <option value="horizontal">Horizontal Row</option>
+                        <option value="horizontal-balanced">Horizontal Row (Balanced Heights)</option>
                         <option value="main-derivatives">Main + Derivatives (1+N)</option>
                         <option value="grid-2x2">2x2 Grid</option>
                         <option value="vertical">Vertical Stack</option>
@@ -271,6 +272,12 @@
                     <label for="padding">Padding (px)</label>
                     <input type="number" id="padding" value="100" onchange="updateLayoutPreview()">
                 </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="targetHeight">Target Height for Balancing (px)</label>
+                <input type="number" id="targetHeight" value="600" placeholder="600" onchange="updateLayoutPreview()">
+                <small>For balanced layouts, all images will be scaled to this height</small>
             </div>
             
             <div class="layout-preview" id="layoutPreview">
@@ -650,6 +657,12 @@
                         html += `<div class="layout-box">Img ${i + 1}</div>`;
                     }
                     break;
+                case 'horizontal-balanced':
+                    for (let i = 0; i < imageCount; i++) {
+                        html += `<div class="layout-box" style="background: #27ae60;">Bal ${i + 1}</div>`;
+                    }
+                    html += '<br><small style="color: #27ae60;">✓ All images scaled to same height</small>';
+                    break;
                 case 'main-derivatives':
                     html += `<div class="layout-box main">Main</div><br>`;
                     for (let i = 1; i < imageCount; i++) {
@@ -702,6 +715,7 @@
         function generateComparisonLayout(images, layoutType, padding, metadata) {
             const manifestId = `comparison-${Date.now()}`;
             let canvasWidth, canvasHeight, positions;
+            const targetHeight = parseInt(document.getElementById('targetHeight').value) || 600;
             
             switch (layoutType) {
                 case 'horizontal':
@@ -715,6 +729,34 @@
                     images.forEach(img => {
                         positions.push({ x, y: padding, width: img.width, height: img.height });
                         x += img.width + padding;
+                    });
+                    break;
+                    
+                case 'horizontal-balanced':
+                    // Scale all images to same height for better comparison
+                    const scaledImages = images.map(img => {
+                        const scale = targetHeight / img.height;
+                        return {
+                            ...img,
+                            scaledWidth: Math.round(img.width * scale),
+                            scaledHeight: targetHeight
+                        };
+                    });
+                    
+                    const totalScaledWidth = scaledImages.reduce((sum, img) => sum + img.scaledWidth, 0);
+                    canvasWidth = totalScaledWidth + (padding * (images.length + 1));
+                    canvasHeight = targetHeight + (padding * 2);
+                    
+                    positions = [];
+                    let scaledX = padding;
+                    scaledImages.forEach(img => {
+                        positions.push({ 
+                            x: scaledX, 
+                            y: padding, 
+                            width: img.scaledWidth, 
+                            height: img.scaledHeight 
+                        });
+                        scaledX += img.scaledWidth + padding;
                     });
                     break;
                     
