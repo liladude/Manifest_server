@@ -47,7 +47,7 @@
               "type": "Annotation",
               "motivation": "painting",
               "target": {
-                "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard#xywh=600,50,2267,1572",
+                "id": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard#xywh=200,50,3067,2125",
                 "type": "SpecificResource",
                 "source": "https://liladude.github.io/Manifest_server/garofalo-ligorio-comparison/canvas/storyboard"
               },
