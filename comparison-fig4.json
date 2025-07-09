@@ -2,19 +2,33 @@
   "@context": [
     "http://iiif.io/api/presentation/3/context.json"
   ],
-  "id": "https://liladude.github.io/Manifest_server/comparison-1752055505971.json",
+  "id": "https://liladude.github.io/Manifest_server/comparison-1751990327644.json",
   "type": "Manifest",
   "label": {
     "it": [
-      "testing"
+      "Confronto Busto e Erma"
     ],
     "en": [
-      "testing"
+      "Confronto Busto e Erma"
     ]
   },
+   "metadata": [
+    {
+      "label": {"it": ["Autore"], "en": ["Author"]},
+      "value": {"it": ["Cecilia Vicentini"], "en": ["Cecilia Vicentini"]}
+    },
+    {
+      "label": {"it": ["Soggetto"], "en": ["Subject"]},
+      "value": {"it": ["Confronto tra busto di Palazzo Bevilacqua ed Erma del camerino delle Duchesse"], "en": ["Pirro Ligorio, Garofalo, Triumph of Bacchus, derived drawings"]}
+    },
+    {
+      "label": {"it": ["Tipo di composizione"], "en": ["Composition Type"]},
+      "value": {"it": ["Storyboard comparativo"], "en": ["Comparative Storyboard"]}
+    }
+  ],
   "summary": {
     "it": [
-      ""
+      "Confronto visivo tra elementi all'antica"
     ],
     "en": [
       ""
@@ -26,7 +40,7 @@
   "viewingDirection": "left-to-right",
   "items": [
     {
-      "id": "https://liladude.github.io/Manifest_server/comparison-1752055505971/canvas/layout",
+      "id": "https://liladude.github.io/Manifest_server/comparison-1751990327644/canvas/layout",
       "type": "Canvas",
       "label": {
         "it": [
@@ -40,27 +54,31 @@
       "height": 800,
       "items": [
         {
-          "id": "https://liladude.github.io/Manifest_server/comparison-1752055505971/page/1",
+          "id": "https://liladude.github.io/Manifest_server/comparison-1751990327644/page/1",
           "type": "AnnotationPage",
           "items": [
             {
-              "id": "https://liladude.github.io/Manifest_server/comparison-1752055505971/annotation/img1",
+              "id": "https://liladude.github.io/Manifest_server/comparison-1751990327644/annotation/img1",
               "type": "Annotation",
               "motivation": "painting",
               "target": {
-                "id": "https://liladude.github.io/Manifest_server/comparison-1752055505971/canvas/layout#xywh=100,100,517,600",
+                "id": "https://liladude.github.io/Manifest_server/comparison-1751990327644/canvas/layout#xywh=100,100,648,600",
                 "type": "SpecificResource",
-                "source": "https://liladude.github.io/Manifest_server/comparison-1752055505971/canvas/layout"
+                "source": "https://liladude.github.io/Manifest_server/comparison-1751990327644/canvas/layout"
               },
               "body": {
-                "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_04b.jp2/full/max/0/default.jpg",
+                "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_04a.jp2/full/max/0/default.jpg",
                 "type": "Image",
                 "format": "image/jpeg",
-                "width": 2074,
-                "height": 2405,
+                "width": 2590,
+                "height": 2400,
+                     "label": {
+                  "it": ["Fig. 4a: Palazzo Bevilacqua, Ferrara - Dettaglio di busto della facciata"],
+                  "en": ["Fig. 4a: Palazzo Bevilacqua, Ferrara - Dettaglio di busto della facciata"]
+                     },
                 "service": [
                   {
-                    "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_04b.jp2",
+                    "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_04a.jp2",
                     "type": "ImageService3",
                     "profile": "level2"
                   }
@@ -68,23 +86,27 @@
               }
             },
             {
-              "id": "https://liladude.github.io/Manifest_server/comparison-1752055505971/annotation/img2",
+              "id": "https://liladude.github.io/Manifest_server/comparison-1751990327644/annotation/img2",
               "type": "Annotation",
               "motivation": "painting",
               "target": {
-                "id": "https://liladude.github.io/Manifest_server/comparison-1752055505971/canvas/layout#xywh=717,100,648,600",
+                "id": "https://liladude.github.io/Manifest_server/comparison-1751990327644/canvas/layout#xywh=848,100,517,600",
                 "type": "SpecificResource",
-                "source": "https://liladude.github.io/Manifest_server/comparison-1752055505971/canvas/layout"
+                "source": "https://liladude.github.io/Manifest_server/comparison-1751990327644/canvas/layout"
               },
               "body": {
-                "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_04.jp2/full/max/0/default.jpg",
+                "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_04b.jp2/full/max/0/default.jpg",
                 "type": "Image",
                 "format": "image/jpeg",
-                "width": 2590,
-                "height": 2400,
+                "width": 2074,
+                "height": 2405,
+                "label": {
+                  "it": ["Fig. 4a: Camerino delle Duchesse, Ferrara - Dettaglio di erma"],
+                  "en": ["Fig. 4a: Camerino delle Duchesse, Ferrara - Dettaglio di erma"]
+                     },
                 "service": [
                   {
-                    "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_04.jp2",
+                    "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_04b.jp2",
                     "type": "ImageService3",
                     "profile": "level2"
                   }
@@ -96,11 +118,11 @@
       ],
       "thumbnail": [
         {
-          "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_04b.jp2/full/400,/0/default.jpg",
+          "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_04a.jp2/full/400,/0/default.jpg",
           "type": "Image",
           "format": "image/jpeg",
           "width": 400,
-          "height": 218
+          "height": 316
         }
       ]
     }
