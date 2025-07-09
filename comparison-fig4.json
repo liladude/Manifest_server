@@ -2,7 +2,7 @@
   "@context": [
     "http://iiif.io/api/presentation/3/context.json"
   ],
-  "id": "https://liladude.github.io/Manifest_server/comparison-1752050888676.json",
+  "id": "https://liladude.github.io/Manifest_server/comparison-1752052941861.json",
   "type": "Manifest",
   "label": {
     "it": [
@@ -26,7 +26,7 @@
   "viewingDirection": "left-to-right",
   "items": [
     {
-      "id": "https://liladude.github.io/Manifest_server/comparison-1752050888676/canvas/layout",
+      "id": "https://liladude.github.io/Manifest_server/comparison-1752052941861/canvas/layout",
       "type": "Canvas",
       "label": {
         "it": [
@@ -36,21 +36,21 @@
           "Comparative Layout"
         ]
       },
-      "width": 1314,
+      "width": 1315,
       "height": 700,
       "items": [
         {
-          "id": "https://liladude.github.io/Manifest_server/comparison-1752050888676/page/1",
+          "id": "https://liladude.github.io/Manifest_server/comparison-1752052941861/page/1",
           "type": "AnnotationPage",
           "items": [
             {
-              "id": "https://liladude.github.io/Manifest_server/comparison-1752050888676/annotation/img1",
+              "id": "https://liladude.github.io/Manifest_server/comparison-1752052941861/annotation/img1",
               "type": "Annotation",
               "motivation": "painting",
               "target": {
-                "id": "https://liladude.github.io/Manifest_server/comparison-1752050888676/canvas/layout#xywh=50,50,647,600",
+                "id": "https://liladude.github.io/Manifest_server/comparison-1752052941861/canvas/layout#xywh=50,50,648,600",
                 "type": "SpecificResource",
-                "source": "https://liladude.github.io/Manifest_server/comparison-1752050888676/canvas/layout"
+                "source": "https://liladude.github.io/Manifest_server/comparison-1752052941861/canvas/layout"
               },
               "body": {
                 "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_04a.jp2/full/max/0/default.jpg",
@@ -66,13 +66,13 @@
               }
             },
             {
-              "id": "https://liladude.github.io/Manifest_server/comparison-1752050888676/annotation/img2",
+              "id": "https://liladude.github.io/Manifest_server/comparison-1752052941861/annotation/img2",
               "type": "Annotation",
               "motivation": "painting",
               "target": {
-                "id": "https://liladude.github.io/Manifest_server/comparison-1752050888676/canvas/layout#xywh=747,50,517,600",
+                "id": "https://liladude.github.io/Manifest_server/comparison-1752052941861/canvas/layout#xywh=748,50,517,600",
                 "type": "SpecificResource",
-                "source": "https://liladude.github.io/Manifest_server/comparison-1752050888676/canvas/layout"
+                "source": "https://liladude.github.io/Manifest_server/comparison-1752052941861/canvas/layout"
               },
               "body": {
                 "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_04b.jp2/full/max/0/default.jpg",
