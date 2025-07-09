@@ -1,0 +1,132 @@
+{
+  "@context": [
+    "http://iiif.io/api/presentation/3/context.json"
+  ],
+  "id": "https://liladude.github.io/Manifest_server/comparison-1752070662208.json",
+  "type": "Manifest",
+  "label": {
+    "it": [
+      "Pannelli dello Stanzino delle Duchesse, Palazzo Comunale, Ferrara"
+    ],
+    "en": [
+      "Pannelli dello Stanzino delle Duchesse, Palazzo Comunale, Ferrara"
+    ]
+  },
+  "summary": {
+    "it": [
+      "Per gentile Concessione della Provincia di Ferrara. Materiale fotografico di proprietà dei Musei Civici di Arte Antica di Ferrara."
+    ],
+    "en": [
+      "Per gentile Concessione della Provincia di Ferrara. Materiale fotografico di proprietà dei Musei Civici di Arte Antica di Ferrara."
+    ]
+  },
+  "behavior": [
+    "multi-part"
+  ],
+  "viewingDirection": "left-to-right",
+  "items": [
+    {
+      "id": "https://liladude.github.io/Manifest_server/comparison-1752070662208/canvas/layout",
+      "type": "Canvas",
+      "label": {
+        "it": [
+          "Layout Comparativo"
+        ],
+        "en": [
+          "Comparative Layout"
+        ]
+      },
+      "width": 979,
+      "height": 800,
+      "items": [
+        {
+          "id": "https://liladude.github.io/Manifest_server/comparison-1752070662208/page/1",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://liladude.github.io/Manifest_server/comparison-1752070662208/annotation/img1",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": {
+                "id": "https://liladude.github.io/Manifest_server/comparison-1752070662208/canvas/layout#xywh=100,100,193,600",
+                "type": "SpecificResource",
+                "source": "https://liladude.github.io/Manifest_server/comparison-1752070662208/canvas/layout"
+              },
+              "body": {
+                "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_13a.jp2/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "width": 1646,
+                "height": 5124,
+                "service": [
+                  {
+                    "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_13a.jp2",
+                    "type": "ImageService3",
+                    "profile": "level2"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "https://liladude.github.io/Manifest_server/comparison-1752070662208/annotation/img2",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": {
+                "id": "https://liladude.github.io/Manifest_server/comparison-1752070662208/canvas/layout#xywh=393,100,196,600",
+                "type": "SpecificResource",
+                "source": "https://liladude.github.io/Manifest_server/comparison-1752070662208/canvas/layout"
+              },
+              "body": {
+                "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_13b.jp2/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "width": 1800,
+                "height": 5500,
+                "service": [
+                  {
+                    "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_13b.jp2",
+                    "type": "ImageService3",
+                    "profile": "level2"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "https://liladude.github.io/Manifest_server/comparison-1752070662208/annotation/img3",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": {
+                "id": "https://liladude.github.io/Manifest_server/comparison-1752070662208/canvas/layout#xywh=689,100,190,600",
+                "type": "SpecificResource",
+                "source": "https://liladude.github.io/Manifest_server/comparison-1752070662208/canvas/layout"
+              },
+              "body": {
+                "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_13c.jp2/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "width": 1550,
+                "height": 4895,
+                "service": [
+                  {
+                    "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_13c.jp2",
+                    "type": "ImageService3",
+                    "profile": "level2"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "thumbnail": [
+        {
+          "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_13a.jp2/full/400,/0/default.jpg",
+          "type": "Image",
+          "format": "image/jpeg",
+          "width": 400,
+          "height": 327
+        }
+      ]
+    }
+  ]
+}
