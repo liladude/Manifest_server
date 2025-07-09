@@ -77,14 +77,14 @@
                 "source": "https://liladude.github.io/Manifest_server/comparison-1752055505971/canvas/layout"
               },
               "body": {
-                "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_04a.jp2/full/max/0/default.jpg",
+                "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_04.jp2/full/max/0/default.jpg",
                 "type": "Image",
                 "format": "image/jpeg",
                 "width": 2590,
                 "height": 2400,
                 "service": [
                   {
-                    "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_04a.jp2",
+                    "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_04.jp2",
                     "type": "ImageService3",
                     "profile": "level2"
                   }
