@@ -153,11 +153,11 @@
             <div class="form-row">
                 <div class="form-group">
                     <label for="imageUrl">IIIF Image URL *</label>
-                    <input type="url" id="imageUrl" placeholder="https://hertz-foto-os1.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_09.jp2/full/max/0/default.jpg">
+                    <input type="url" id="imageUrl" placeholder="https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_09.jp2/full/max/0/default.jpg">
                 </div>
                 <div class="form-group">
                     <label for="imageService">IIIF Service ID *</label>
-                    <input type="url" id="imageService" placeholder="https://hertz-foto-os1.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_09.jp2">
+                    <input type="url" id="imageService" placeholder="https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_09.jp2">
                     <button type="button" class="button auto-fetch" onclick="fetchImageInfo()">🔍 Auto-fetch Info</button>
                 </div>
             </div>
@@ -478,8 +478,8 @@
                             "id": imageUrl,
                             "type": "Image",
                             "format": "image/jpeg",
-                            "width": width,
-                            "height": height,
+                            "width": width,  // This should be original width
+                            "height": height, // This should be original height
                             "service": [{
                                 "id": imageService,
                                 "type": "ImageService3",
@@ -507,8 +507,8 @@
                     date: document.getElementById('date').value || 'No date',
                     imageUrl: imageUrl,
                     serviceId: imageService,
-                    width: width,
-                    height: height
+                    width: width,  // Store original dimensions
+                    height: height // Store original dimensions
                 }
             };
             
@@ -661,129 +661,40 @@
                     break;
                     
                 case 'horizontal-balanced':
-                    // Scale all images to same height for better comparison
-                    const scaledImages = images.map(img => {
-                        const scale = targetHeight / img.height;
-                        return {
-                            ...img,
-                            scaledWidth: Math.round(img.width * scale),
-                            scaledHeight: targetHeight
-                        };
-                    });
-                    
-                    const totalScaledWidth = scaledImages.reduce((sum, img) => sum + img.scaledWidth, 0);
-                    canvasWidth = totalScaledWidth + (padding * (images.length + 1));
-                    canvasHeight = targetHeight + (padding * 2);
-                    
-                    positions = [];
-                    let scaledX = padding;
-                    scaledImages.forEach(img => {
-                        positions.push({ 
-                            x: scaledX, 
-                            y: padding, 
-                            width: img.scaledWidth, 
-                            height: img.scaledHeight 
-                        });
-                        scaledX += img.scaledWidth + padding;
-                    });
-                    break;
-                    
-                case 'storyboard':
-                    // Optimized storyboard layout like the working Garofalo manifest
-                    // Force reasonable canvas proportions and consistent scaling
-                    const storyboardHeight = targetHeight || 600;
-                    
-                    const storyboardImages = images.map(img => {
-                        const scale = storyboardHeight / img.height;
-                        return {
-                            ...img,
-                            scaledWidth: Math.round(img.width * scale),
-                            scaledHeight: storyboardHeight
-                        };
-                    });
-                    
-                    const totalStoryboardWidth = storyboardImages.reduce((sum, img) => sum + img.scaledWidth, 0);
-                    
-                    // Use proportions similar to working Garofalo manifest
-                    canvasWidth = totalStoryboardWidth + (padding * (images.length + 1));
-                    canvasHeight = storyboardHeight + (padding * 2);
-                    
-                    // Ensure canvas isn't too wide (max 16:9 ratio)
-                    if (canvasWidth / canvasHeight > 3) {
-                        const maxWidth = canvasHeight * 3;
-                        const scale = maxWidth / canvasWidth;
-                        canvasWidth = maxWidth;
-                        storyboardImages.forEach(img => {
-                            img.scaledWidth = Math.round(img.scaledWidth * scale);
-                        });
-                    }
-                    
-                    positions = [];
-                    let storyX = padding;
-                    storyboardImages.forEach(img => {
-                        positions.push({ 
-                            x: storyX, 
-                            y: padding, 
-                            width: img.scaledWidth, 
-                            height: img.scaledHeight 
-                        });
-                        storyX += img.scaledWidth + padding;
-                    });
-                    break;
-                case 'horizontal-upscale':
-                    // Scale everything to make the smallest image have good detail
-                    const minImage = images.reduce((min, img) => 
-                        (img.width * img.height < min.width * min.height) ? img : min
-                    );
-                    
-                    // Use the smaller image's larger dimension as target
-                    const targetDimension = Math.max(minImage.width, minImage.height);
-                    const upscaleTarget = Math.max(targetDimension * 2, 800); // At least 800px
-                    
-                    const upscaledImages = images.map(img => {
-                        // Scale based on larger dimension to maintain aspect ratio
-                        const scale = upscaleTarget / Math.max(img.width, img.height);
-                        return {
-                            ...img,
-                            scaledWidth: Math.round(img.width * scale),
-                            scaledHeight: Math.round(img.height * scale)
-                        };
-                    });
-                    
-                    const totalUpscaledWidth = upscaledImages.reduce((sum, img) => sum + img.scaledWidth, 0);
-                    const maxUpscaledHeight = Math.max(...upscaledImages.map(img => img.scaledHeight));
-                    canvasWidth = totalUpscaledWidth + (padding * (images.length + 1));
-                    canvasHeight = maxUpscaledHeight + (padding * 2);
-                    
-                    positions = [];
-                    let upscaledX = padding;
-                    upscaledImages.forEach(img => {
-                        positions.push({ 
-                            x: upscaledX, 
-                            y: padding + Math.round((maxUpscaledHeight - img.scaledHeight) / 2), // Center vertically
-                            width: img.scaledWidth, 
-                            height: img.scaledHeight 
-                        });
-                        upscaledX += img.scaledWidth + padding;
-                    });
-                    break;
                     for (let i = 0; i < imageCount; i++) {
-                        html += `<div class="layout-box" style="background: #27ae60;">Bal ${i + 1}</div>`;
+                        html += `<div class="layout-box" style="background: #27ae60; height: 60px;">Bal ${i + 1}</div>`;
                     }
                     html += '<br><small style="color: #27ae60;">✓ All images scaled to same height</small>';
                     break;
+                    
+                case 'horizontal-upscale':
+                    for (let i = 0; i < imageCount; i++) {
+                        html += `<div class="layout-box" style="background: #9b59b6;">Up ${i + 1}</div>`;
+                    }
+                    html += '<br><small style="color: #9b59b6;">✓ Small images upscaled for detail</small>';
+                    break;
+                    
+                case 'storyboard':
+                    for (let i = 0; i < imageCount; i++) {
+                        html += `<div class="layout-box" style="background: #e67e22;">Story ${i + 1}</div>`;
+                    }
+                    html += '<br><small style="color: #e67e22;">✓ Optimized storyboard layout</small>';
+                    break;
+                    
                 case 'main-derivatives':
                     html += `<div class="layout-box main">Main</div><br>`;
                     for (let i = 1; i < imageCount; i++) {
                         html += `<div class="layout-box">Der ${i}</div>`;
                     }
                     break;
+                    
                 case 'grid-2x2':
                     for (let i = 0; i < Math.min(4, imageCount); i++) {
                         if (i === 2) html += '<br>';
                         html += `<div class="layout-box">Img ${i + 1}</div>`;
                     }
                     break;
+                    
                 case 'vertical':
                     for (let i = 0; i < imageCount; i++) {
                         html += `<div class="layout-box">Img ${i + 1}</div><br>`;
@@ -869,6 +780,103 @@
                     });
                     break;
                     
+                case 'horizontal-upscale':
+                    // Scale everything to make the smallest image have good detail
+                    const minImage = images.reduce((min, img) => 
+                        (img.width * img.height < min.width * min.height) ? img : min
+                    );
+                    
+                    // Use the smaller image's larger dimension as target
+                    const targetDimension = Math.max(minImage.width, minImage.height);
+                    const upscaleTarget = Math.max(targetDimension * 2, 800); // At least 800px
+                    
+                    const upscaledImages = images.map(img => {
+                        // Scale based on larger dimension to maintain aspect ratio
+                        const scale = upscaleTarget / Math.max(img.width, img.height);
+                        return {
+                            ...img,
+                            scaledWidth: Math.round(img.width * scale),
+                            scaledHeight: Math.round(img.height * scale)
+                        };
+                    });
+                    
+                    const totalUpscaledWidth = upscaledImages.reduce((sum, img) => sum + img.scaledWidth, 0);
+                    const maxUpscaledHeight = Math.max(...upscaledImages.map(img => img.scaledHeight));
+                    canvasWidth = totalUpscaledWidth + (padding * (images.length + 1));
+                    canvasHeight = maxUpscaledHeight + (padding * 2);
+                    
+                    positions = [];
+                    let upscaledX = padding;
+                    upscaledImages.forEach(img => {
+                        positions.push({ 
+                            x: upscaledX, 
+                            y: padding + Math.round((maxUpscaledHeight - img.scaledHeight) / 2), // Center vertically
+                            width: img.scaledWidth, 
+                            height: img.scaledHeight 
+                        });
+                        upscaledX += img.scaledWidth + padding;
+                    });
+                    break;
+                    
+                case 'storyboard':
+                    // Optimized storyboard layout
+                    const storyboardHeight = targetHeight || 600;
+                    
+                    const storyboardImages = images.map(img => {
+                        const scale = storyboardHeight / img.height;
+                        return {
+                            ...img,
+                            scaledWidth: Math.round(img.width * scale),
+                            scaledHeight: storyboardHeight
+                        };
+                    });
+                    
+                    const totalStoryboardWidth = storyboardImages.reduce((sum, img) => sum + img.scaledWidth, 0);
+                    canvasWidth = totalStoryboardWidth + (padding * (images.length + 1));
+                    canvasHeight = storyboardHeight + (padding * 2);
+                    
+                    // Ensure canvas isn't too wide (max 3:1 ratio)
+                    if (canvasWidth / canvasHeight > 3) {
+                        const maxWidth = canvasHeight * 3;
+                        const scaleDown = maxWidth / canvasWidth;
+                        canvasWidth = maxWidth;
+                        storyboardImages.forEach(img => {
+                            img.scaledWidth = Math.round(img.scaledWidth * scaleDown);
+                        });
+                    }
+                    
+                    positions = [];
+                    let storyX = padding;
+                    storyboardImages.forEach(img => {
+                        positions.push({ 
+                            x: storyX, 
+                            y: padding, 
+                            width: img.scaledWidth, 
+                            height: img.scaledHeight 
+                        });
+                        storyX += img.scaledWidth + padding;
+                    });
+                    break;
+                    
+                case 'vertical':
+                    const maxVerticalWidth = Math.max(...images.map(img => img.width));
+                    const totalVerticalHeight = images.reduce((sum, img) => sum + img.height, 0);
+                    canvasWidth = maxVerticalWidth + (padding * 2);
+                    canvasHeight = totalVerticalHeight + (padding * (images.length + 1));
+                    
+                    positions = [];
+                    let verticalY = padding;
+                    images.forEach(img => {
+                        positions.push({ 
+                            x: padding + Math.round((maxVerticalWidth - img.width) / 2), // Center horizontally
+                            y: verticalY, 
+                            width: img.width, 
+                            height: img.height 
+                        });
+                        verticalY += img.height + padding;
+                    });
+                    break;
+                    
                 case 'main-derivatives':
                     const mainImg = images[0];
                     const derivatives = images.slice(1);
@@ -928,7 +936,7 @@
                     "it": [metadata.summaryIt],
                     "en": [metadata.summaryIt]
                 },
-                "behavior": ["individuals"],
+                "behavior": ["multi-part"],
                 "viewingDirection": "left-to-right",
                 "items": [{
                     "id": `https://liladude.github.io/Manifest_server/${manifestId}/canvas/layout`,
@@ -952,6 +960,8 @@
                                 "id": img.imageUrl,
                                 "type": "Image",
                                 "format": "image/jpeg",
+                                "width": img.width,  // ← ADD: Original image width
+                                "height": img.height, // ← ADD: Original image height
                                 "service": [{
                                     "id": img.serviceId,
                                     "type": "ImageService3",
