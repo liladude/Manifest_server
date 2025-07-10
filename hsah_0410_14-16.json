@@ -1,0 +1,132 @@
+{
+  "@context": [
+    "http://iiif.io/api/presentation/3/context.json"
+  ],
+  "id": "https://liladude.github.io/Manifest_server/comparison-1752136151789.json",
+  "type": "Manifest",
+  "label": {
+    "it": [
+      "Disegni di Ornato"
+    ],
+    "en": [
+      "Disegni di Ornato"
+    ]
+  },
+  "summary": {
+    "it": [
+      "Pirro Ligorio, Il libro dell'antichità di Pirro Ligorio. Raccolta di disegni originali di figure, e di ornati dello stesso Pirro Ligorio, alcuni fatti colla penna, altri col lapis, ed altri col pastello, Vol. 30, Archivio di Stato di Torino"
+    ],
+    "en": [
+      "Pirro Ligorio, Il libro dell'antichità di Pirro Ligorio. Raccolta di disegni originali di figure, e di ornati dello stesso Pirro Ligorio, alcuni fatti colla penna, altri col lapis, ed altri col pastello, Vol. 30, Archivio di Stato di Torino"
+    ]
+  },
+  "behavior": [
+    "multi-part"
+  ],
+  "viewingDirection": "left-to-right",
+  "items": [
+    {
+      "id": "https://liladude.github.io/Manifest_server/comparison-1752136151789/canvas/layout",
+      "type": "Canvas",
+      "label": {
+        "it": [
+          "Layout Comparativo"
+        ],
+        "en": [
+          "Comparative Layout"
+        ]
+      },
+      "width": 1654,
+      "height": 800,
+      "items": [
+        {
+          "id": "https://liladude.github.io/Manifest_server/comparison-1752136151789/page/1",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://liladude.github.io/Manifest_server/comparison-1752136151789/annotation/img1",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": {
+                "id": "https://liladude.github.io/Manifest_server/comparison-1752136151789/canvas/layout#xywh=100,100,408,600",
+                "type": "SpecificResource",
+                "source": "https://liladude.github.io/Manifest_server/comparison-1752136151789/canvas/layout"
+              },
+              "body": {
+                "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_14.jp2/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "width": 3404,
+                "height": 5000,
+                "service": [
+                  {
+                    "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_14.jp2",
+                    "type": "ImageService3",
+                    "profile": "level2"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "https://liladude.github.io/Manifest_server/comparison-1752136151789/annotation/img2",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": {
+                "id": "https://liladude.github.io/Manifest_server/comparison-1752136151789/canvas/layout#xywh=608,100,425,600",
+                "type": "SpecificResource",
+                "source": "https://liladude.github.io/Manifest_server/comparison-1752136151789/canvas/layout"
+              },
+              "body": {
+                "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_15.jp2/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "width": 3581,
+                "height": 5053,
+                "service": [
+                  {
+                    "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_15.jp2",
+                    "type": "ImageService3",
+                    "profile": "level2"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "https://liladude.github.io/Manifest_server/comparison-1752136151789/annotation/img3",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": {
+                "id": "https://liladude.github.io/Manifest_server/comparison-1752136151789/canvas/layout#xywh=1133,100,421,600",
+                "type": "SpecificResource",
+                "source": "https://liladude.github.io/Manifest_server/comparison-1752136151789/canvas/layout"
+              },
+              "body": {
+                "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_15.jp2/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "width": 3511,
+                "height": 5008,
+                "service": [
+                  {
+                    "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_16.jp2",
+                    "type": "ImageService3",
+                    "profile": "level2"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "thumbnail": [
+        {
+          "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_14.jp2/full/400,/0/default.jpg",
+          "type": "Image",
+          "format": "image/jpeg",
+          "width": 400,
+          "height": 193
+        }
+      ]
+    }
+  ]
+}
