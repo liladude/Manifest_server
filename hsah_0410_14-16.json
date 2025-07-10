@@ -2,7 +2,7 @@
   "@context": [
     "http://iiif.io/api/presentation/3/context.json"
   ],
-  "id": "https://liladude.github.io/Manifest_server/comparison-1752136151789.json",
+  "id": "https://liladude.github.io/Manifest_server/comparison-1752137352100.json",
   "type": "Manifest",
   "label": {
     "it": [
@@ -26,7 +26,7 @@
   "viewingDirection": "left-to-right",
   "items": [
     {
-      "id": "https://liladude.github.io/Manifest_server/comparison-1752136151789/canvas/layout",
+      "id": "https://liladude.github.io/Manifest_server/comparison-1752137352100/canvas/layout",
       "type": "Canvas",
       "label": {
         "it": [
@@ -36,21 +36,21 @@
           "Comparative Layout"
         ]
       },
-      "width": 1654,
-      "height": 800,
+      "width": 1454,
+      "height": 700,
       "items": [
         {
-          "id": "https://liladude.github.io/Manifest_server/comparison-1752136151789/page/1",
+          "id": "https://liladude.github.io/Manifest_server/comparison-1752137352100/page/1",
           "type": "AnnotationPage",
           "items": [
             {
-              "id": "https://liladude.github.io/Manifest_server/comparison-1752136151789/annotation/img1",
+              "id": "https://liladude.github.io/Manifest_server/comparison-1752137352100/annotation/img1",
               "type": "Annotation",
               "motivation": "painting",
               "target": {
-                "id": "https://liladude.github.io/Manifest_server/comparison-1752136151789/canvas/layout#xywh=100,100,408,600",
+                "id": "https://liladude.github.io/Manifest_server/comparison-1752137352100/canvas/layout#xywh=50,50,408,600",
                 "type": "SpecificResource",
-                "source": "https://liladude.github.io/Manifest_server/comparison-1752136151789/canvas/layout"
+                "source": "https://liladude.github.io/Manifest_server/comparison-1752137352100/canvas/layout"
               },
               "body": {
                 "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_14.jp2/full/max/0/default.jpg",
@@ -68,13 +68,13 @@
               }
             },
             {
-              "id": "https://liladude.github.io/Manifest_server/comparison-1752136151789/annotation/img2",
+              "id": "https://liladude.github.io/Manifest_server/comparison-1752137352100/annotation/img2",
               "type": "Annotation",
               "motivation": "painting",
               "target": {
-                "id": "https://liladude.github.io/Manifest_server/comparison-1752136151789/canvas/layout#xywh=608,100,425,600",
+                "id": "https://liladude.github.io/Manifest_server/comparison-1752137352100/canvas/layout#xywh=508,50,425,600",
                 "type": "SpecificResource",
-                "source": "https://liladude.github.io/Manifest_server/comparison-1752136151789/canvas/layout"
+                "source": "https://liladude.github.io/Manifest_server/comparison-1752137352100/canvas/layout"
               },
               "body": {
                 "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_15.jp2/full/max/0/default.jpg",
@@ -92,13 +92,13 @@
               }
             },
             {
-              "id": "https://liladude.github.io/Manifest_server/comparison-1752136151789/annotation/img3",
+              "id": "https://liladude.github.io/Manifest_server/comparison-1752137352100/annotation/img3",
               "type": "Annotation",
               "motivation": "painting",
               "target": {
-                "id": "https://liladude.github.io/Manifest_server/comparison-1752136151789/canvas/layout#xywh=1133,100,421,600",
+                "id": "https://liladude.github.io/Manifest_server/comparison-1752137352100/canvas/layout#xywh=983,50,421,600",
                 "type": "SpecificResource",
-                "source": "https://liladude.github.io/Manifest_server/comparison-1752136151789/canvas/layout"
+                "source": "https://liladude.github.io/Manifest_server/comparison-1752137352100/canvas/layout"
               },
               "body": {
                 "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_15.jp2/full/max/0/default.jpg",
