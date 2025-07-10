@@ -23,7 +23,6 @@
   "behavior": [
     "multi-part"
   ],
-  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://liladude.github.io/Manifest_server/comparison-1752141832786/canvas/layout",
