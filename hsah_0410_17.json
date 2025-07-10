@@ -1,0 +1,132 @@
+{
+  "@context": [
+    "http://iiif.io/api/presentation/3/context.json"
+  ],
+  "id": "https://liladude.github.io/Manifest_server/comparison-1752141832786.json",
+  "type": "Manifest",
+  "label": {
+    "it": [
+      "Confronto elementi di grottecsca"
+    ],
+    "en": [
+      "Confronto elementi di grottecsca"
+    ]
+  },
+  "summary": {
+    "it": [
+      ""
+    ],
+    "en": [
+      ""
+    ]
+  },
+  "behavior": [
+    "multi-part"
+  ],
+  "viewingDirection": "left-to-right",
+  "items": [
+    {
+      "id": "https://liladude.github.io/Manifest_server/comparison-1752141832786/canvas/layout",
+      "type": "Canvas",
+      "label": {
+        "it": [
+          "Layout Comparativo"
+        ],
+        "en": [
+          "Comparative Layout"
+        ]
+      },
+      "width": 2841,
+      "height": 3190,
+      "items": [
+        {
+          "id": "https://liladude.github.io/Manifest_server/comparison-1752141832786/page/1",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://liladude.github.io/Manifest_server/comparison-1752141832786/annotation/img1",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": {
+                "id": "https://liladude.github.io/Manifest_server/comparison-1752141832786/canvas/layout#xywh=100,100,2641,2001",
+                "type": "SpecificResource",
+                "source": "https://liladude.github.io/Manifest_server/comparison-1752141832786/canvas/layout"
+              },
+              "body": {
+                "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_17a.jp2/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "width": 2641,
+                "height": 2001,
+                "service": [
+                  {
+                    "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_17a.jp2",
+                    "type": "ImageService3",
+                    "profile": "level2"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "https://liladude.github.io/Manifest_server/comparison-1752141832786/annotation/img2",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": {
+                "id": "https://liladude.github.io/Manifest_server/comparison-1752141832786/canvas/layout#xywh=100,2201,1270,889",
+                "type": "SpecificResource",
+                "source": "https://liladude.github.io/Manifest_server/comparison-1752141832786/canvas/layout"
+              },
+              "body": {
+                "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_17a.jp2/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "width": 1550,
+                "height": 1198,
+                "service": [
+                  {
+                    "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_17b.jp2",
+                    "type": "ImageService3",
+                    "profile": "level2"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "https://liladude.github.io/Manifest_server/comparison-1752141832786/annotation/img3",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": {
+                "id": "https://liladude.github.io/Manifest_server/comparison-1752141832786/canvas/layout#xywh=1470,2201,1270,889",
+                "type": "SpecificResource",
+                "source": "https://liladude.github.io/Manifest_server/comparison-1752141832786/canvas/layout"
+              },
+              "body": {
+                "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_17a.jp2/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "width": 2475,
+                "height": 3713,
+                "service": [
+                  {
+                    "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_17c.jp2",
+                    "type": "ImageService3",
+                    "profile": "level2"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "thumbnail": [
+        {
+          "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_17a.jp2/full/400,/0/default.jpg",
+          "type": "Image",
+          "format": "image/jpeg",
+          "width": 400,
+          "height": 449
+        }
+      ]
+    }
+  ]
+}
