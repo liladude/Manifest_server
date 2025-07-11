@@ -35,8 +35,8 @@
           "Comparative Layout"
         ]
       },
-      "width": 4000,
-      "height": 2250,
+      "width": 1600,
+      "height": 700,
       "items": [
         {
           "id": "https://liladude.github.io/Manifest_server/comparison-1752141832786/page/1",
@@ -47,7 +47,7 @@
               "type": "Annotation",
               "motivation": "painting",
               "target": {
-                "id": "https://liladude.github.io/Manifest_server/comparison-1752141832786/canvas/layout#xywh=986,0,1807,1469",
+                "id": "https://liladude.github.io/Manifest_server/comparison-1752141832786/canvas/layout#xywh=485,0,564,459",
                 "type": "SpecificResource",
                 "source": "https://liladude.github.io/Manifest_server/comparison-1752141832786/canvas/layout"
               },
@@ -72,7 +72,7 @@
               "type": "Annotation",
               "motivation": "painting",
               "target": {
-                "id": "https://liladude.github.io/Manifest_server/comparison-1752141832786/canvas/layout#xywh=2800,449,1200,1800",
+                "id": "https://liladude.github.io/Manifest_server/comparison-1752141832786/canvas/layout#xywh=1050,140,374,560",
                 "type": "SpecificResource",
                 "source": "https://liladude.github.io/Manifest_server/comparison-1752141832786/canvas/layout"
               },
@@ -96,7 +96,7 @@
               "type": "Annotation",
               "motivation": "painting",
               "target": {
-                "id": "https://liladude.github.io/Manifest_server/comparison-1752141832786/canvas/layout#xywh=0,1323,1200,927",
+                "id": "https://liladude.github.io/Manifest_server/comparison-1752141832786/canvas/layout#xywh=180,412,374,288",
                 "type": "SpecificResource",
                 "source": "https://liladude.github.io/Manifest_server/comparison-1752141832786/canvas/layout"
               },
