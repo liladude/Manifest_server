@@ -96,7 +96,7 @@
               "type": "Annotation",
               "motivation": "painting",
               "target": {
-                "id": "https://liladude.github.io/Manifest_server/comparison-1752141832786/canvas/layout#xywh=210,400,320,250",
+                "id": "https://liladude.github.io/Manifest_server/comparison-1752141832786/canvas/layout#xywh=210,170,320,250",
                 "type": "SpecificResource",
                 "source": "https://liladude.github.io/Manifest_server/comparison-1752141832786/canvas/layout"
               },
