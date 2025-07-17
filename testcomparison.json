@@ -1,0 +1,118 @@
+{
+  "@context": [
+    "http://iiif.io/api/presentation/3/context.json"
+  ],
+  "id": "https://liladude.github.io/Manifest_server/comparison-universal-1752739323067.json",
+  "type": "Manifest",
+  "label": {
+    "it": [
+      "comparizon"
+    ],
+    "en": [
+      "comparizon"
+    ]
+  },
+  "summary": {
+    "it": [
+      ""
+    ],
+    "en": [
+      ""
+    ]
+  },
+  "behavior": [
+    "multi-part"
+  ],
+  "viewingDirection": "left-to-right",
+  "items": [
+    {
+      "id": "https://liladude.github.io/Manifest_server/comparison-universal-1752739323067/canvas/layout",
+      "type": "Canvas",
+      "label": {
+        "it": [
+          "Layout Comparativo"
+        ],
+        "en": [
+          "Comparative Layout"
+        ]
+      },
+      "width": 1600,
+      "height": 700,
+      "items": [
+        {
+          "id": "https://liladude.github.io/Manifest_server/comparison-universal-1752739323067/page/1",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://liladude.github.io/Manifest_server/comparison-universal-1752739323067/annotation/img1",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": "https://liladude.github.io/Manifest_server/comparison-universal-1752739323067/canvas/layout#xywh=50,50,272,400",
+              "body": {
+                "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_14.jp2/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "width": 3404,
+                "height": 5000,
+                "service": [
+                  {
+                    "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_14.jp2",
+                    "type": "ImageService3",
+                    "profile": "level2"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "https://liladude.github.io/Manifest_server/comparison-universal-1752739323067/annotation/img2",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": "https://liladude.github.io/Manifest_server/comparison-universal-1752739323067/canvas/layout#xywh=50,500,111,83",
+              "body": {
+                "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_15.jp2/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "width": 3581,
+                "height": 5053,
+                "service": [
+                  {
+                    "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_15.jp2",
+                    "type": "ImageService3",
+                    "profile": "level2"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "https://liladude.github.io/Manifest_server/comparison-universal-1752739323067/annotation/img3",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": "https://liladude.github.io/Manifest_server/comparison-universal-1752739323067/canvas/layout#xywh=211,500,111,83",
+              "body": {
+                "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_15.jp2/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "width": 3511,
+                "height": 5008,
+                "service": [
+                  {
+                    "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_16.jp2",
+                    "type": "ImageService3",
+                    "profile": "level2"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "thumbnail": [
+        {
+          "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0410%2Fhsah_0410_14.jp2/full/400,/0/default.jpg",
+          "type": "Image",
+          "format": "image/jpeg"
+        }
+      ]
+    }
+  ]
+}
