@@ -1,0 +1,98 @@
+{
+  "@context": [
+    "http://iiif.io/api/presentation/3/context.json"
+  ],
+  "id": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/rotation-selector-two-layer-test.json",
+  "type": "Manifest",
+  "label": {
+    "it": [
+      "superimposition — selector rotation test"
+    ]
+  },
+  "items": [
+    {
+      "id": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/rotation-selector-two-layer-test/canvas/1",
+      "type": "Canvas",
+      "width": 6895,
+      "height": 8321,
+      "items": [
+        {
+          "id": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/rotation-selector-two-layer-test/page/1",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/rotation-selector-two-layer-test/annotation/layer1",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "id": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/rotation-selector-two-layer-test/body/layer1",
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0411%2Fhsah_0411_13.jp2/full/max/0/default.jpg",
+                  "type": "Image",
+                  "format": "image/jpeg",
+                  "width": 4743,
+                  "height": 7129,
+                  "service": [
+                    {
+                      "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0411%2Fhsah_0411_13.jp2",
+                      "type": "ImageService3",
+                      "profile": "level2"
+                    }
+                  ]
+                },
+                "selector": {
+                  "type": "ImageApiSelector",
+                  "rotation": "20"
+                }
+              },
+              "target": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/rotation-selector-two-layer-test/canvas/1#xywh=0,0,6895,8321",
+              "label": {
+                "it": [
+                  "Figura 13. — Rilievo di Aion/Phanes (inv. n. 2676) Modena, Gallerie Estensi. — rotated 20° via ImageApiSelector"
+                ]
+              }
+            },
+            {
+              "id": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/rotation-selector-two-layer-test/annotation/layer2",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0411%2Fhsah_0411_12.jp2/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "width": 3381,
+                "height": 5041,
+                "service": [
+                  {
+                    "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0411%2Fhsah_0411_12.jp2",
+                    "type": "ImageService3",
+                    "profile": "level2"
+                  }
+                ],
+                "label": {
+                  "it": [
+                    "Figura 12. — Pirro Ligorio, disegno per la decorazione di un soffitto."
+                  ]
+                }
+              },
+              "target": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/rotation-selector-two-layer-test/canvas/1#xywh=1482,652,3381,5041",
+              "label": {
+                "it": [
+                  "Figura 12. — Pirro Ligorio, disegno per la decorazione di un soffitto."
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "thumbnail": [
+        {
+          "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0411%2Fhsah_0411_13.jp2/full/400,/0/default.jpg",
+          "type": "Image",
+          "format": "image/jpeg"
+        }
+      ]
+    }
+  ]
+}
