@@ -2,7 +2,7 @@
   "@context": [
     "http://iiif.io/api/presentation/3/context.json"
   ],
-  "id": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/layered-1785434020410.json",
+  "id": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/layered-selector-test.json",
   "type": "Manifest",
   "label": {
     "it": [
@@ -11,44 +11,72 @@
   },
   "items": [
     {
-      "id": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/layered-1785434020410/canvas/1",
+      "id": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/layered-selector-test/canvas/1",
       "type": "Canvas",
-      "width": 7129,
-      "height": 4743,
+      "width": 6895,
+      "height": 8321,
       "items": [
         {
-          "id": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/layered-1785434020410/page/1",
+          "id": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/layered-selector-test/page/1",
           "type": "AnnotationPage",
           "items": [
             {
-              "id": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/layered-1785434020410/annotation/layer1",
+              "id": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/layered-selector-test/annotation/layer1",
               "type": "Annotation",
               "motivation": "painting",
               "body": {
-                "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0411%2Fhsah_0411_13.jp2/full/max/90/default.jpg",
+                "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0411%2Fhsah_0411_12.jp2/full/max/0/default.jpg",
                 "type": "Image",
                 "format": "image/jpeg",
-                "width": 7129,
-                "height": 4743,
+                "width": 3381,
+                "height": 5041,
                 "service": [
                   {
-                    "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0411%2Fhsah_0411_13.jp2",
+                    "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0411%2Fhsah_0411_12.jp2",
                     "type": "ImageService3",
                     "profile": "level2"
                   }
                 ],
                 "label": {
                   "it": [
-                    "Figura 13. — Rilievo di Aion/Phanes (inv. n. 2676) Modena, Gallerie Estensi."
-                  ]
-                },
-                "summary": {
-                  "it": [
-                    "Rilievo di Aion/Phanes (inv. n. 2676) Modena, Gallerie Estensi. Crediti: FA-S-PHG-MOD-18644-01, foto Ph. Gross."
+                    "Figura 12. — Pirro Ligorio, disegno per la decorazione di un soffitto."
                   ]
                 }
               },
-              "target": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/layered-1785434020410/canvas/1",
+              "target": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/layered-selector-test/canvas/1#xywh=1482,652,3381,5041",
+              "label": {
+                "it": [
+                  "Figura 12. — Pirro Ligorio, disegno per la decorazione di un soffitto."
+                ]
+              }
+            },
+            {
+              "id": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/layered-selector-test/annotation/layer2",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "id": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/layered-selector-test/body/layer2",
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0411%2Fhsah_0411_13.jp2/full/max/0/default.jpg",
+                  "type": "Image",
+                  "format": "image/jpeg",
+                  "width": 4743,
+                  "height": 7129,
+                  "service": [
+                    {
+                      "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0411%2Fhsah_0411_13.jp2",
+                      "type": "ImageService3",
+                      "profile": "level2"
+                    }
+                  ]
+                },
+                "selector": {
+                  "type": "ImageApiSelector",
+                  "rotation": "20"
+                }
+              },
+              "target": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/layered-selector-test/canvas/1#xywh=0,0,6895,8321",
               "label": {
                 "it": [
                   "Figura 13. — Rilievo di Aion/Phanes (inv. n. 2676) Modena, Gallerie Estensi."
