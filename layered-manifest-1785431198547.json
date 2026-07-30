@@ -2,30 +2,30 @@
   "@context": [
     "http://iiif.io/api/presentation/3/context.json"
   ],
-  "id": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/rotation-selector-single-test.json",
+  "id": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/rotation-selector-single-test-20.json",
   "type": "Manifest",
   "label": {
     "it": [
-      "rotation test — single image"
+      "rotation test — single image, 20°"
     ]
   },
   "items": [
     {
-      "id": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/rotation-selector-single-test/canvas/1",
+      "id": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/rotation-selector-single-test-20/canvas/1",
       "type": "Canvas",
-      "width": 7129,
-      "height": 4743,
+      "width": 6895,
+      "height": 8321,
       "items": [
         {
-          "id": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/rotation-selector-single-test/page/1",
+          "id": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/rotation-selector-single-test-20/page/1",
           "type": "AnnotationPage",
           "items": [
             {
-              "id": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/rotation-selector-single-test/annotation/layer1",
+              "id": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/rotation-selector-single-test-20/annotation/layer1",
               "type": "Annotation",
               "motivation": "painting",
               "body": {
-                "id": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/rotation-selector-single-test/body/layer1",
+                "id": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/rotation-selector-single-test-20/body/layer1",
                 "type": "SpecificResource",
                 "source": {
                   "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0411%2Fhsah_0411_13.jp2/full/max/0/default.jpg",
@@ -43,13 +43,13 @@
                 },
                 "selector": {
                   "type": "ImageApiSelector",
-                  "rotation": "90"
+                  "rotation": "20"
                 }
               },
-              "target": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/rotation-selector-single-test/canvas/1",
+              "target": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/rotation-selector-single-test-20/canvas/1",
               "label": {
                 "it": [
-                  "Figura 13. — Rilievo di Aion/Phanes (inv. n. 2676) Modena, Gallerie Estensi. — rotated 90° via ImageApiSelector"
+                  "Figura 13. — Rilievo di Aion/Phanes (inv. n. 2676) Modena, Gallerie Estensi. — rotated 20° via ImageApiSelector"
                 ]
               }
             }
@@ -58,7 +58,7 @@
       ],
       "thumbnail": [
         {
-          "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0411%2Fhsah_0411_13.jp2/full/max/90/default.jpg",
+          "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0411%2Fhsah_0411_13.jp2/full/max/20/default.jpg",
           "type": "Image",
           "format": "image/jpeg"
         }
