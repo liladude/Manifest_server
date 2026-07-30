@@ -2,7 +2,7 @@
   "@context": [
     "http://iiif.io/api/presentation/3/context.json"
   ],
-  "id": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/layered-1785430996501.json",
+  "id": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/layered-1785432590953.json",
   "type": "Manifest",
   "label": {
     "it": [
@@ -11,47 +11,17 @@
   },
   "items": [
     {
-      "id": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/layered-1785430996501/canvas/1",
+      "id": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/layered-1785432590953/canvas/1",
       "type": "Canvas",
       "width": 6895,
       "height": 8321,
       "items": [
         {
-          "id": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/layered-1785430996501/page/1",
+          "id": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/layered-1785432590953/page/1",
           "type": "AnnotationPage",
           "items": [
             {
-              "id": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/layered-1785430996501/annotation/layer1",
-              "type": "Annotation",
-              "motivation": "painting",
-              "body": {
-                "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0411%2Fhsah_0411_12.jp2/full/max/0/default.jpg",
-                "type": "Image",
-                "format": "image/jpeg",
-                "width": 3381,
-                "height": 5041,
-                "service": [
-                  {
-                    "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0411%2Fhsah_0411_12.jp2",
-                    "type": "ImageService3",
-                    "profile": "level2"
-                  }
-                ],
-                "label": {
-                  "it": [
-                    "superimposition"
-                  ]
-                }
-              },
-              "target": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/layered-1785430996501/canvas/1#xywh=1482,652,3381,5041",
-              "label": {
-                "it": [
-                  "superimposition"
-                ]
-              }
-            },
-            {
-              "id": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/layered-1785430996501/annotation/layer2",
+              "id": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/layered-1785432590953/annotation/layer1",
               "type": "Annotation",
               "motivation": "painting",
               "body": {
@@ -78,7 +48,7 @@
                   ]
                 }
               },
-              "target": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/layered-1785430996501/canvas/1#xywh=0,0,6895,8321",
+              "target": "https://annotation.biblhertz.it/iiif_manifests/HSAH/04/hsah_0411_12-13.json/layered-1785432590953/canvas/1#xywh=0,0,6895,8321",
               "label": {
                 "it": [
                   "Figura 13. — Rilievo di Aion/Phanes (inv. n. 2676) Modena, Gallerie Estensi."
@@ -90,7 +60,7 @@
       ],
       "thumbnail": [
         {
-          "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0411%2Fhsah_0411_12.jp2/full/400,/0/default.jpg",
+          "id": "https://fotothek.biblhertz.it/iiif/3/dpub%2Fhsah0411%2Fhsah_0411_13.jp2/full/400,/0/default.jpg",
           "type": "Image",
           "format": "image/jpeg"
         }
